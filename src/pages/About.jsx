@@ -1,18 +1,23 @@
-import { Briefcase, GraduationCap, Award, MapPin, Calendar, ArrowRight, Mail, Linkedin, Phone } from 'lucide-react'
+import { Briefcase, GraduationCap, Award, MapPin, Calendar, ArrowRight, Mail, Linkedin } from 'lucide-react'
+import { useLanguage } from '../context/LanguageContext'
+import { useTranslations } from '../data/translations'
 
 export default function About() {
-  const experience = [
+  const { language } = useLanguage()
+  const t = useTranslations(language)
+
+  const experience = language === 'fr' ? [
     {
       role: 'Independent Consultant – AI & Enterprise Software',
       company: 'Spread AI / Eco2Veritas',
       period: 'Juin 2024 – Présent',
-      description: 'Strategic consulting pour entreprises européennes de logiciels IA sur l\'expansion marché. Enterprise account development pour solutions logicielles industrielles en France.'
+      description: "Strategic consulting pour entreprises européennes de logiciels IA sur l'expansion marché. Enterprise account development pour solutions logicielles industrielles en France."
     },
     {
       role: 'Sales Director & General Manager France',
       company: 'ARXUM GmbH & ARXUM France SAS',
       period: 'Fév 2018 – Mai 2024 (6 ans)',
-      description: 'Fondation et scaling de la filiale française de 0 à 25+ FTEs (Sales, Project, R&D). Croissance ARR de €0 à €100k via ventes directes et indirectes. Gestion du cycle de vente complet pour logiciels AI/AR en environnement Life Sciences réglementé.'
+      description: "Fondation et scaling de la filiale française de 0 à 25+ FTEs (Sales, Project, R&D). Croissance ARR de €0 à €100k via ventes directes et indirectes. Gestion du cycle de vente complet pour logiciels AI/AR en environnement Life Sciences réglementé."
     },
     {
       role: 'Sales Executive – Cloud ERP Solutions',
@@ -20,9 +25,28 @@ export default function About() {
       period: 'Août 2016 – Déc 2017 (1,5 an)',
       description: 'Récompensé "Best Winter Sales Europe" – top performer en acquisition clients et revenus. Développement de nouveaux marchés pour solutions Cloud ERP, dépassement constant des quotas.'
     }
+  ] : [
+    {
+      role: 'Independent Consultant – AI & Enterprise Software',
+      company: 'Spread AI / Eco2Veritas',
+      period: 'June 2024 – Present',
+      description: 'Strategic consulting for European AI software companies on market expansion. Enterprise account development for industrial software solutions in France.'
+    },
+    {
+      role: 'Sales Director & General Manager France',
+      company: 'ARXUM GmbH & ARXUM France SAS',
+      period: 'Feb 2018 – May 2024 (6 years)',
+      description: 'Founded and scaled French subsidiary from 0 to 25+ FTEs (Sales, Project, R&D). Grew ARR from €0 to €100k through direct and indirect sales. Full sales cycle management for AI/AR software in regulated Life Sciences environment.'
+    },
+    {
+      role: 'Sales Executive – Cloud ERP Solutions',
+      company: 'Exact Software',
+      period: 'Aug 2016 – Dec 2017 (1.5 years)',
+      description: 'Awarded "Best Winter Sales Europe" – top performer in customer acquisition and revenue. Developed new markets for Cloud ERP solutions, consistently exceeding quotas.'
+    }
   ]
 
-  const education = [
+  const education = language === 'fr' ? [
     {
       degree: 'Executive Program – Energy and Sustainability',
       school: 'École Polytechnique',
@@ -35,14 +59,60 @@ export default function About() {
       period: '2015 – 2016',
       description: 'Double diplôme Paris & Chicago.'
     }
+  ] : [
+    {
+      degree: 'Executive Program – Energy and Sustainability',
+      school: 'École Polytechnique',
+      period: '2018 – 2019',
+      description: 'Thesis on blockchain technology applied to renewable energy. Award winner at United Nations Energy Program (UNEP) hackathon.'
+    },
+    {
+      degree: 'MSc. Social Entrepreneurship & Alternative Business Models',
+      school: 'INSEEC Business School & Columbia College',
+      period: '2015 – 2016',
+      description: 'Dual degree Paris & Chicago.'
+    }
   ]
 
-  const skills = [
+  const skills = language === 'fr' ? [
+    { category: 'Enterprise Sales', items: ['MEDDICC & SPIN Selling', 'Négociation complexe', 'Channel & Partner Dev', 'Cycles longs'] },
+    { category: 'AI & SaaS', items: ['Stratégie Go-to-Market', 'Expansion marché', 'Positionnement produit', 'Value Selling'] },
+    { category: 'Life Sciences', items: ['Pharma & Biotech', 'Environnements GxP', 'Conformité réglementaire', 'Opérations labo'] },
+    { category: 'Leadership', items: ['Team Building', 'Management transverse', 'Collaboration 25+ FTEs', 'P&L Ownership'] }
+  ] : [
     { category: 'Enterprise Sales', items: ['MEDDICC & SPIN Selling', 'Complex Deal Negotiation', 'Channel & Partner Dev', 'Long Sales Cycles'] },
     { category: 'AI & SaaS', items: ['Go-to-Market Strategy', 'Market Expansion', 'Product Positioning', 'Value Selling'] },
     { category: 'Life Sciences', items: ['Pharma & Biotech', 'GxP Environments', 'Regulatory Compliance', 'Lab Operations'] },
     { category: 'Leadership', items: ['Team Building', 'Cross-functional Mgmt', 'Collaboration 25+ FTEs', 'P&L Ownership'] }
   ]
+
+  const interests = language === 'fr'
+    ? ['Triathlon', 'Boxe', 'Philosophie & Science', 'Piano']
+    : ['Triathlon', 'Boxing', 'Philosophy & Science', 'Piano']
+
+  const labels = language === 'fr' ? {
+    available: 'Disponible',
+    keyAchievement: '🏆 Key Achievement: Construction de la filiale française from scratch jusqu\'à €100k ARR en 4 ans, collaboration avec 25+ FTEs (Sales, Project, R&D).',
+    experience: 'Expérience Professionnelle',
+    education: 'Formation',
+    skills: 'Compétences Clés',
+    interests: 'Centres d\'intérêt',
+    workTogether: 'Travaillons ensemble',
+    workDescription: 'Que vous cherchiez à développer votre marché français, structurer votre équipe commerciale ou lancer une solution AI/SaaS, discutons de votre projet.',
+    contactMe: 'Me contacter',
+    description: 'Sales Director avec 9+ ans d\'expérience dans le scaling de solutions B2B SaaS et AI sur des marchés enterprise complexes. Track record prouvé dans la construction d\'équipes commerciales performantes, établissement de présence marché en Life Sciences, Industrial et Tech.'
+  } : {
+    available: 'Available',
+    keyAchievement: '🏆 Key Achievement: Built French subsidiary from scratch to €100k ARR in 4 years, collaborating with 25+ FTEs (Sales, Project, R&D).',
+    experience: 'Professional Experience',
+    education: 'Education',
+    skills: 'Key Skills',
+    interests: 'Interests',
+    workTogether: "Let's work together",
+    workDescription: 'Whether you want to develop your French market, structure your sales team, or launch an AI/SaaS solution, let\'s discuss your project.',
+    contactMe: 'Contact me',
+    description: 'Sales Director with 9+ years of experience scaling B2B SaaS and AI solutions in complex enterprise markets. Proven track record in building high-performing sales teams, establishing market presence in Life Sciences, Industrial and Tech.'
+  }
 
   return (
     <div className="pt-24 pb-16">
@@ -57,14 +127,11 @@ export default function About() {
               Enterprise Sales Director | AI & SaaS
             </p>
             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              Sales Director avec 9+ ans d'expérience dans le scaling de solutions B2B SaaS et AI
-              sur des marchés enterprise complexes. Track record prouvé dans la construction d'équipes
-              commerciales performantes, établissement de présence marché en Life Sciences, Industrial et Tech.
+              {labels.description}
             </p>
             <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-6">
               <p className="text-blue-800 font-medium">
-                🏆 Key Achievement: Construction de la filiale française from scratch jusqu'à €100k ARR
-                en 4 ans, collaboration avec 25+ FTEs (Sales, Project, R&D).
+                {labels.keyAchievement}
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600">
@@ -94,7 +161,7 @@ export default function About() {
             <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl p-4">
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-slate-700">Disponible</span>
+                <span className="text-sm font-medium text-slate-700">{labels.available}</span>
               </div>
             </div>
           </div>
@@ -104,7 +171,7 @@ export default function About() {
         <section className="mb-20">
           <div className="flex items-center gap-3 mb-8">
             <Briefcase className="w-6 h-6 text-blue-600" />
-            <h2 className="text-2xl font-bold text-slate-900">Expérience Professionnelle</h2>
+            <h2 className="text-2xl font-bold text-slate-900">{labels.experience}</h2>
           </div>
 
           <div className="space-y-6">
@@ -133,7 +200,7 @@ export default function About() {
         <section className="mb-20">
           <div className="flex items-center gap-3 mb-8">
             <GraduationCap className="w-6 h-6 text-blue-600" />
-            <h2 className="text-2xl font-bold text-slate-900">Formation</h2>
+            <h2 className="text-2xl font-bold text-slate-900">{labels.education}</h2>
           </div>
 
           <div className="space-y-6">
@@ -159,7 +226,7 @@ export default function About() {
         <section className="mb-20">
           <div className="flex items-center gap-3 mb-8">
             <Award className="w-6 h-6 text-blue-600" />
-            <h2 className="text-2xl font-bold text-slate-900">Compétences Clés</h2>
+            <h2 className="text-2xl font-bold text-slate-900">{labels.skills}</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -184,9 +251,9 @@ export default function About() {
 
         {/* Interests */}
         <section className="mb-20">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">Centres d'intérêt</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">{labels.interests}</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Triathlon', 'Boxe', 'Philosophie & Science', 'Piano'].map((interest, index) => (
+            {interests.map((interest, index) => (
               <span key={index} className="px-6 py-3 bg-slate-100 text-slate-700 rounded-full font-medium">
                 {interest}
               </span>
@@ -197,18 +264,17 @@ export default function About() {
         {/* CTA */}
         <section className="gradient-bg rounded-3xl p-8 md:p-12 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Travaillons ensemble
+            {labels.workTogether}
           </h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-            Que vous cherchiez à développer votre marché français, structurer votre équipe commerciale
-            ou lancer une solution AI/SaaS, discutons de votre projet.
+            {labels.workDescription}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="mailto:axel_lr@pm.me"
               className="inline-flex bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold items-center gap-2 hover:bg-blue-50 transition-colors"
             >
-              Me contacter
+              {labels.contactMe}
               <ArrowRight className="w-5 h-5" />
             </a>
             <a

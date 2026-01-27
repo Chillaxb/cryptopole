@@ -1,11 +1,30 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle, ExternalLink, Calendar, Briefcase, Star, ChevronRight } from 'lucide-react'
-import { clients, services } from '../data/content'
 import Modal from '../components/Modal'
+import { useLanguage } from '../context/LanguageContext'
+import { useTranslations } from '../data/translations'
+
+const serviceImages = [
+  '/enterprise-sales.png',
+  '/ai-saas-gtm.png',
+  '/life-sciences.png',
+  '/team-building.png'
+]
+
+const clientLogos = [
+  '/logos/arxum.png',
+  '/logos/spread.png',
+  '/logos/e2v.png',
+  '/logos/exact.svg'
+]
 
 export default function Landing() {
-  const [selectedClient, setSelectedClient] = useState(null)
+  const [selectedClientIndex, setSelectedClientIndex] = useState(null)
+  const { language } = useLanguage()
+  const t = useTranslations(language)
+
+  const selectedClient = selectedClientIndex !== null ? t.clients.items[selectedClientIndex] : null
 
   return (
     <div className="pt-20 md:pt-16">
@@ -19,18 +38,16 @@ export default function Landing() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6">
               <img src="/logo-black.png" alt="" className="w-5 h-5" />
-              Enterprise Sales & AI Consulting
+              {t.hero.badge}
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6">
-              Accélérez votre{' '}
-              <span className="gradient-text">croissance B2B</span>
+              {t.hero.title}{' '}
+              <span className="gradient-text">{t.hero.titleHighlight}</span>
             </h1>
 
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              Enterprise Sales Director avec 9+ ans d'expérience en B2B SaaS et solutions AI.
-              Ex-GM France d'ARXUM, j'accompagne les entreprises tech dans leur expansion marché
-              et la construction d'équipes commerciales performantes.
+              {t.hero.description}
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -38,29 +55,29 @@ export default function Landing() {
                 href="mailto:axel_lr@pm.me"
                 className="gradient-bg text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity"
               >
-                Discutons de votre projet
+                {t.hero.cta}
                 <ArrowRight className="w-5 h-5" />
               </a>
               <Link
                 to="/creations"
                 className="bg-white text-slate-900 px-8 py-4 rounded-xl font-semibold border border-slate-200 hover:border-slate-300 transition-colors"
               >
-                Voir mes réalisations
+                {t.hero.ctaSecondary}
               </Link>
             </div>
 
             <div className="flex flex-wrap items-center gap-6 mt-12 text-sm text-slate-600">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-green-500" />
-                9+ ans d'expérience
+                {t.hero.stats.experience}
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-green-500" />
-                €0 → €100k ARR
+                {t.hero.stats.arr}
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-green-500" />
-                25+ FTEs en équipe
+                {t.hero.stats.team}
               </div>
             </div>
           </div>
@@ -72,22 +89,22 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Expertise & Services
+              {t.services.title}
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Accompagnement stratégique pour startups et scale-ups tech
+              {t.services.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
+            {t.services.items.map((service, index) => (
               <div
                 key={index}
                 className="card-hover p-6 rounded-2xl bg-slate-50 border border-slate-100"
               >
                 <div className="w-14 h-14 rounded-xl overflow-hidden mb-4 mx-auto">
                   <img
-                    src={service.image}
+                    src={serviceImages[index]}
                     alt={service.title}
                     className="w-full h-full object-cover"
                   />
@@ -109,23 +126,23 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Expérience & Références
+              {t.clients.title}
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              De la startup tech aux grands groupes industriels
+              {t.clients.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {clients.map((client, index) => (
+            {t.clients.items.map((client, index) => (
               <button
                 key={index}
-                onClick={() => setSelectedClient(client)}
+                onClick={() => setSelectedClientIndex(index)}
                 className="card-hover bg-white p-6 rounded-2xl border border-slate-200 text-left group cursor-pointer"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-20 h-14 rounded-xl bg-white border border-slate-100 flex items-center justify-center p-2">
-                    <img src={client.logo} alt={client.name} className="w-full h-full object-contain" />
+                    <img src={clientLogos[index]} alt={client.name} className="w-full h-full object-contain" />
                   </div>
                   <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-blue-500 transition-colors" />
                 </div>
@@ -150,13 +167,13 @@ export default function Landing() {
       </section>
 
       {/* Client Modal */}
-      <Modal isOpen={!!selectedClient} onClose={() => setSelectedClient(null)}>
+      <Modal isOpen={!!selectedClient} onClose={() => setSelectedClientIndex(null)}>
         {selectedClient && (
           <div className="p-8">
             {/* Header */}
             <div className="flex items-start gap-4 mb-6">
               <div className="w-24 h-16 rounded-2xl bg-white border border-slate-200 flex items-center justify-center flex-shrink-0 p-3">
-                <img src={selectedClient.logo} alt={selectedClient.name} className="w-full h-full object-contain" />
+                <img src={clientLogos[selectedClientIndex]} alt={selectedClient.name} className="w-full h-full object-contain" />
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-slate-900">{selectedClient.name}</h2>
@@ -181,7 +198,7 @@ export default function Landing() {
             <div className="mb-6">
               <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-900 mb-2">
                 <Briefcase className="w-4 h-4 text-blue-600" />
-                Contexte
+                {t.modal.context}
               </h3>
               <p className="text-slate-600">{selectedClient.details.context}</p>
             </div>
@@ -190,7 +207,7 @@ export default function Landing() {
             <div className="mb-6">
               <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-900 mb-3">
                 <Star className="w-4 h-4 text-blue-600" />
-                Points clés
+                {t.modal.highlights}
               </h3>
               <ul className="space-y-2">
                 {selectedClient.details.highlights.map((highlight, i) => (
@@ -204,13 +221,13 @@ export default function Landing() {
 
             {/* Impact */}
             <div className="bg-slate-50 rounded-xl p-4 mb-6">
-              <h3 className="text-sm font-semibold text-slate-900 mb-2">Impact & Apprentissages</h3>
+              <h3 className="text-sm font-semibold text-slate-900 mb-2">{t.modal.impact}</h3>
               <p className="text-slate-600 italic">"{selectedClient.details.impact}"</p>
             </div>
 
             {/* Skills */}
             <div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-3">Compétences développées</h3>
+              <h3 className="text-sm font-semibold text-slate-900 mb-3">{t.modal.skills}</h3>
               <div className="flex flex-wrap gap-2">
                 {selectedClient.details.skills.map((skill, i) => (
                   <span key={i} className="px-3 py-1 bg-slate-200 text-slate-700 rounded-full text-sm">
@@ -229,25 +246,24 @@ export default function Landing() {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Prêt à accélérer votre croissance ?
+            {t.cta.title}
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Que ce soit pour structurer votre équipe commerciale, développer le marché français
-            ou lancer votre solution AI/SaaS, je suis là pour vous accompagner.
+            {t.cta.description}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="mailto:axel_lr@pm.me"
               className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold flex items-center gap-2 hover:bg-blue-50 transition-colors"
             >
-              Contactez-moi
+              {t.cta.button}
               <ArrowRight className="w-5 h-5" />
             </a>
             <Link
               to="/about"
               className="bg-transparent text-white px-8 py-4 rounded-xl font-semibold border-2 border-white/30 hover:bg-white/10 transition-colors flex items-center gap-2"
             >
-              En savoir plus
+              {t.cta.learnMore}
               <ExternalLink className="w-5 h-5" />
             </Link>
           </div>

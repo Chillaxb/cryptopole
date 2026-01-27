@@ -1,7 +1,19 @@
 import { Link } from 'react-router-dom'
 import { Linkedin, Github, Mail } from 'lucide-react'
+import { useLanguage } from '../context/LanguageContext'
+import { useTranslations } from '../data/translations'
 
 export default function Footer() {
+  const { language } = useLanguage()
+  const t = useTranslations(language)
+
+  const navLinks = [
+    { path: '/', label: t.nav.home },
+    { path: '/creations', label: t.nav.creations },
+    { path: '/blog', label: t.nav.blog },
+    { path: '/about', label: t.nav.about },
+  ]
+
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -12,34 +24,36 @@ export default function Footer() {
               <img src="/logo-full.png" alt="Cryptopole" className="h-10 brightness-0 invert" />
             </div>
             <p className="text-slate-400 text-sm max-w-md">
-              Consultant freelance spécialisé en Intelligence Artificielle, Blockchain et Technologies XR.
-              Solutions innovantes pour l'industrie pharmaceutique, biotech et spatiale.
+              {t.footer.description}
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <h3 className="font-semibold mb-4">Navigation</h3>
+            <h3 className="font-semibold mb-4">{t.footer.navigation}</h3>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><Link to="/" className="hover:text-white transition-colors">Accueil</Link></li>
-              <li><Link to="/creations" className="hover:text-white transition-colors">Mes Créations</Link></li>
-              <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-              <li><Link to="/about" className="hover:text-white transition-colors">À Propos</Link></li>
+              {navLinks.map((link) => (
+                <li key={link.path}>
+                  <Link to={link.path} className="hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
+            <h3 className="font-semibold mb-4">{t.footer.contact}</h3>
             <ul className="space-y-2 text-sm text-slate-400">
               <li>
-                <a href="mailto:contact@cryptopole.fr" className="hover:text-white transition-colors flex items-center gap-2">
+                <a href="mailto:axel_lr@pm.me" className="hover:text-white transition-colors flex items-center gap-2">
                   <Mail className="w-4 h-4" />
-                  contact@cryptopole.fr
+                  axel_lr@pm.me
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
+                <a href="https://linkedin.com/in/axelbenoist" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
                 </a>
@@ -56,11 +70,11 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} Cryptopole. Tous droits réservés.
+            © {new Date().getFullYear()} Cryptopole. {t.footer.rights}
           </p>
           <div className="flex gap-4 text-sm text-slate-500">
-            <Link to="/legal" className="hover:text-white transition-colors">Mentions légales</Link>
-            <Link to="/privacy" className="hover:text-white transition-colors">Confidentialité</Link>
+            <Link to="/legal" className="hover:text-white transition-colors">{t.footer.legal}</Link>
+            <Link to="/privacy" className="hover:text-white transition-colors">{t.footer.privacy}</Link>
           </div>
         </div>
       </div>

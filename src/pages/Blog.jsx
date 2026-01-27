@@ -1,14 +1,36 @@
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react'
-import { blogPosts } from '../data/content'
+import { useLanguage } from '../context/LanguageContext'
+import { useTranslations } from '../data/translations'
 
 export default function Blog() {
+  const { language } = useLanguage()
+  const t = useTranslations(language)
+
   const formatDate = (dateString) => {
-    return new Date(dateString).toLocaleDateString('fr-FR', {
+    return new Date(dateString).toLocaleDateString(language === 'fr' ? 'fr-FR' : 'en-US', {
       day: 'numeric',
       month: 'long',
       year: 'numeric'
     })
   }
+
+  const labels = language === 'fr' ? {
+    readArticle: "Lire l'article",
+    read: 'Lire',
+    stayInformed: 'Restez informé',
+    newsletterDesc: 'Recevez mes derniers articles et réflexions sur les technologies émergentes directement dans votre boîte mail.',
+    emailPlaceholder: 'votre@email.com',
+    subscribe: "S'inscrire"
+  } : {
+    readArticle: 'Read article',
+    read: 'Read',
+    stayInformed: 'Stay informed',
+    newsletterDesc: 'Get my latest articles and thoughts on emerging technologies directly in your inbox.',
+    emailPlaceholder: 'your@email.com',
+    subscribe: 'Subscribe'
+  }
+
+  const blogPosts = t.blog.posts
 
   return (
     <div className="pt-24 pb-16">
@@ -16,10 +38,10 @@ export default function Blog() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Blog
+            {t.blog.title}
           </h1>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Réflexions sur l'IA, la Blockchain, les technologies XR et leur impact sur l'industrie
+            {t.blog.subtitle}
           </p>
         </div>
 
@@ -39,7 +61,7 @@ export default function Blog() {
                   </span>
                   <span className="text-slate-500 text-sm flex items-center gap-2">
                     <Clock className="w-4 h-4" />
-                    {blogPosts[0].readTime}
+                    {blogPosts[0].readTime} {t.blog.readTime}
                   </span>
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
@@ -49,7 +71,7 @@ export default function Blog() {
                   {blogPosts[0].excerpt}
                 </p>
                 <button className="gradient-bg text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity">
-                  Lire l'article
+                  {labels.readArticle}
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
@@ -71,7 +93,7 @@ export default function Blog() {
                   </span>
                   <span className="text-slate-400 text-xs flex items-center gap-1">
                     <Clock className="w-3 h-3" />
-                    {post.readTime}
+                    {post.readTime} {t.blog.readTime}
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2 line-clamp-2">
@@ -85,7 +107,7 @@ export default function Blog() {
                     {formatDate(post.date)}
                   </span>
                   <button className="text-blue-600 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all">
-                    Lire
+                    {labels.read}
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -97,23 +119,22 @@ export default function Blog() {
         {/* Newsletter CTA */}
         <div className="mt-16 bg-slate-900 rounded-3xl p-8 md:p-12 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Restez informé
+            {labels.stayInformed}
           </h2>
           <p className="text-slate-400 mb-8 max-w-xl mx-auto">
-            Recevez mes derniers articles et réflexions sur les technologies émergentes
-            directement dans votre boîte mail.
+            {labels.newsletterDesc}
           </p>
           <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
-              placeholder="votre@email.com"
+              placeholder={labels.emailPlaceholder}
               className="flex-1 px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
             />
             <button
               type="submit"
               className="gradient-bg text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition-opacity"
             >
-              S'inscrire
+              {labels.subscribe}
             </button>
           </form>
         </div>
