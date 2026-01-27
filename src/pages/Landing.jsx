@@ -8,9 +8,9 @@ export default function Landing() {
   const [selectedClient, setSelectedClient] = useState(null)
 
   return (
-    <div className="pt-16">
+    <div className="pt-20 md:pt-16">
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center relative overflow-hidden">
+      <section className="min-h-[90vh] flex items-center relative overflow-hidden pt-8 md:pt-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50" />
         <div className="absolute top-20 right-20 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-30" />
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-200 rounded-full blur-3xl opacity-30" />
