@@ -57,7 +57,7 @@ export const clients = [
   },
   {
     name: 'Exact Software',
-    logo: '/logos/exact.png',
+    logo: '/logos/exact.svg',
     description: 'Sales Executive Cloud ERP - "Best Winter Sales Europe" Award',
     sector: 'ERP/SaaS',
     period: '2016 - 2017',
