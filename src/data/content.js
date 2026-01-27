@@ -1,39 +1,78 @@
 export const clients = [
   {
-    name: 'Arxum',
-    logo: '/logos/arxum.svg',
-    description: 'CEO France - Blockchain B2B pour la traçabilité industrielle',
-    sector: 'Blockchain'
+    name: 'ARXUM',
+    logo: '/logos/arxum.png',
+    description: 'Sales Director & General Manager France - Industrial SaaS (AI, AR) for Life Sciences',
+    sector: 'Life Sciences • Blockchain',
+    period: '2018 - 2024',
+    role: 'Employé #1 → CEO France & Investisseur',
+    details: {
+      context: 'Rejoint comme premier employé d\'une startup blockchain allemande spécialisée dans la traçabilité industrielle pour les Life Sciences.',
+      highlights: [
+        'Évolution de Employé #1 à CEO France et Investisseur',
+        'Construction de la filiale française from scratch jusqu\'à €100k ARR',
+        'Collaboration avec 25+ FTEs (Sales, Project, R&D)',
+        'Participation à toutes les échelles : projets clients, développement commercial, évolution produit'
+      ],
+      impact: 'Une aventure entrepreneuriale complète où j\'ai pu toucher à tous les aspects d\'une scale-up tech : de la première ligne de code déployée chez un client à la stratégie de croissance européenne.',
+      skills: ['Leadership', 'Entrepreneuriat', 'Sales B2B', 'Life Sciences', 'Blockchain']
+    }
   },
   {
-    name: 'European Space Agency (ESA)',
-    logo: '/logos/esa.svg',
-    description: 'Solutions de traçabilité pour projets spatiaux',
-    sector: 'Spatial'
+    name: 'Spread AI',
+    logo: '/logos/spread.png',
+    description: 'Strategic consulting pour l\'expansion marché européen de solutions IA industrielles',
+    sector: 'Defense • Automotive • AI',
+    period: '2024 - 2025',
+    role: 'Consultant Strategic Sales',
+    details: {
+      context: 'Ma 9ème année de collaboration avec des entreprises allemandes. Mission de développement du marché français pour une solution Knowledge Graph dans un contexte automobile européen particulièrement difficile.',
+      highlights: [
+        'Développement de relations stratégiques avec Renault et Stellantis (France & Italie)',
+        'Ouverture du secteur Défense : Ariane, Dassault, et autres acteurs majeurs',
+        'Application rigoureuse de la stratégie Spread sur le territoire français',
+        'Navigation dans un marché automobile en pleine restructuration'
+      ],
+      impact: 'Une expérience riche en technique et en leçons dans un contexte de marché difficile. Là où les vrais sales font la différence : transformer les obstacles en opportunités.',
+      skills: ['Enterprise Sales', 'Automotive', 'Defense', 'Knowledge Graph', 'Resilience']
+    }
   },
   {
-    name: 'BizBloqs Management Solutions',
-    logo: '/logos/bizbloqs.svg',
-    description: 'Consulting en transformation digitale',
-    sector: 'Tech'
+    name: 'Eco2Veritas',
+    logo: '/logos/e2v.png',
+    description: 'Enterprise account development pour solutions logicielles industrielles',
+    sector: 'Recyclage • AI • Industrial',
+    period: '2024 - Présent',
+    role: 'Consultant Business Development',
+    details: {
+      context: 'Accompagnement d\'une startup française innovante dans le secteur du recyclage industriel, utilisant l\'IA pour optimiser les processus de tri et de valorisation.',
+      highlights: [
+        'Développement de la stratégie commerciale B2B',
+        'Création d\'outils d\'automatisation de prospection (E2V Outreach)',
+        'Identification et qualification de comptes enterprise'
+      ],
+      impact: 'Contribution à la croissance d\'une solution tech à impact environnemental positif.',
+      skills: ['Business Development', 'Sales Automation', 'Cleantech', 'AI']
+    }
   },
   {
-    name: 'Spread.ai',
-    logo: '/logos/spread.svg',
-    description: 'Développement de solutions IA',
-    sector: 'AI'
-  },
-  {
-    name: 'FlexFuel',
-    logo: '/logos/flexfuel.svg',
-    description: 'Solutions tech pour l\'énergie',
-    sector: 'Energy'
-  },
-  {
-    name: 'Pharma & Biotech',
-    logo: '/logos/pharma.svg',
-    description: 'Suivi des activités de laboratoire et traçabilité',
-    sector: 'Healthcare'
+    name: 'Exact Software',
+    logo: '/logos/exact.png',
+    description: 'Sales Executive Cloud ERP - "Best Winter Sales Europe" Award',
+    sector: 'ERP/SaaS',
+    period: '2016 - 2017',
+    role: 'Sales Executive Cloud ERP',
+    details: {
+      context: 'Ma première expérience professionnelle au sein d\'une entreprise internationale hollandaise, leader européen des solutions ERP pour PME.',
+      highlights: [
+        'Meilleurs résultats de vente du pays',
+        'Récompensé "Best Winter Sales Europe" - top performer acquisition clients',
+        'Ouverture du marché ERP Cloud pour l\'industrie française',
+        'Dépassement constant des quotas commerciaux'
+      ],
+      impact: 'Une école de vente exceptionnelle où j\'ai tout appris des fondamentaux du B2B SaaS. Les bases solides qui ont construit ma carrière.',
+      skills: ['SaaS Sales', 'ERP', 'New Business', 'Cloud Solutions', 'SMB/Mid-Market']
+    }
   }
 ]
 
@@ -41,7 +80,7 @@ export const creations = [
   {
     id: 'safe-flow',
     name: 'Safe-flow.ai',
-    description: 'Application de bien-être et santé mentale utilisant l\'IA pour personnaliser les exercices de respiration et méditation.',
+    description: 'Application de bien-être et santé mentale utilisant l\'IA pour personnaliser les exercices de respiration et méditation. Stack React/Vite avec backend Node.js.',
     tags: ['AI', 'Health', 'React', 'Mobile'],
     url: 'https://safe-flow.ai',
     image: '/projects/safeflow.png',
@@ -50,20 +89,20 @@ export const creations = [
   {
     id: 'e2v-outreach',
     name: 'E2V Outreach',
-    description: 'Plateforme d\'automatisation de prospection commerciale pour eco2Veritas.',
-    tags: ['Automation', 'B2B', 'SaaS'],
-    url: null,
+    description: 'Plateforme d\'automatisation de prospection commerciale B2B pour Eco2Veritas. Intégration CRM, séquences email automatisées et analytics.',
+    tags: ['Automation', 'B2B', 'Sales', 'SaaS'],
+    url: 'https://e2-v-outreach-kappa.vercel.app',
     image: '/projects/e2v.png',
-    status: 'Production'
+    status: 'Live'
   },
   {
-    id: 'safran4joy',
-    name: 'Safran4Joy',
-    description: 'Solution de suivi et traçabilité pour l\'industrie aéronautique.',
-    tags: ['Blockchain', 'Traceability', 'Aerospace'],
-    url: null,
-    image: '/projects/safran.png',
-    status: 'Production'
+    id: 'saffron4joy',
+    name: 'Saffron4Joy',
+    description: 'Projet e-commerce pour l\'importation et distribution de safran premium d\'Iran. Branding, stratégie go-to-market et plateforme de vente.',
+    tags: ['E-commerce', 'Import', 'Branding'],
+    url: 'https://saffron4joy.github.io/Website-S4J/',
+    image: '/projects/saffron4joy.png',
+    status: 'Live'
   }
 ]
 
@@ -78,41 +117,41 @@ export const blogPosts = [
   },
   {
     id: 2,
-    title: 'IA et XR : Les nouvelles frontières de l\'interaction homme-machine',
-    excerpt: 'Exploration des synergies entre intelligence artificielle et réalité étendue.',
+    title: 'IA et AR en environnement réglementé Life Sciences',
+    excerpt: 'Retour d\'expérience sur le déploiement de solutions AI/AR dans les laboratoires pharmaceutiques.',
     date: '2024-01-10',
-    category: 'AI/XR',
+    category: 'AI/AR',
     readTime: '7 min'
   },
   {
     id: 3,
-    title: 'De l\'ESA aux startups : Retour d\'expérience sur la tech spatiale',
-    excerpt: 'Leçons apprises en travaillant sur des projets de traçabilité pour l\'Agence Spatiale Européenne.',
+    title: 'MEDDICC : La méthode qui transforme les ventes enterprise',
+    excerpt: 'Comment structurer vos cycles de vente complexes avec la méthodologie MEDDICC.',
     date: '2024-01-05',
-    category: 'Space Tech',
+    category: 'Sales',
     readTime: '6 min'
   }
 ]
 
 export const services = [
   {
-    title: 'Intelligence Artificielle',
-    description: 'Développement de solutions IA sur mesure, intégration de LLMs, automatisation intelligente.',
-    icon: 'Brain'
+    title: 'Enterprise Sales',
+    description: 'Développement commercial grands comptes, méthodologies MEDDICC & SPIN, cycles de vente complexes.',
+    image: '/enterprise-sales.png'
   },
   {
-    title: 'Blockchain & Web3',
-    description: 'Architecture blockchain, smart contracts, solutions de traçabilité et tokenisation.',
-    icon: 'Blocks'
+    title: 'AI & SaaS Go-to-Market',
+    description: 'Stratégie de lancement, expansion marché européen, channel & partner development.',
+    image: '/ai-saas-gtm.png'
   },
   {
-    title: 'Réalité Étendue (XR)',
-    description: 'Applications AR/VR/MR pour l\'industrie, formation et visualisation de données.',
-    icon: 'Glasses'
+    title: 'Life Sciences & Industrial',
+    description: 'Expertise sectorielle pharma/biotech, environnements réglementés GxP, solutions industrielles.',
+    image: '/life-sciences.png'
   },
   {
-    title: 'Consulting Tech',
-    description: 'Stratégie digitale, audit technique, accompagnement à la transformation.',
-    icon: 'Lightbulb'
+    title: 'Team Building',
+    description: 'Construction et scaling d\'équipes Sales, Project et R&D. Management cross-fonctionnel.',
+    image: '/team-building.png'
   }
 ]

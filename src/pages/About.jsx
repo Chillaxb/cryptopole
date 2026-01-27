@@ -1,32 +1,47 @@
-import { Briefcase, GraduationCap, Award, MapPin, Calendar, ArrowRight } from 'lucide-react'
+import { Briefcase, GraduationCap, Award, MapPin, Calendar, ArrowRight, Mail, Linkedin, Phone } from 'lucide-react'
 
 export default function About() {
   const experience = [
     {
-      role: 'CEO France',
-      company: 'Arxum',
-      period: '2020 - 2022',
-      description: 'Direction de la filiale française spécialisée dans les solutions blockchain B2B pour la traçabilité industrielle. Développement commercial et partenariats stratégiques avec le secteur pharma/biotech.'
+      role: 'Independent Consultant – AI & Enterprise Software',
+      company: 'Spread AI / Eco2Veritas',
+      period: 'Juin 2024 – Présent',
+      description: 'Strategic consulting pour entreprises européennes de logiciels IA sur l\'expansion marché. Enterprise account development pour solutions logicielles industrielles en France.'
     },
     {
-      role: 'Consultant Blockchain & AI',
-      company: 'Freelance / Cryptopole',
-      period: '2022 - Présent',
-      description: 'Accompagnement d\'entreprises dans leur transformation digitale. Développement de solutions sur mesure en IA, blockchain et XR pour des clients variés.'
+      role: 'Sales Director & General Manager France',
+      company: 'ARXUM GmbH & ARXUM France SAS',
+      period: 'Fév 2018 – Mai 2024 (6 ans)',
+      description: 'Fondation et scaling de la filiale française de 0 à 25+ FTEs (Sales, Project, R&D). Croissance ARR de €0 à €100k via ventes directes et indirectes. Gestion du cycle de vente complet pour logiciels AI/AR en environnement Life Sciences réglementé.'
     },
     {
-      role: 'Projets ESA',
-      company: 'European Space Agency',
-      period: '2021',
-      description: 'Conception et développement de solutions de traçabilité pour des projets de l\'Agence Spatiale Européenne.'
+      role: 'Sales Executive – Cloud ERP Solutions',
+      company: 'Exact Software',
+      period: 'Août 2016 – Déc 2017 (1,5 an)',
+      description: 'Récompensé "Best Winter Sales Europe" – top performer en acquisition clients et revenus. Développement de nouveaux marchés pour solutions Cloud ERP, dépassement constant des quotas.'
+    }
+  ]
+
+  const education = [
+    {
+      degree: 'Executive Program – Energy and Sustainability',
+      school: 'École Polytechnique',
+      period: '2018 – 2019',
+      description: 'Thèse sur la technologie blockchain appliquée aux énergies renouvelables. Récompensé au hackathon United Nations Energy Program (UNEP).'
+    },
+    {
+      degree: 'MSc. Social Entrepreneurship & Alternative Business Models',
+      school: 'INSEEC Business School & Columbia College',
+      period: '2015 – 2016',
+      description: 'Double diplôme Paris & Chicago.'
     }
   ]
 
   const skills = [
-    { category: 'AI & Machine Learning', items: ['LLMs & NLP', 'Computer Vision', 'MLOps', 'RAG Systems'] },
-    { category: 'Blockchain', items: ['Ethereum', 'Solidity', 'Hyperledger', 'Tokenisation'] },
-    { category: 'XR Technologies', items: ['Unity', 'AR/VR Dev', 'Spatial Computing', '3D Visualization'] },
-    { category: 'Development', items: ['React', 'Node.js', 'Python', 'Cloud Architecture'] }
+    { category: 'Enterprise Sales', items: ['MEDDICC & SPIN Selling', 'Complex Deal Negotiation', 'Channel & Partner Dev', 'Long Sales Cycles'] },
+    { category: 'AI & SaaS', items: ['Go-to-Market Strategy', 'Market Expansion', 'Product Positioning', 'Value Selling'] },
+    { category: 'Life Sciences', items: ['Pharma & Biotech', 'GxP Environments', 'Regulatory Compliance', 'Lab Operations'] },
+    { category: 'Leadership', items: ['Team Building', 'Cross-functional Mgmt', 'Collaboration 25+ FTEs', 'P&L Ownership'] }
   ]
 
   return (
@@ -35,33 +50,46 @@ export default function About() {
         {/* Hero */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              À Propos
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">
+              Axel Benoist
             </h1>
+            <p className="text-xl text-blue-600 font-medium mb-6">
+              Enterprise Sales Director | AI & SaaS
+            </p>
             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              Passionné par les technologies émergentes, j'accompagne les entreprises dans leur transformation
-              digitale depuis plus de 10 ans. Mon parcours m'a mené de la direction d'une filiale blockchain
-              à des projets avec l'Agence Spatiale Européenne.
+              Sales Director avec 9+ ans d'expérience dans le scaling de solutions B2B SaaS et AI
+              sur des marchés enterprise complexes. Track record prouvé dans la construction d'équipes
+              commerciales performantes, établissement de présence marché en Life Sciences, Industrial et Tech.
             </p>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              Aujourd'hui consultant indépendant sous la marque <strong className="text-slate-900">Cryptopole</strong>,
-              je mets mon expertise au service de projets innovants, de la startup ambitieuse aux grands groupes industriels.
-            </p>
-            <div className="flex items-center gap-6 text-sm text-slate-500">
+            <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-6">
+              <p className="text-blue-800 font-medium">
+                🏆 Key Achievement: Construction de la filiale française from scratch jusqu'à €100k ARR
+                en 4 ans, collaboration avec 25+ FTEs (Sales, Project, R&D).
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600">
               <span className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                France
+                Annecy / Paris, France
               </span>
-              <span className="flex items-center gap-2">
-                <Briefcase className="w-4 h-4" />
-                Disponible pour missions
-              </span>
+              <a href="mailto:axel_lr@pm.me" className="flex items-center gap-2 hover:text-blue-600 transition-colors">
+                <Mail className="w-4 h-4" />
+                axel_lr@pm.me
+              </a>
+              <a href="https://linkedin.com/in/axelbenoist" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-600 transition-colors">
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </a>
             </div>
           </div>
 
           <div className="relative">
-            <div className="aspect-square rounded-3xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-              <span className="text-8xl font-bold text-white/20">AXB</span>
+            <div className="aspect-square rounded-3xl overflow-hidden">
+              <img
+                src="/founder-portrait.png"
+                alt="Axel Benoist"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl p-4">
               <div className="flex items-center gap-3">
@@ -76,7 +104,7 @@ export default function About() {
         <section className="mb-20">
           <div className="flex items-center gap-3 mb-8">
             <Briefcase className="w-6 h-6 text-blue-600" />
-            <h2 className="text-2xl font-bold text-slate-900">Expérience</h2>
+            <h2 className="text-2xl font-bold text-slate-900">Expérience Professionnelle</h2>
           </div>
 
           <div className="space-y-6">
@@ -101,18 +129,44 @@ export default function About() {
           </div>
         </section>
 
+        {/* Education */}
+        <section className="mb-20">
+          <div className="flex items-center gap-3 mb-8">
+            <GraduationCap className="w-6 h-6 text-blue-600" />
+            <h2 className="text-2xl font-bold text-slate-900">Formation</h2>
+          </div>
+
+          <div className="space-y-6">
+            {education.map((edu, index) => (
+              <div
+                key={index}
+                className="bg-slate-50 rounded-2xl border border-slate-100 p-6"
+              >
+                <div className="flex flex-wrap items-start justify-between gap-4 mb-2">
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-900">{edu.degree}</h3>
+                    <p className="text-blue-600 font-medium">{edu.school}</p>
+                  </div>
+                  <span className="text-sm text-slate-500">{edu.period}</span>
+                </div>
+                <p className="text-slate-600 text-sm">{edu.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Skills */}
         <section className="mb-20">
           <div className="flex items-center gap-3 mb-8">
             <Award className="w-6 h-6 text-blue-600" />
-            <h2 className="text-2xl font-bold text-slate-900">Compétences</h2>
+            <h2 className="text-2xl font-bold text-slate-900">Compétences Clés</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="bg-slate-50 rounded-2xl p-6 border border-slate-100"
+                className="bg-white rounded-2xl p-6 border border-slate-200"
               >
                 <h3 className="font-semibold text-slate-900 mb-4">{skill.category}</h3>
                 <ul className="space-y-2">
@@ -128,35 +182,15 @@ export default function About() {
           </div>
         </section>
 
-        {/* Values */}
+        {/* Interests */}
         <section className="mb-20">
-          <div className="flex items-center gap-3 mb-8">
-            <GraduationCap className="w-6 h-6 text-blue-600" />
-            <h2 className="text-2xl font-bold text-slate-900">Valeurs</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-8">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="font-semibold text-slate-900 mb-2">Excellence</h3>
-              <p className="text-sm text-slate-600">
-                Chaque projet mérite une attention aux détails et une qualité irréprochable
-              </p>
-            </div>
-            <div className="text-center p-8">
-              <div className="text-4xl mb-4">🤝</div>
-              <h3 className="font-semibold text-slate-900 mb-2">Transparence</h3>
-              <p className="text-sm text-slate-600">
-                Communication claire et honnête à chaque étape du projet
-              </p>
-            </div>
-            <div className="text-center p-8">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="font-semibold text-slate-900 mb-2">Innovation</h3>
-              <p className="text-sm text-slate-600">
-                Toujours à l'affût des dernières technologies pour des solutions d'avant-garde
-              </p>
-            </div>
+          <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">Centres d'intérêt</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            {['Triathlon', 'Boxe', 'Philosophie & Science', 'Piano'].map((interest, index) => (
+              <span key={index} className="px-6 py-3 bg-slate-100 text-slate-700 rounded-full font-medium">
+                {interest}
+              </span>
+            ))}
           </div>
         </section>
 
@@ -166,16 +200,27 @@ export default function About() {
             Travaillons ensemble
           </h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-            Que vous ayez un projet défini ou une idée à explorer, je suis à votre écoute
-            pour discuter de la meilleure approche.
+            Que vous cherchiez à développer votre marché français, structurer votre équipe commerciale
+            ou lancer une solution AI/SaaS, discutons de votre projet.
           </p>
-          <a
-            href="mailto:contact@cryptopole.fr"
-            className="inline-flex bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold items-center gap-2 hover:bg-blue-50 transition-colors"
-          >
-            Prendre contact
-            <ArrowRight className="w-5 h-5" />
-          </a>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="mailto:axel_lr@pm.me"
+              className="inline-flex bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold items-center gap-2 hover:bg-blue-50 transition-colors"
+            >
+              Me contacter
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            <a
+              href="https://linkedin.com/in/axelbenoist"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex bg-transparent text-white border-2 border-white/30 px-8 py-4 rounded-xl font-semibold items-center gap-2 hover:bg-white/10 transition-colors"
+            >
+              <Linkedin className="w-5 h-5" />
+              LinkedIn
+            </a>
+          </div>
         </section>
       </div>
     </div>

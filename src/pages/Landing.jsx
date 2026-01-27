@@ -1,15 +1,12 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Brain, Blocks, Glasses, Lightbulb, ArrowRight, CheckCircle, ExternalLink } from 'lucide-react'
+import { ArrowRight, CheckCircle, ExternalLink, Calendar, Briefcase, Star, ChevronRight } from 'lucide-react'
 import { clients, services } from '../data/content'
-
-const iconMap = {
-  Brain: Brain,
-  Blocks: Blocks,
-  Glasses: Glasses,
-  Lightbulb: Lightbulb
-}
+import Modal from '../components/Modal'
 
 export default function Landing() {
+  const [selectedClient, setSelectedClient] = useState(null)
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
@@ -21,24 +18,24 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6">
-              <Blocks className="w-4 h-4" />
-              Consultant Freelance
+              <img src="/logo-black.png" alt="" className="w-5 h-5" />
+              Enterprise Sales & AI Consulting
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6">
-              Transformez vos idées en{' '}
-              <span className="gradient-text">solutions innovantes</span>
+              Accélérez votre{' '}
+              <span className="gradient-text">croissance B2B</span>
             </h1>
 
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              Expert en Intelligence Artificielle, Blockchain et Technologies XR.
-              Ex-CEO France d'Arxum, j'accompagne les entreprises dans leur transformation digitale,
-              de la pharma à l'aérospatiale.
+              Enterprise Sales Director avec 9+ ans d'expérience en B2B SaaS et solutions AI.
+              Ex-GM France d'ARXUM, j'accompagne les entreprises tech dans leur expansion marché
+              et la construction d'équipes commerciales performantes.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="mailto:contact@cryptopole.fr"
+                href="mailto:axel_lr@pm.me"
                 className="gradient-bg text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity"
               >
                 Discutons de votre projet
@@ -55,15 +52,15 @@ export default function Landing() {
             <div className="flex flex-wrap items-center gap-6 mt-12 text-sm text-slate-600">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-green-500" />
-                10+ ans d'expérience
+                9+ ans d'expérience
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-green-500" />
-                Clients Fortune 500
+                €0 → €100k ARR
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-green-500" />
-                Projets ESA
+                25+ FTEs en équipe
               </div>
             </div>
           </div>
@@ -78,30 +75,31 @@ export default function Landing() {
               Expertise & Services
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Des solutions sur mesure pour répondre aux défis technologiques les plus complexes
+              Accompagnement stratégique pour startups et scale-ups tech
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => {
-              const Icon = iconMap[service.icon]
-              return (
-                <div
-                  key={index}
-                  className="card-hover p-6 rounded-2xl bg-slate-50 border border-slate-100"
-                >
-                  <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-slate-600 text-sm">
-                    {service.description}
-                  </p>
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="card-hover p-6 rounded-2xl bg-slate-50 border border-slate-100"
+              >
+                <div className="w-14 h-14 rounded-xl overflow-hidden mb-4 mx-auto">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              )
-            })}
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 text-center">
+                  {service.title}
+                </h3>
+                <p className="text-slate-600 text-sm text-center">
+                  {service.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -111,40 +109,119 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Ils m'ont fait confiance
+              Expérience & Références
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              De la startup innovante aux institutions internationales
+              De la startup tech aux grands groupes industriels
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {clients.map((client, index) => (
-              <div
+              <button
                 key={index}
-                className="card-hover bg-white p-6 rounded-2xl border border-slate-200"
+                onClick={() => setSelectedClient(client)}
+                className="card-hover bg-white p-6 rounded-2xl border border-slate-200 text-left group cursor-pointer"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center">
-                    <span className="text-lg font-bold text-slate-600">
-                      {client.name.charAt(0)}
-                    </span>
+                  <div className="w-20 h-14 rounded-xl bg-white border border-slate-100 flex items-center justify-center p-2">
+                    <img src={client.logo} alt={client.name} className="w-full h-full object-contain" />
                   </div>
-                  <span className="text-xs font-medium px-3 py-1 bg-blue-100 text-blue-700 rounded-full">
-                    {client.sector}
-                  </span>
+                  <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-blue-500 transition-colors" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                <h3 className="text-lg font-semibold text-slate-900 mb-1">
                   {client.name}
                 </h3>
-                <p className="text-slate-600 text-sm">
+                <p className="text-xs text-slate-500 mb-2">{client.period}</p>
+                <p className="text-slate-600 text-sm line-clamp-2">
                   {client.description}
                 </p>
-              </div>
+                <div className="mt-3 flex flex-wrap gap-1">
+                  {client.sector.split(' • ').map((tag, i) => (
+                    <span key={i} className="text-xs px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </button>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Client Modal */}
+      <Modal isOpen={!!selectedClient} onClose={() => setSelectedClient(null)}>
+        {selectedClient && (
+          <div className="p-8">
+            {/* Header */}
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-24 h-16 rounded-2xl bg-white border border-slate-200 flex items-center justify-center flex-shrink-0 p-3">
+                <img src={selectedClient.logo} alt={selectedClient.name} className="w-full h-full object-contain" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-slate-900">{selectedClient.name}</h2>
+                <p className="text-blue-600 font-medium">{selectedClient.role}</p>
+                <div className="flex items-center gap-2 mt-1 text-sm text-slate-500">
+                  <Calendar className="w-4 h-4" />
+                  {selectedClient.period}
+                </div>
+              </div>
+            </div>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mb-6">
+              {selectedClient.sector.split(' • ').map((tag, i) => (
+                <span key={i} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* Context */}
+            <div className="mb-6">
+              <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-900 mb-2">
+                <Briefcase className="w-4 h-4 text-blue-600" />
+                Contexte
+              </h3>
+              <p className="text-slate-600">{selectedClient.details.context}</p>
+            </div>
+
+            {/* Highlights */}
+            <div className="mb-6">
+              <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-900 mb-3">
+                <Star className="w-4 h-4 text-blue-600" />
+                Points clés
+              </h3>
+              <ul className="space-y-2">
+                {selectedClient.details.highlights.map((highlight, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-600">
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Impact */}
+            <div className="bg-slate-50 rounded-xl p-4 mb-6">
+              <h3 className="text-sm font-semibold text-slate-900 mb-2">Impact & Apprentissages</h3>
+              <p className="text-slate-600 italic">"{selectedClient.details.impact}"</p>
+            </div>
+
+            {/* Skills */}
+            <div>
+              <h3 className="text-sm font-semibold text-slate-900 mb-3">Compétences développées</h3>
+              <div className="flex flex-wrap gap-2">
+                {selectedClient.details.skills.map((skill, i) => (
+                  <span key={i} className="px-3 py-1 bg-slate-200 text-slate-700 rounded-full text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </Modal>
 
       {/* CTA Section */}
       <section className="py-24 gradient-bg relative overflow-hidden">
@@ -152,15 +229,15 @@ export default function Landing() {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Prêt à donner vie à votre projet ?
+            Prêt à accélérer votre croissance ?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Que ce soit pour un audit technique, un développement sur mesure ou un accompagnement stratégique,
-            je suis là pour vous aider.
+            Que ce soit pour structurer votre équipe commerciale, développer le marché français
+            ou lancer votre solution AI/SaaS, je suis là pour vous accompagner.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="mailto:contact@cryptopole.fr"
+              href="mailto:axel_lr@pm.me"
               className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold flex items-center gap-2 hover:bg-blue-50 transition-colors"
             >
               Contactez-moi

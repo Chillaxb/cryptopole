@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Blocks, Linkedin, Github, Mail } from 'lucide-react'
+import { Linkedin, Github, Mail } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -8,9 +8,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <Blocks className="w-8 h-8 text-blue-400" />
-              <span className="text-xl font-bold">Cryptopole</span>
+            <div className="mb-4">
+              <img src="/logo-full.png" alt="Cryptopole" className="h-10 brightness-0 invert" />
             </div>
             <p className="text-slate-400 text-sm max-w-md">
               Consultant freelance spécialisé en Intelligence Artificielle, Blockchain et Technologies XR.
