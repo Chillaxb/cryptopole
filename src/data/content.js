@@ -42,7 +42,7 @@ export const clients = [
     logo: '/logos/e2v.png',
     description: 'Enterprise account development pour solutions logicielles industrielles',
     sector: 'Recyclage • AI • Industrial',
-    period: '2024 - Présent',
+    period: '2025 - Présent',
     role: 'Consultant Business Development',
     details: {
       context: 'Accompagnement d\'une startup française innovante dans le secteur du recyclage industriel, utilisant l\'IA pour optimiser les processus de tri et de valorisation.',
