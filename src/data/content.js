@@ -15,7 +15,8 @@ export const clients = [
         'Participation à toutes les échelles : projets clients, développement commercial, évolution produit'
       ],
       impact: 'Une aventure entrepreneuriale complète où j\'ai pu toucher à tous les aspects d\'une scale-up tech : de la première ligne de code déployée chez un client à la stratégie de croissance européenne.',
-      skills: ['Leadership', 'Entrepreneuriat', 'Sales B2B', 'Life Sciences', 'Blockchain']
+      skills: ['Leadership', 'Entrepreneuriat', 'Sales B2B', 'Life Sciences', 'Blockchain'],
+      stack: ['Zoho CRM/ERP', 'Atlassian Jira', 'Atlassian Confluence']
     }
   },
   {
@@ -34,7 +35,8 @@ export const clients = [
         'Navigation dans un marché automobile en pleine restructuration'
       ],
       impact: 'Une expérience riche en technique et en leçons dans un contexte de marché difficile. Là où les vrais sales font la différence : transformer les obstacles en opportunités.',
-      skills: ['Enterprise Sales', 'Automotive', 'Defense', 'Knowledge Graph', 'Resilience']
+      skills: ['Enterprise Sales', 'Automotive', 'Defense', 'Knowledge Graph', 'Resilience'],
+      stack: ['Salesforce', 'Sales Navigator', 'Lusha', 'SalesLoft', 'OpenAI']
     }
   },
   {
@@ -52,7 +54,8 @@ export const clients = [
         'Identification et qualification de comptes enterprise'
       ],
       impact: 'Contribution à la croissance d\'une solution tech à impact environnemental positif.',
-      skills: ['Business Development', 'Sales Automation', 'Cleantech', 'AI']
+      skills: ['Business Development', 'Sales Automation', 'Cleantech', 'AI'],
+      stack: ['HubSpot', 'Sales Navigator', 'Lusha', 'Anthropic', 'Microsoft 365']
     }
   },
   {
@@ -71,7 +74,8 @@ export const clients = [
         'Dépassement constant des quotas commerciaux'
       ],
       impact: 'Une école de vente exceptionnelle où j\'ai tout appris des fondamentaux du B2B SaaS. Les bases solides qui ont construit ma carrière.',
-      skills: ['SaaS Sales', 'ERP', 'New Business', 'Cloud Solutions', 'SMB/Mid-Market']
+      skills: ['SaaS Sales', 'ERP', 'New Business', 'Cloud Solutions', 'SMB/Mid-Market'],
+      stack: ['Exact Online', 'Globe CRM/ERP/WMS']
     }
   }
 ]

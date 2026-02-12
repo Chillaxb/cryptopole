@@ -68,7 +68,8 @@ export const translations = {
               'Participation à toutes les échelles : projets clients, développement commercial, évolution produit'
             ],
             impact: "Une aventure entrepreneuriale complète où j'ai pu toucher à tous les aspects d'une scale-up tech : de la première ligne de code déployée chez un client à la stratégie de croissance européenne.",
-            skills: ['Leadership', 'Entrepreneuriat', 'Sales B2B', 'Life Sciences', 'Blockchain']
+            skills: ['Leadership', 'Entrepreneuriat', 'Sales B2B', 'Life Sciences', 'Blockchain'],
+            stack: ['Zoho CRM/ERP', 'Atlassian Jira', 'Atlassian Confluence']
           }
         },
         {
@@ -86,7 +87,8 @@ export const translations = {
               'Navigation dans un marché automobile en pleine restructuration'
             ],
             impact: "Une expérience riche en technique et en leçons dans un contexte de marché difficile. Là où les vrais sales font la différence : transformer les obstacles en opportunités.",
-            skills: ['Enterprise Sales', 'Automotive', 'Defense', 'Knowledge Graph', 'Resilience']
+            skills: ['Enterprise Sales', 'Automotive', 'Defense', 'Knowledge Graph', 'Resilience'],
+            stack: ['Salesforce', 'Sales Navigator', 'Lusha', 'SalesLoft', 'OpenAI']
           }
         },
         {
@@ -103,7 +105,8 @@ export const translations = {
               'Identification et qualification de comptes enterprise'
             ],
             impact: "Contribution à la croissance d'une solution tech à impact environnemental positif.",
-            skills: ['Business Development', 'Sales Automation', 'Cleantech', 'AI']
+            skills: ['Business Development', 'Sales Automation', 'Cleantech', 'AI'],
+            stack: ['HubSpot', 'Sales Navigator', 'Lusha', 'Anthropic', 'Microsoft 365']
           }
         },
         {
@@ -121,7 +124,8 @@ export const translations = {
               'Dépassement constant des quotas commerciaux'
             ],
             impact: "Une école de vente exceptionnelle où j'ai tout appris des fondamentaux du B2B SaaS. Les bases solides qui ont construit ma carrière.",
-            skills: ['SaaS Sales', 'ERP', 'New Business', 'Cloud Solutions', 'SMB/Mid-Market']
+            skills: ['SaaS Sales', 'ERP', 'New Business', 'Cloud Solutions', 'SMB/Mid-Market'],
+            stack: ['Exact Online', 'Globe CRM/ERP/WMS']
           }
         }
       ]
@@ -132,7 +136,8 @@ export const translations = {
       context: 'Contexte',
       highlights: 'Points clés',
       impact: 'Impact & Apprentissages',
-      skills: 'Compétences développées'
+      skills: 'Compétences développées',
+      stack: 'Stack & Outils'
     },
 
     // CTA Section
@@ -339,7 +344,8 @@ export const translations = {
               'Involvement at all levels: client projects, business development, product evolution'
             ],
             impact: "A complete entrepreneurial adventure where I touched every aspect of a tech scale-up: from the first line of code deployed at a client to the European growth strategy.",
-            skills: ['Leadership', 'Entrepreneurship', 'B2B Sales', 'Life Sciences', 'Blockchain']
+            skills: ['Leadership', 'Entrepreneurship', 'B2B Sales', 'Life Sciences', 'Blockchain'],
+            stack: ['Zoho CRM/ERP', 'Atlassian Jira', 'Atlassian Confluence']
           }
         },
         {
@@ -357,7 +363,8 @@ export const translations = {
               'Navigating an automotive market in full restructuring'
             ],
             impact: 'A rich experience in technique and lessons in a difficult market context. Where real sales professionals make the difference: turning obstacles into opportunities.',
-            skills: ['Enterprise Sales', 'Automotive', 'Defense', 'Knowledge Graph', 'Resilience']
+            skills: ['Enterprise Sales', 'Automotive', 'Defense', 'Knowledge Graph', 'Resilience'],
+            stack: ['Salesforce', 'Sales Navigator', 'Lusha', 'SalesLoft', 'OpenAI']
           }
         },
         {
@@ -374,7 +381,8 @@ export const translations = {
               'Enterprise account identification and qualification'
             ],
             impact: 'Contributing to the growth of a tech solution with positive environmental impact.',
-            skills: ['Business Development', 'Sales Automation', 'Cleantech', 'AI']
+            skills: ['Business Development', 'Sales Automation', 'Cleantech', 'AI'],
+            stack: ['HubSpot', 'Sales Navigator', 'Lusha', 'Anthropic', 'Microsoft 365']
           }
         },
         {
@@ -392,7 +400,8 @@ export const translations = {
               'Consistently exceeding sales quotas'
             ],
             impact: 'An exceptional sales school where I learned all the fundamentals of B2B SaaS. The solid foundations that built my career.',
-            skills: ['SaaS Sales', 'ERP', 'New Business', 'Cloud Solutions', 'SMB/Mid-Market']
+            skills: ['SaaS Sales', 'ERP', 'New Business', 'Cloud Solutions', 'SMB/Mid-Market'],
+            stack: ['Exact Online', 'Globe CRM/ERP/WMS']
           }
         }
       ]
@@ -403,7 +412,8 @@ export const translations = {
       context: 'Context',
       highlights: 'Key Points',
       impact: 'Impact & Learnings',
-      skills: 'Skills Developed'
+      skills: 'Skills Developed',
+      stack: 'Stack & Tools'
     },
 
     // CTA Section

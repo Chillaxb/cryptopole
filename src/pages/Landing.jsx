@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, ExternalLink, Calendar, Briefcase, Star, ChevronRight } from 'lucide-react'
+import { ArrowRight, CheckCircle, ExternalLink, Calendar, Briefcase, Star, ChevronRight, Layers } from 'lucide-react'
 import Modal from '../components/Modal'
 import { useLanguage } from '../context/LanguageContext'
 import { useTranslations } from '../data/translations'
@@ -236,6 +236,23 @@ export default function Landing() {
                 ))}
               </div>
             </div>
+
+            {/* Stack & Tools */}
+            {selectedClient.details.stack && selectedClient.details.stack.length > 0 && (
+              <div className="mt-6">
+                <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-900 mb-3">
+                  <Layers className="w-4 h-4 text-blue-600" />
+                  {t.modal.stack}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {selectedClient.details.stack.map((tool, i) => (
+                    <span key={i} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
       </Modal>
