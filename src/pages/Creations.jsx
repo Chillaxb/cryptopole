@@ -18,7 +18,9 @@ const projectUrls = {
 const projectImages = {
   'safe-flow': '/projects/safeflow.png',
   'e2v-outreach': '/projects/e2v.png',
-  'saffron4joy': '/projects/saffron4joy.png'
+  'saffron4joy': '/projects/saffron4joy.png',
+  'e2v-ui': '/projects/e2v-ui.png',
+  'recycling-calculator': '/projects/recycling-calculator.png'
 }
 
 export default function Creations() {
