@@ -22,7 +22,8 @@ const projectImages = {
   'e2v-ui': '/projects/e2v-ui.png',
   'recycling-calculator': '/projects/recycling-calculator.png',
   'tyre-epr': '/projects/tyre-epr.png',
-  'video-studio': '/projects/video-studio.png'
+  'video-studio': '/projects/video-studio.png',
+  'hireflow': '/projects/hireflow.png'
 }
 
 export default function Creations() {
