@@ -5,7 +5,14 @@ import { useTranslations } from '../data/translations'
 const projectUrls = {
   'safe-flow': 'https://safe-flow.ai',
   'e2v-outreach': 'https://e2-v-outreach-kappa.vercel.app',
-  'saffron4joy': 'https://saffron4joy.github.io/Website-S4J/'
+  'saffron4joy': 'https://saffron4joy.github.io/Website-S4J/',
+  'bioforge': 'https://bioforge-axel-benoists-projects.vercel.app',
+  'e2v-workshop-form': 'https://e2v-workshop-form.vercel.app',
+  'video-studio': 'https://video-studio-jade.vercel.app',
+  'tyre-epr': 'https://tyre-epr.vercel.app',
+  'e2v-ui': 'https://e2v-ui.vercel.app',
+  'recycling-calculator': 'https://mechanical-recycling-calculator.vercel.app',
+  'hireflow': 'https://hireflow-beta.vercel.app'
 }
 
 const projectImages = {

@@ -174,6 +174,55 @@ export const translations = {
           description: "Projet e-commerce pour l'importation et distribution de safran premium d'Iran. Branding, stratégie go-to-market et plateforme de vente.",
           tags: ['E-commerce', 'Import', 'Branding'],
           status: 'Live'
+        },
+        {
+          id: 'bioforge',
+          name: 'BioForge',
+          description: "Hub d'intelligence santé et fitness personnel. Analyse cross-domain par IA de données génétiques, bilans sanguins, microbiome et historique médical.",
+          tags: ['AI', 'Health', 'Next.js', 'FastAPI'],
+          status: 'Development'
+        },
+        {
+          id: 'e2v-workshop-form',
+          name: 'E2V Project Scoping',
+          description: "Système de project management conçu pour simplifier la collecte d'informations et maximiser l'engagement des prospects en phase de scoping.",
+          tags: ['Next.js', 'Sales Enablement', 'SaaS'],
+          status: 'Live'
+        },
+        {
+          id: 'video-studio',
+          name: 'Video Studio',
+          description: "Pipeline de production vidéo. Gestion de projets, scripts, traductions et exports audio pour la création de contenus professionnels.",
+          tags: ['Video', 'Production', 'Next.js'],
+          status: 'Live'
+        },
+        {
+          id: 'tyre-epr',
+          name: 'Tyre EPR Assessment',
+          description: "Outil interactif d'évaluation du potentiel de projets prospects dans l'industrie du pneumatique. Mesure des drivers d'importance, calcul de ROI et estimation de la fiabilité des réponses.",
+          tags: ['Recycling', 'ROI', 'Assessment'],
+          status: 'Live'
+        },
+        {
+          id: 'e2v-ui',
+          name: 'E2V UI',
+          description: "Bibliothèque d'inspirations UI et design system pour l'écosystème eco2Veritas. Composants réutilisables et prototypes d'interfaces.",
+          tags: ['UI/UX', 'Design System', 'Vite'],
+          status: 'Development'
+        },
+        {
+          id: 'recycling-calculator',
+          name: 'Recycling Assessment',
+          description: "Outil interactif d'évaluation du potentiel de projets prospects dans le recyclage mécanique. Mesure des drivers d'importance, calcul de ROI et estimation de la pertinence de l'évaluation.",
+          tags: ['Simulation', 'ROI', 'Assessment'],
+          status: 'Live'
+        },
+        {
+          id: 'hireflow',
+          name: 'HireFlow',
+          description: "Outil d'analyse d'offres d'emploi et gestion de candidatures. Matching intelligent et suivi du pipeline de candidature.",
+          tags: ['AI', 'Job Search', 'Next.js'],
+          status: 'Live'
         }
       ]
     },
@@ -449,6 +498,55 @@ export const translations = {
           name: 'Saffron4Joy',
           description: 'E-commerce project for importing and distributing premium saffron from Iran. Branding, go-to-market strategy and sales platform.',
           tags: ['E-commerce', 'Import', 'Branding'],
+          status: 'Live'
+        },
+        {
+          id: 'bioforge',
+          name: 'BioForge',
+          description: 'Personal health & fitness intelligence hub. AI-powered cross-domain analysis of genetics, blood work, microbiome and medical history.',
+          tags: ['AI', 'Health', 'Next.js', 'FastAPI'],
+          status: 'Development'
+        },
+        {
+          id: 'e2v-workshop-form',
+          name: 'E2V Project Scoping',
+          description: 'Project management system designed to streamline information gathering and maximize prospect engagement during the scoping phase.',
+          tags: ['Next.js', 'Sales Enablement', 'SaaS'],
+          status: 'Live'
+        },
+        {
+          id: 'video-studio',
+          name: 'Video Studio',
+          description: 'Video production pipeline. Project management, scripts, translations and audio exports for professional content creation.',
+          tags: ['Video', 'Production', 'Next.js'],
+          status: 'Live'
+        },
+        {
+          id: 'tyre-epr',
+          name: 'Tyre EPR Assessment',
+          description: 'Interactive prospect project potential assessment tool for the tyre industry. Measures key importance drivers, ROI calculation and response reliability estimation.',
+          tags: ['Recycling', 'ROI', 'Assessment'],
+          status: 'Live'
+        },
+        {
+          id: 'e2v-ui',
+          name: 'E2V UI',
+          description: 'UI inspiration library and design system for the eco2Veritas ecosystem. Reusable components and interface prototypes.',
+          tags: ['UI/UX', 'Design System', 'Vite'],
+          status: 'Development'
+        },
+        {
+          id: 'recycling-calculator',
+          name: 'Recycling Assessment',
+          description: 'Interactive prospect project potential assessment tool for mechanical recycling. Measures key importance drivers, ROI calculation and assessment relevance estimation.',
+          tags: ['Simulation', 'ROI', 'Assessment'],
+          status: 'Live'
+        },
+        {
+          id: 'hireflow',
+          name: 'HireFlow',
+          description: 'Job offer analysis and application management tool. Intelligent matching and application pipeline tracking.',
+          tags: ['AI', 'Job Search', 'Next.js'],
           status: 'Live'
         }
       ]
