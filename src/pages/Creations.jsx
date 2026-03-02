@@ -21,7 +21,8 @@ const projectImages = {
   'saffron4joy': '/projects/saffron4joy.png',
   'e2v-ui': '/projects/e2v-ui.png',
   'recycling-calculator': '/projects/recycling-calculator.png',
-  'tyre-epr': '/projects/tyre-epr.png'
+  'tyre-epr': '/projects/tyre-epr.png',
+  'video-studio': '/projects/video-studio.png'
 }
 
 export default function Creations() {
