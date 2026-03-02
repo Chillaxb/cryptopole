@@ -24,7 +24,8 @@ const projectImages = {
   'tyre-epr': '/projects/tyre-epr.png',
   'video-studio': '/projects/video-studio.png',
   'hireflow': '/projects/hireflow.png',
-  'bioforge': '/projects/bioforge.png'
+  'bioforge': '/projects/bioforge.png',
+  'e2v-workshop-form': '/projects/e2v-workshop-form.png'
 }
 
 export default function Creations() {
