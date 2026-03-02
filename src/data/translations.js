@@ -180,7 +180,7 @@ export const translations = {
           name: 'BioForge',
           description: "Hub d'intelligence santé et fitness personnel. Analyse cross-domain par IA de données génétiques, bilans sanguins, microbiome et historique médical.",
           tags: ['AI', 'Health', 'Next.js', 'FastAPI'],
-          status: 'Development'
+          status: 'Live'
         },
         {
           id: 'e2v-workshop-form',
@@ -208,7 +208,7 @@ export const translations = {
           name: 'E2V UI',
           description: "Bibliothèque d'inspirations UI et design system pour l'écosystème eco2Veritas. Composants réutilisables et prototypes d'interfaces.",
           tags: ['UI/UX', 'Design System', 'Vite'],
-          status: 'Development'
+          status: 'Live'
         },
         {
           id: 'recycling-calculator',
@@ -505,7 +505,7 @@ export const translations = {
           name: 'BioForge',
           description: 'Personal health & fitness intelligence hub. AI-powered cross-domain analysis of genetics, blood work, microbiome and medical history.',
           tags: ['AI', 'Health', 'Next.js', 'FastAPI'],
-          status: 'Development'
+          status: 'Live'
         },
         {
           id: 'e2v-workshop-form',
@@ -533,7 +533,7 @@ export const translations = {
           name: 'E2V UI',
           description: 'UI inspiration library and design system for the eco2Veritas ecosystem. Reusable components and interface prototypes.',
           tags: ['UI/UX', 'Design System', 'Vite'],
-          status: 'Development'
+          status: 'Live'
         },
         {
           id: 'recycling-calculator',
