@@ -23,7 +23,8 @@ const projectImages = {
   'recycling-calculator': '/projects/recycling-calculator.png',
   'tyre-epr': '/projects/tyre-epr.png',
   'video-studio': '/projects/video-studio.png',
-  'hireflow': '/projects/hireflow.png'
+  'hireflow': '/projects/hireflow.png',
+  'bioforge': '/projects/bioforge.png'
 }
 
 export default function Creations() {
