@@ -20,7 +20,8 @@ const projectImages = {
   'e2v-outreach': '/projects/e2v.png',
   'saffron4joy': '/projects/saffron4joy.png',
   'e2v-ui': '/projects/e2v-ui.png',
-  'recycling-calculator': '/projects/recycling-calculator.png'
+  'recycling-calculator': '/projects/recycling-calculator.png',
+  'tyre-epr': '/projects/tyre-epr.png'
 }
 
 export default function Creations() {
