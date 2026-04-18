@@ -151,77 +151,77 @@ export const translations = {
     // Creations Page
     creations: {
       title: 'Mes Créations',
-      subtitle: 'Projets personnels et outils développés pour mes clients',
+      subtitle: 'Produits conçus, développés et déployés en production — du concept au go-to-market',
       visitSite: 'Visiter le site',
       items: [
         {
-          id: 'safe-flow',
-          name: 'Safe-flow.ai',
-          description: "Application de bien-être et santé mentale utilisant l'IA pour personnaliser les exercices de respiration et méditation. Stack React/Vite avec backend Node.js.",
-          tags: ['AI', 'Health', 'React', 'Mobile'],
-          status: 'Live'
-        },
-        {
-          id: 'e2v-outreach',
-          name: 'E2V Outreach',
-          description: "Plateforme d'automatisation de prospection commerciale B2B pour Eco2Veritas. Intégration CRM, séquences email automatisées et analytics.",
-          tags: ['Automation', 'B2B', 'Sales', 'SaaS'],
-          status: 'Live'
-        },
-        {
-          id: 'saffron4joy',
-          name: 'Saffron4Joy',
-          description: "Projet e-commerce pour l'importation et distribution de safran premium d'Iran. Branding, stratégie go-to-market et plateforme de vente.",
-          tags: ['E-commerce', 'Import', 'Branding'],
-          status: 'Live'
-        },
-        {
           id: 'bioforge',
           name: 'BioForge',
-          description: "Hub d'intelligence santé et fitness personnel. Analyse cross-domain par IA de données génétiques, bilans sanguins, microbiome et historique médical.",
-          tags: ['AI', 'Health', 'Next.js', 'FastAPI'],
+          description: "Plateforme d'intelligence santé & performance. Unifie données génétiques (23andMe/VCF), bilans sanguins, microbiome et entraînement. Pipeline génomique avec scoring évolutif Evo 2, pharmacogénomique, recommandations exécutables par IA. Coach conversationnel avec contexte médical complet, génération de programmes d'entraînement personnalisés.",
+          tags: ['HealthTech', 'Genomics', 'AI', 'Next.js', 'FastAPI', 'pgvector'],
           status: 'Live'
         },
         {
-          id: 'e2v-workshop-form',
-          name: 'E2V Project Scoping',
-          description: "Système de project management conçu pour simplifier la collecte d'informations et maximiser l'engagement des prospects en phase de scoping.",
-          tags: ['Next.js', 'Sales Enablement', 'SaaS'],
-          status: 'Live'
-        },
-        {
-          id: 'video-studio',
-          name: 'Video Studio',
-          description: "Pipeline de production vidéo. Gestion de projets, scripts, traductions et exports audio pour la création de contenus professionnels.",
-          tags: ['Video', 'Production', 'Next.js'],
-          status: 'Live'
-        },
-        {
-          id: 'tyre-epr',
-          name: 'Tyre EPR Assessment',
-          description: "Outil interactif d'évaluation du potentiel de projets prospects dans l'industrie du pneumatique. Mesure des drivers d'importance, calcul de ROI et estimation de la fiabilité des réponses.",
-          tags: ['Recycling', 'ROI', 'Assessment'],
-          status: 'Live'
-        },
-        {
-          id: 'e2v-ui',
-          name: 'E2V UI',
-          description: "Bibliothèque d'inspirations UI et design system pour l'écosystème eco2Veritas. Composants réutilisables et prototypes d'interfaces.",
-          tags: ['UI/UX', 'Design System', 'Vite'],
-          status: 'Live'
-        },
-        {
-          id: 'recycling-calculator',
-          name: 'Recycling Assessment',
-          description: "Outil interactif d'évaluation du potentiel de projets prospects dans le recyclage mécanique. Mesure des drivers d'importance, calcul de ROI et estimation de la pertinence de l'évaluation.",
-          tags: ['Simulation', 'ROI', 'Assessment'],
+          id: 'safe-flow',
+          name: 'Safe-flow.ai',
+          description: "Plateforme wellness complète : app mobile React Native (iOS/Android) + webapp + landing page. 15+ techniques guidées (respiration, méditation), coaching IA personnalisé, intégration Garmin (HRV, stress, sommeil), gamification \"Paramis\" avec badges et niveaux progressifs. Audio guidé ElevenLabs, bilingue FR/EN, RGPD compliant.",
+          tags: ['Wellness', 'React Native', 'AI', 'Garmin', 'Flask'],
           status: 'Live'
         },
         {
           id: 'hireflow',
           name: 'HireFlow',
-          description: "Outil d'analyse d'offres d'emploi et gestion de candidatures. Matching intelligent et suivi du pipeline de candidature.",
-          tags: ['AI', 'Job Search', 'Next.js'],
+          description: "Plateforme de recherche d'emploi augmentée par IA. Scraping intelligent depuis 20+ sources (Greenhouse, Lever, Ashby, Adzuna...), scoring CV-offre 0-100, évaluation profonde 6 axes, génération de lettres de motivation multi-ton, banque de STAR stories, préparation entretiens et recherche compensation. Suivi candidatures full-cycle.",
+          tags: ['HRTech', 'AI', 'Next.js', 'Prisma', 'Scraping'],
+          status: 'Live'
+        },
+        {
+          id: 'e2v-outreach',
+          name: 'E2V Outreach',
+          description: "CRM & plateforme d'exécution commerciale full-stack. Gestion pipeline/contacts, séquences email/call automatisées avec templates dynamiques, sync bidirectionnelle HubSpot, envoi SendGrid, dashboard KPIs temps réel. Monitoring d'agents IA de prospection avec feed live et file d'approbation.",
+          tags: ['SalesTech', 'CRM', 'HubSpot', 'Next.js', 'FastAPI'],
+          status: 'Live'
+        },
+        {
+          id: 'video-studio',
+          name: 'Video Studio',
+          description: "Pipeline de production vidéo multilingue automatisée. Génération de scripts par IA, traduction avec gestion de glossaire terminologique, conversion SSML, et génération d'avatars vidéo via HeyGen. Workflow complet du brief produit au livrable final.",
+          tags: ['Video', 'AI', 'HeyGen', 'Next.js', 'FastAPI'],
+          status: 'Live'
+        },
+        {
+          id: 'tyre-epr',
+          name: 'Tyre EPR Platform',
+          description: "Plateforme de conformité REP (Responsabilité Élargie du Producteur) pour l'industrie du pneumatique. Dashboards multi-parties prenantes, suivi volumes injection/offset, détection d'anomalies mass balance, opérations terrain mobile-first avec mode offline, système de certificats 2 niveaux. Multi-pays (France ADEME, Mexique, EU).",
+          tags: ['RegTech', 'Compliance', 'React', 'TypeScript', 'Multi-country'],
+          status: 'Live'
+        },
+        {
+          id: 'recycling-calculator',
+          name: 'Recycling ROI Simulator',
+          description: "Simulateur interactif de ROI pour le recyclage mécanique. Modélisation des coûts incidents, temps d'audit, effectifs — calcul des économies, réduction charge de travail et timeline de retour sur investissement. Export Excel avec formules live pour validation CFO.",
+          tags: ['Sales Enablement', 'ROI', 'Simulation', 'Excel Export'],
+          status: 'Live'
+        },
+        {
+          id: 'e2v-workshop-form',
+          name: 'E2V Project Scoping',
+          description: "Outil de cadrage projet interactif pour la phase de scoping commercial. Collecte structurée des besoins prospects, qualification automatique et maximisation de l'engagement en amont du cycle de vente.",
+          tags: ['Sales Enablement', 'Next.js', 'Lead Qualification'],
+          status: 'Live'
+        },
+        {
+          id: 'e2v-ui',
+          name: 'E2V Design System',
+          description: "Bibliothèque de composants UI et design system pour l'écosystème eco2Veritas. Prototypage rapide d'interfaces, composants réutilisables et guidelines de marque.",
+          tags: ['UI/UX', 'Design System', 'Vite', 'Component Library'],
+          status: 'Live'
+        },
+        {
+          id: 'saffron4joy',
+          name: 'Saffron4Joy',
+          description: "Projet e-commerce pour l'importation et distribution de safran premium d'Iran. Branding complet, stratégie go-to-market et plateforme de vente en ligne.",
+          tags: ['E-commerce', 'Import', 'Branding', 'GTM'],
           status: 'Live'
         }
       ]
@@ -476,77 +476,77 @@ export const translations = {
     // Creations Page
     creations: {
       title: 'My Projects',
-      subtitle: 'Personal projects and tools developed for my clients',
+      subtitle: 'Products designed, built and deployed to production — from concept to go-to-market',
       visitSite: 'Visit site',
       items: [
         {
-          id: 'safe-flow',
-          name: 'Safe-flow.ai',
-          description: 'Wellness and mental health app using AI to personalize breathing and meditation exercises. React/Vite stack with Node.js backend.',
-          tags: ['AI', 'Health', 'React', 'Mobile'],
-          status: 'Live'
-        },
-        {
-          id: 'e2v-outreach',
-          name: 'E2V Outreach',
-          description: 'B2B sales prospecting automation platform for Eco2Veritas. CRM integration, automated email sequences and analytics.',
-          tags: ['Automation', 'B2B', 'Sales', 'SaaS'],
-          status: 'Live'
-        },
-        {
-          id: 'saffron4joy',
-          name: 'Saffron4Joy',
-          description: 'E-commerce project for importing and distributing premium saffron from Iran. Branding, go-to-market strategy and sales platform.',
-          tags: ['E-commerce', 'Import', 'Branding'],
-          status: 'Live'
-        },
-        {
           id: 'bioforge',
           name: 'BioForge',
-          description: 'Personal health & fitness intelligence hub. AI-powered cross-domain analysis of genetics, blood work, microbiome and medical history.',
-          tags: ['AI', 'Health', 'Next.js', 'FastAPI'],
+          description: 'Health & performance intelligence platform. Unifies genetic data (23andMe/VCF), blood panels, microbiome and training. Genomic pipeline with Evo 2 evolutionary scoring, pharmacogenomics, AI-powered actionable recommendations. Conversational coach with full medical context, personalized training program generation.',
+          tags: ['HealthTech', 'Genomics', 'AI', 'Next.js', 'FastAPI', 'pgvector'],
           status: 'Live'
         },
         {
-          id: 'e2v-workshop-form',
-          name: 'E2V Project Scoping',
-          description: 'Project management system designed to streamline information gathering and maximize prospect engagement during the scoping phase.',
-          tags: ['Next.js', 'Sales Enablement', 'SaaS'],
-          status: 'Live'
-        },
-        {
-          id: 'video-studio',
-          name: 'Video Studio',
-          description: 'Video production pipeline. Project management, scripts, translations and audio exports for professional content creation.',
-          tags: ['Video', 'Production', 'Next.js'],
-          status: 'Live'
-        },
-        {
-          id: 'tyre-epr',
-          name: 'Tyre EPR Assessment',
-          description: 'Interactive prospect project potential assessment tool for the tyre industry. Measures key importance drivers, ROI calculation and response reliability estimation.',
-          tags: ['Recycling', 'ROI', 'Assessment'],
-          status: 'Live'
-        },
-        {
-          id: 'e2v-ui',
-          name: 'E2V UI',
-          description: 'UI inspiration library and design system for the eco2Veritas ecosystem. Reusable components and interface prototypes.',
-          tags: ['UI/UX', 'Design System', 'Vite'],
-          status: 'Live'
-        },
-        {
-          id: 'recycling-calculator',
-          name: 'Recycling Assessment',
-          description: 'Interactive prospect project potential assessment tool for mechanical recycling. Measures key importance drivers, ROI calculation and assessment relevance estimation.',
-          tags: ['Simulation', 'ROI', 'Assessment'],
+          id: 'safe-flow',
+          name: 'Safe-flow.ai',
+          description: 'Full-stack wellness platform: React Native mobile app (iOS/Android) + webapp + landing page. 15+ guided techniques (breathwork, meditation), personalized AI coaching, Garmin integration (HRV, stress, sleep), "Paramis" gamification with badges and progressive levels. ElevenLabs guided audio, bilingual FR/EN, GDPR compliant.',
+          tags: ['Wellness', 'React Native', 'AI', 'Garmin', 'Flask'],
           status: 'Live'
         },
         {
           id: 'hireflow',
           name: 'HireFlow',
-          description: 'Job offer analysis and application management tool. Intelligent matching and application pipeline tracking.',
-          tags: ['AI', 'Job Search', 'Next.js'],
+          description: 'AI-augmented job search platform. Smart scraping from 20+ sources (Greenhouse, Lever, Ashby, Adzuna...), CV-to-job scoring 0-100, deep 6-axis evaluation, multi-tone cover letter generation, STAR story bank, interview prep and compensation research. Full-cycle application tracking.',
+          tags: ['HRTech', 'AI', 'Next.js', 'Prisma', 'Scraping'],
+          status: 'Live'
+        },
+        {
+          id: 'e2v-outreach',
+          name: 'E2V Outreach',
+          description: 'Full-stack CRM & sales execution platform. Pipeline/contact management, automated email/call sequences with dynamic templates, bidirectional HubSpot sync, SendGrid delivery, real-time KPI dashboard. AI prospecting agent monitoring with live feed and approval queue.',
+          tags: ['SalesTech', 'CRM', 'HubSpot', 'Next.js', 'FastAPI'],
+          status: 'Live'
+        },
+        {
+          id: 'video-studio',
+          name: 'Video Studio',
+          description: 'Automated multilingual video production pipeline. AI-powered script generation, translation with terminology glossary management, SSML conversion, and HeyGen video avatar generation. Complete workflow from product brief to final deliverable.',
+          tags: ['Video', 'AI', 'HeyGen', 'Next.js', 'FastAPI'],
+          status: 'Live'
+        },
+        {
+          id: 'tyre-epr',
+          name: 'Tyre EPR Platform',
+          description: 'EPR (Extended Producer Responsibility) compliance platform for the tyre industry. Multi-stakeholder dashboards, injection/offset volume tracking, mass balance anomaly detection, mobile-first field operations with offline mode, 2-tier certificate system. Multi-country support (France ADEME, Mexico, EU).',
+          tags: ['RegTech', 'Compliance', 'React', 'TypeScript', 'Multi-country'],
+          status: 'Live'
+        },
+        {
+          id: 'recycling-calculator',
+          name: 'Recycling ROI Simulator',
+          description: 'Interactive ROI simulator for mechanical recycling. Models incident costs, audit time, staffing — calculates savings, workload reduction and payback timeline. Excel export with live formulas for CFO validation.',
+          tags: ['Sales Enablement', 'ROI', 'Simulation', 'Excel Export'],
+          status: 'Live'
+        },
+        {
+          id: 'e2v-workshop-form',
+          name: 'E2V Project Scoping',
+          description: 'Interactive project scoping tool for the commercial qualification phase. Structured requirements gathering, automated qualification and prospect engagement maximization upstream of the sales cycle.',
+          tags: ['Sales Enablement', 'Next.js', 'Lead Qualification'],
+          status: 'Live'
+        },
+        {
+          id: 'e2v-ui',
+          name: 'E2V Design System',
+          description: 'UI component library and design system for the eco2Veritas ecosystem. Rapid interface prototyping, reusable components and brand guidelines.',
+          tags: ['UI/UX', 'Design System', 'Vite', 'Component Library'],
+          status: 'Live'
+        },
+        {
+          id: 'saffron4joy',
+          name: 'Saffron4Joy',
+          description: 'E-commerce project for importing and distributing premium saffron from Iran. Full branding, go-to-market strategy and online sales platform.',
+          tags: ['E-commerce', 'Import', 'Branding', 'GTM'],
           status: 'Live'
         }
       ]

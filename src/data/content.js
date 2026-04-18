@@ -82,28 +82,91 @@ export const clients = [
 
 export const creations = [
   {
+    id: 'bioforge',
+    name: 'BioForge',
+    description: 'Plateforme d\'intelligence santé & performance. Unifie données génétiques, bilans sanguins, microbiome et entraînement. Pipeline génomique Evo 2, pharmacogénomique, recommandations IA exécutables. Coach conversationnel avec contexte médical complet.',
+    tags: ['HealthTech', 'Genomics', 'AI', 'Next.js', 'FastAPI', 'pgvector'],
+    url: 'https://bioforge-axel-benoists-projects.vercel.app',
+    image: '/projects/bioforge.png',
+    status: 'Live'
+  },
+  {
     id: 'safe-flow',
     name: 'Safe-flow.ai',
-    description: 'Application de bien-être et santé mentale utilisant l\'IA pour personnaliser les exercices de respiration et méditation. Stack React/Vite avec backend Node.js.',
-    tags: ['AI', 'Health', 'React', 'Mobile'],
+    description: 'Plateforme wellness complète : app mobile React Native + webapp. 15+ techniques guidées, coaching IA, intégration Garmin, gamification Paramis. Audio guidé ElevenLabs, bilingue, RGPD compliant.',
+    tags: ['Wellness', 'React Native', 'AI', 'Garmin', 'Flask'],
     url: 'https://safe-flow.ai',
     image: '/projects/safeflow.png',
     status: 'Live'
   },
   {
+    id: 'hireflow',
+    name: 'HireFlow',
+    description: 'Plateforme de recherche d\'emploi augmentée par IA. Scraping 20+ sources, scoring CV-offre 0-100, lettres de motivation multi-ton, STAR stories, préparation entretiens. Suivi candidatures full-cycle.',
+    tags: ['HRTech', 'AI', 'Next.js', 'Prisma', 'Scraping'],
+    url: 'https://hireflow-beta.vercel.app',
+    image: '/projects/hireflow.png',
+    status: 'Live'
+  },
+  {
     id: 'e2v-outreach',
     name: 'E2V Outreach',
-    description: 'Plateforme d\'automatisation de prospection commerciale B2B pour Eco2Veritas. Intégration CRM, séquences email automatisées et analytics.',
-    tags: ['Automation', 'B2B', 'Sales', 'SaaS'],
+    description: 'CRM & plateforme d\'exécution commerciale. Pipeline/contacts, séquences email/call automatisées, sync HubSpot, dashboard KPIs temps réel. Monitoring agents IA avec file d\'approbation.',
+    tags: ['SalesTech', 'CRM', 'HubSpot', 'Next.js', 'FastAPI'],
     url: 'https://e2-v-outreach-kappa.vercel.app',
     image: '/projects/e2v.png',
     status: 'Live'
   },
   {
+    id: 'video-studio',
+    name: 'Video Studio',
+    description: 'Pipeline de production vidéo multilingue automatisée. Scripts IA, traduction avec glossaire, SSML, avatars HeyGen. Du brief au livrable final.',
+    tags: ['Video', 'AI', 'HeyGen', 'Next.js', 'FastAPI'],
+    url: 'https://video-studio-jade.vercel.app',
+    image: '/projects/video-studio.png',
+    status: 'Live'
+  },
+  {
+    id: 'tyre-epr',
+    name: 'Tyre EPR Platform',
+    description: 'Plateforme de conformité REP pneumatique. Dashboards multi-parties prenantes, tracking volumes, détection anomalies, opérations terrain mobile-first, certificats 2 niveaux. Multi-pays.',
+    tags: ['RegTech', 'Compliance', 'React', 'TypeScript', 'Multi-country'],
+    url: 'https://tyre-epr.vercel.app',
+    image: '/projects/tyre-epr.png',
+    status: 'Live'
+  },
+  {
+    id: 'recycling-calculator',
+    name: 'Recycling ROI Simulator',
+    description: 'Simulateur ROI recyclage mécanique. Modélisation coûts, économies, timeline ROI. Export Excel avec formules live pour validation CFO.',
+    tags: ['Sales Enablement', 'ROI', 'Simulation', 'Excel Export'],
+    url: 'https://mechanical-recycling-calculator.vercel.app',
+    image: '/projects/recycling-calculator.png',
+    status: 'Live'
+  },
+  {
+    id: 'e2v-workshop-form',
+    name: 'E2V Project Scoping',
+    description: 'Outil de cadrage projet interactif. Collecte structurée des besoins, qualification automatique, engagement prospect en phase de scoping.',
+    tags: ['Sales Enablement', 'Next.js', 'Lead Qualification'],
+    url: 'https://e2v-workshop-form.vercel.app',
+    image: '/projects/e2v-workshop-form.png',
+    status: 'Live'
+  },
+  {
+    id: 'e2v-ui',
+    name: 'E2V Design System',
+    description: 'Bibliothèque de composants UI et design system pour l\'écosystème eco2Veritas. Prototypage rapide et guidelines de marque.',
+    tags: ['UI/UX', 'Design System', 'Vite', 'Component Library'],
+    url: 'https://e2v-ui.vercel.app',
+    image: '/projects/e2v-ui.png',
+    status: 'Live'
+  },
+  {
     id: 'saffron4joy',
     name: 'Saffron4Joy',
-    description: 'Projet e-commerce pour l\'importation et distribution de safran premium d\'Iran. Branding, stratégie go-to-market et plateforme de vente.',
-    tags: ['E-commerce', 'Import', 'Branding'],
+    description: 'Projet e-commerce pour l\'importation et distribution de safran premium d\'Iran. Branding complet, stratégie GTM et plateforme de vente.',
+    tags: ['E-commerce', 'Import', 'Branding', 'GTM'],
     url: 'https://saffron4joy.github.io/Website-S4J/',
     image: '/projects/saffron4joy.png',
     status: 'Live'
