@@ -4,28 +4,24 @@ import { useTranslations } from '../data/translations'
 
 const projectUrls = {
   'safe-flow': 'https://safe-flow.ai',
-  'e2v-outreach': 'https://e2-v-outreach-kappa.vercel.app',
-  'saffron4joy': 'https://saffron4joy.github.io/Website-S4J/',
-  'bioforge': 'https://bioforge-axel-benoists-projects.vercel.app',
+  'e2v-outreach': 'https://e2v-outreach.vercel.app',
+  'saffron4joy': 'https://saffronforjoy.com',
+  'bioforge': 'https://bioforge.science',
   'e2v-workshop-form': 'https://e2v-workshop-form.vercel.app',
-  'video-studio': 'https://video-studio-jade.vercel.app',
   'tyre-epr': 'https://tyre-epr.vercel.app',
-  'e2v-ui': 'https://e2v-ui.vercel.app',
-  'recycling-calculator': 'https://mechanical-recycling-calculator.vercel.app',
-  'hireflow': 'https://hireflow-beta.vercel.app'
+  'e2v-ui': 'https://tyre-mgmt.vercel.app',
+  'recycling-calculator': 'https://mechanical-recycling-calculator.vercel.app'
 }
 
 const projectImages = {
-  'safe-flow': '/projects/safeflow.png',
-  'e2v-outreach': '/projects/e2v.png',
-  'saffron4joy': '/projects/saffron4joy.png',
-  'e2v-ui': '/projects/e2v-ui.png',
-  'recycling-calculator': '/projects/recycling-calculator.png',
-  'tyre-epr': '/projects/tyre-epr.png',
-  'video-studio': '/projects/video-studio.png',
-  'hireflow': '/projects/hireflow.png',
-  'bioforge': '/projects/bioforge.png',
-  'e2v-workshop-form': '/projects/e2v-workshop-form.png'
+  'safe-flow': '/projects/safeflow.webp',
+  'e2v-outreach': '/projects/e2v.webp',
+  'saffron4joy': '/projects/saffron4joy.webp',
+  'e2v-ui': '/projects/e2v-ui.webp',
+  'recycling-calculator': '/projects/recycling-calculator.webp',
+  'tyre-epr': '/projects/tyre-epr.webp',
+  'bioforge': '/projects/bioforge.webp',
+  'e2v-workshop-form': '/projects/e2v-workshop-form.webp'
 }
 
 export default function Creations() {
@@ -107,6 +103,8 @@ export default function Creations() {
                     src={projectImages[project.id]}
                     alt={project.name}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                     onError={(e) => {
                       e.target.style.display = 'none'
                       e.target.parentElement.innerHTML = `<span class="text-4xl font-bold text-slate-300">${project.name}</span>`

@@ -10,7 +10,6 @@ export default function Footer() {
   const navLinks = [
     { path: '/', label: t.nav.home },
     { path: '/creations', label: t.nav.creations },
-    { path: '/blog', label: t.nav.blog },
     { path: '/about', label: t.nav.about },
   ]
 
@@ -69,7 +68,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-800 mt-8 pt-8 flex justify-center items-center">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-400">
             © {new Date().getFullYear()} Cryptopole. {t.footer.rights}
           </p>
         </div>

@@ -19,7 +19,7 @@ export const translations = {
       ctaSecondary: 'Voir mes réalisations',
       stats: {
         experience: "9+ ans d'expérience",
-        arr: '€0 → €100k ARR',
+        arr: '€0 → €800k ARR',
         team: '25+ FTEs en équipe'
       }
     },
@@ -63,7 +63,7 @@ export const translations = {
             context: "Rejoint comme premier employé d'une startup blockchain allemande spécialisée dans la traçabilité industrielle pour les Life Sciences.",
             highlights: [
               'Évolution de Employé #1 à CEO France et Investisseur',
-              "Construction de la filiale française from scratch jusqu'à €100k ARR",
+              "Construction de la filiale française from scratch jusqu'à €800k ARR",
               'Collaboration avec 25+ FTEs (Sales, Project, R&D)',
               'Participation à toutes les échelles : projets clients, développement commercial, évolution produit'
             ],
@@ -92,20 +92,21 @@ export const translations = {
           }
         },
         {
-          name: 'Eco2Veritas',
-          description: 'Enterprise account development pour solutions logicielles industrielles',
-          sector: 'Recyclage • AI • Industrial',
+          name: 'eco2Veritas',
+          description: "Plateforme de conformité et de traçabilité pour l'industrie du recyclage",
+          sector: 'Recyclage • Conformité • Traçabilité',
           period: '2025 - Présent',
-          role: 'Consultant Business Development',
+          role: 'Sales & Product Development Director',
           details: {
-            context: "Accompagnement d'une startup française innovante dans le secteur du recyclage industriel, utilisant l'IA pour optimiser les processus de tri et de valorisation.",
+            context: "Plateforme de conformité et de traçabilité pour l'industrie du recyclage. Je dirige les ventes enterprise, la stratégie produit et l'onboarding des clients, et je porte la roadmap de la plateforme.",
             highlights: [
-              'Développement de la stratégie commerciale B2B',
-              "Création d'outils d'automatisation de prospection (E2V Outreach)",
-              'Identification et qualification de comptes enterprise'
+              'Pilotage des ventes enterprise auprès des acteurs du recyclage',
+              'Définition de la stratégie produit et responsabilité de la roadmap plateforme',
+              'Onboarding des clients sur la plateforme',
+              "Création d'outils d'automatisation de prospection (E2V Outreach)"
             ],
             impact: "Contribution à la croissance d'une solution tech à impact environnemental positif.",
-            skills: ['Business Development', 'Sales Automation', 'Cleantech', 'AI'],
+            skills: ['Enterprise Sales', 'Product Strategy', 'Client Onboarding', 'Sales Automation', 'Cleantech'],
             stack: ['HubSpot', 'Sales Navigator', 'Lusha', 'Anthropic', 'Microsoft 365']
           }
         },
@@ -157,8 +158,8 @@ export const translations = {
         {
           id: 'bioforge',
           name: 'BioForge',
-          description: "Plateforme d'intelligence santé & performance. Unifie données génétiques (23andMe/VCF), bilans sanguins, microbiome et entraînement. Pipeline génomique avec scoring évolutif Evo 2, pharmacogénomique, recommandations exécutables par IA. Coach conversationnel avec contexte médical complet, génération de programmes d'entraînement personnalisés.",
-          tags: ['HealthTech', 'Genomics', 'AI', 'Next.js', 'FastAPI', 'pgvector'],
+          description: "Plateforme santé & performance pour sportifs d'endurance. Cockpit quotidien (readiness Garmin ou WHOOP, charge d'entraînement), plans d'entraînement adaptatifs recalculés chaque jour selon le sommeil, la HRV et la fatigue, séances structurées envoyées sur montre Garmin. Briefs de course personnalisés (profil du parcours, allure par segment, plan nutrition). Health Hub croisant bilans sanguins, microbiome et entraînement. Coach conversationnel avec tout le contexte santé et forme, coaching ancré dans une science vérifiée.",
+          tags: ['HealthTech', 'Endurance', 'Wearables', 'Next.js', 'FastAPI', 'pgvector'],
           status: 'Live'
         },
         {
@@ -169,24 +170,10 @@ export const translations = {
           status: 'Live'
         },
         {
-          id: 'hireflow',
-          name: 'HireFlow',
-          description: "Plateforme de recherche d'emploi augmentée par IA. Scraping intelligent depuis 20+ sources (Greenhouse, Lever, Ashby, Adzuna...), scoring CV-offre 0-100, évaluation profonde 6 axes, génération de lettres de motivation multi-ton, banque de STAR stories, préparation entretiens et recherche compensation. Suivi candidatures full-cycle.",
-          tags: ['HRTech', 'AI', 'Next.js', 'Prisma', 'Scraping'],
-          status: 'Live'
-        },
-        {
           id: 'e2v-outreach',
           name: 'E2V Outreach',
           description: "CRM & plateforme d'exécution commerciale full-stack. Gestion pipeline/contacts, séquences email/call automatisées avec templates dynamiques, sync bidirectionnelle HubSpot, envoi SendGrid, dashboard KPIs temps réel. Monitoring d'agents IA de prospection avec feed live et file d'approbation.",
           tags: ['SalesTech', 'CRM', 'HubSpot', 'Next.js', 'FastAPI'],
-          status: 'Live'
-        },
-        {
-          id: 'video-studio',
-          name: 'Video Studio',
-          description: "Pipeline de production vidéo multilingue automatisée. Génération de scripts par IA, traduction avec gestion de glossaire terminologique, conversion SSML, et génération d'avatars vidéo via HeyGen. Workflow complet du brief produit au livrable final.",
-          tags: ['Video', 'AI', 'HeyGen', 'Next.js', 'FastAPI'],
           status: 'Live'
         },
         {
@@ -240,21 +227,24 @@ export const translations = {
           title: "L'avenir de la Blockchain dans l'industrie pharmaceutique",
           excerpt: 'Comment la blockchain révolutionne la traçabilité des médicaments et garantit la sécurité des patients.',
           date: '2024-01-15',
-          category: 'Blockchain'
+          category: 'Blockchain',
+          readTime: 5
         },
         {
           id: 2,
           title: 'IA et AR en environnement réglementé Life Sciences',
           excerpt: "Retour d'expérience sur le déploiement de solutions AI/AR dans les laboratoires pharmaceutiques.",
           date: '2024-01-10',
-          category: 'AI/AR'
+          category: 'AI/AR',
+          readTime: 7
         },
         {
           id: 3,
           title: 'MEDDICC : La méthode qui transforme les ventes enterprise',
           excerpt: 'Comment structurer vos cycles de vente complexes avec la méthodologie MEDDICC.',
           date: '2024-01-05',
-          category: 'Sales'
+          category: 'Sales',
+          readTime: 6
         }
       ]
     },
@@ -344,7 +334,7 @@ export const translations = {
       ctaSecondary: 'View my work',
       stats: {
         experience: '9+ years experience',
-        arr: '€0 → €100k ARR',
+        arr: '€0 → €800k ARR',
         team: '25+ FTEs managed'
       }
     },
@@ -388,7 +378,7 @@ export const translations = {
             context: 'Joined as the first employee of a German blockchain startup specialized in industrial traceability for Life Sciences.',
             highlights: [
               'Evolution from Employee #1 to CEO France and Investor',
-              'Built the French subsidiary from scratch to €100k ARR',
+              'Built the French subsidiary from scratch to €800k ARR',
               'Collaboration with 25+ FTEs (Sales, Project, R&D)',
               'Involvement at all levels: client projects, business development, product evolution'
             ],
@@ -417,20 +407,21 @@ export const translations = {
           }
         },
         {
-          name: 'Eco2Veritas',
-          description: 'Enterprise account development for industrial software solutions',
-          sector: 'Recycling • AI • Industrial',
+          name: 'eco2Veritas',
+          description: 'Compliance and traceability platform for the recycling industry',
+          sector: 'Recycling • Compliance • Traceability',
           period: '2025 - Present',
-          role: 'Business Development Consultant',
+          role: 'Sales & Product Development Director',
           details: {
-            context: 'Supporting an innovative French startup in the industrial recycling sector, using AI to optimize sorting and recovery processes.',
+            context: 'Compliance and traceability platform for the recycling industry. I lead enterprise sales, product strategy and client onboarding, and own the platform roadmap.',
             highlights: [
-              'Development of B2B commercial strategy',
-              'Creation of prospecting automation tools (E2V Outreach)',
-              'Enterprise account identification and qualification'
+              'Leading enterprise sales with recycling industry players',
+              'Defining product strategy and owning the platform roadmap',
+              'Onboarding clients onto the platform',
+              'Creation of prospecting automation tools (E2V Outreach)'
             ],
             impact: 'Contributing to the growth of a tech solution with positive environmental impact.',
-            skills: ['Business Development', 'Sales Automation', 'Cleantech', 'AI'],
+            skills: ['Enterprise Sales', 'Product Strategy', 'Client Onboarding', 'Sales Automation', 'Cleantech'],
             stack: ['HubSpot', 'Sales Navigator', 'Lusha', 'Anthropic', 'Microsoft 365']
           }
         },
@@ -482,8 +473,8 @@ export const translations = {
         {
           id: 'bioforge',
           name: 'BioForge',
-          description: 'Health & performance intelligence platform. Unifies genetic data (23andMe/VCF), blood panels, microbiome and training. Genomic pipeline with Evo 2 evolutionary scoring, pharmacogenomics, AI-powered actionable recommendations. Conversational coach with full medical context, personalized training program generation.',
-          tags: ['HealthTech', 'Genomics', 'AI', 'Next.js', 'FastAPI', 'pgvector'],
+          description: 'Health & performance platform for endurance athletes. Daily cockpit (readiness from Garmin or WHOOP, training load), adaptive training plans redesigned every day from sleep, HRV and fatigue, structured workouts pushed to Garmin watches. Personalized race briefs (course profile, segment pacing, nutrition plan). Health Hub cross-analyzing blood tests, microbiome and training. Conversational coach with full health and fitness context, coaching grounded in verified science.',
+          tags: ['HealthTech', 'Endurance', 'Wearables', 'Next.js', 'FastAPI', 'pgvector'],
           status: 'Live'
         },
         {
@@ -494,24 +485,10 @@ export const translations = {
           status: 'Live'
         },
         {
-          id: 'hireflow',
-          name: 'HireFlow',
-          description: 'AI-augmented job search platform. Smart scraping from 20+ sources (Greenhouse, Lever, Ashby, Adzuna...), CV-to-job scoring 0-100, deep 6-axis evaluation, multi-tone cover letter generation, STAR story bank, interview prep and compensation research. Full-cycle application tracking.',
-          tags: ['HRTech', 'AI', 'Next.js', 'Prisma', 'Scraping'],
-          status: 'Live'
-        },
-        {
           id: 'e2v-outreach',
           name: 'E2V Outreach',
           description: 'Full-stack CRM & sales execution platform. Pipeline/contact management, automated email/call sequences with dynamic templates, bidirectional HubSpot sync, SendGrid delivery, real-time KPI dashboard. AI prospecting agent monitoring with live feed and approval queue.',
           tags: ['SalesTech', 'CRM', 'HubSpot', 'Next.js', 'FastAPI'],
-          status: 'Live'
-        },
-        {
-          id: 'video-studio',
-          name: 'Video Studio',
-          description: 'Automated multilingual video production pipeline. AI-powered script generation, translation with terminology glossary management, SSML conversion, and HeyGen video avatar generation. Complete workflow from product brief to final deliverable.',
-          tags: ['Video', 'AI', 'HeyGen', 'Next.js', 'FastAPI'],
           status: 'Live'
         },
         {
@@ -565,21 +542,24 @@ export const translations = {
           title: 'The Future of Blockchain in Pharmaceutical Industry',
           excerpt: 'How blockchain is revolutionizing drug traceability and ensuring patient safety.',
           date: '2024-01-15',
-          category: 'Blockchain'
+          category: 'Blockchain',
+          readTime: 5
         },
         {
           id: 2,
           title: 'AI and AR in Regulated Life Sciences Environments',
           excerpt: 'Lessons learned from deploying AI/AR solutions in pharmaceutical laboratories.',
           date: '2024-01-10',
-          category: 'AI/AR'
+          category: 'AI/AR',
+          readTime: 7
         },
         {
           id: 3,
           title: 'MEDDICC: The Method That Transforms Enterprise Sales',
           excerpt: 'How to structure your complex sales cycles with the MEDDICC methodology.',
           date: '2024-01-05',
-          category: 'Sales'
+          category: 'Sales',
+          readTime: 6
         }
       ]
     },

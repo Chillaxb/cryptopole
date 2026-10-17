@@ -6,10 +6,10 @@ import { useLanguage } from '../context/LanguageContext'
 import { useTranslations } from '../data/translations'
 
 const serviceImages = [
-  '/enterprise-sales.png',
-  '/ai-saas-gtm.png',
-  '/life-sciences.png',
-  '/team-building.png'
+  '/enterprise-sales.webp',
+  '/ai-saas-gtm.webp',
+  '/life-sciences.webp',
+  '/team-building.webp'
 ]
 
 const clientLogos = [
@@ -107,6 +107,8 @@ export default function Landing() {
                     src={serviceImages[index]}
                     alt={service.title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2 text-center">
@@ -142,7 +144,7 @@ export default function Landing() {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-20 h-14 rounded-xl bg-white border border-slate-100 flex items-center justify-center p-2">
-                    <img src={clientLogos[index]} alt={client.name} className="w-full h-full object-contain" />
+                    <img src={clientLogos[index]} alt={client.name} className="w-full h-full object-contain" loading="lazy" decoding="async" />
                   </div>
                   <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-blue-500 transition-colors" />
                 </div>

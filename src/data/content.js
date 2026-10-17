@@ -10,7 +10,7 @@ export const clients = [
       context: 'Rejoint comme premier employé d\'une startup blockchain allemande spécialisée dans la traçabilité industrielle pour les Life Sciences.',
       highlights: [
         'Évolution de Employé #1 à CEO France et Investisseur',
-        'Construction de la filiale française from scratch jusqu\'à €100k ARR',
+        'Construction de la filiale française from scratch jusqu\'à €800k ARR',
         'Collaboration avec 25+ FTEs (Sales, Project, R&D)',
         'Participation à toutes les échelles : projets clients, développement commercial, évolution produit'
       ],
@@ -40,21 +40,22 @@ export const clients = [
     }
   },
   {
-    name: 'Eco2Veritas',
+    name: 'eco2Veritas',
     logo: '/logos/e2v.png',
-    description: 'Enterprise account development pour solutions logicielles industrielles',
-    sector: 'Recyclage • AI • Industrial',
+    description: 'Plateforme de conformité et de traçabilité pour l\'industrie du recyclage',
+    sector: 'Recyclage • Conformité • Traçabilité',
     period: '2025 - Présent',
-    role: 'Consultant Business Development',
+    role: 'Sales & Product Development Director',
     details: {
-      context: 'Accompagnement d\'une startup française innovante dans le secteur du recyclage industriel, utilisant l\'IA pour optimiser les processus de tri et de valorisation.',
+      context: 'Plateforme de conformité et de traçabilité pour l\'industrie du recyclage. Je dirige les ventes enterprise, la stratégie produit et l\'onboarding des clients, et je porte la roadmap de la plateforme.',
       highlights: [
-        'Développement de la stratégie commerciale B2B',
-        'Création d\'outils d\'automatisation de prospection (E2V Outreach)',
-        'Identification et qualification de comptes enterprise'
+        'Pilotage des ventes enterprise auprès des acteurs du recyclage',
+        'Définition de la stratégie produit et responsabilité de la roadmap plateforme',
+        'Onboarding des clients sur la plateforme',
+        'Création d\'outils d\'automatisation de prospection (E2V Outreach)'
       ],
       impact: 'Contribution à la croissance d\'une solution tech à impact environnemental positif.',
-      skills: ['Business Development', 'Sales Automation', 'Cleantech', 'AI'],
+      skills: ['Enterprise Sales', 'Product Strategy', 'Client Onboarding', 'Sales Automation', 'Cleantech'],
       stack: ['HubSpot', 'Sales Navigator', 'Lusha', 'Anthropic', 'Microsoft 365']
     }
   },
@@ -84,10 +85,10 @@ export const creations = [
   {
     id: 'bioforge',
     name: 'BioForge',
-    description: 'Plateforme d\'intelligence santé & performance. Unifie données génétiques, bilans sanguins, microbiome et entraînement. Pipeline génomique Evo 2, pharmacogénomique, recommandations IA exécutables. Coach conversationnel avec contexte médical complet.',
-    tags: ['HealthTech', 'Genomics', 'AI', 'Next.js', 'FastAPI', 'pgvector'],
-    url: 'https://bioforge-axel-benoists-projects.vercel.app',
-    image: '/projects/bioforge.png',
+    description: 'Plateforme santé & performance pour sportifs d\'endurance. Cockpit quotidien (readiness Garmin ou WHOOP), plans adaptatifs recalculés chaque jour, séances envoyées sur montre Garmin, briefs de course personnalisés. Health Hub croisant bilans sanguins, microbiome et entraînement. Coach conversationnel ancré dans une science vérifiée.',
+    tags: ['HealthTech', 'Endurance', 'Wearables', 'Next.js', 'FastAPI', 'pgvector'],
+    url: 'https://bioforge.science',
+    image: '/projects/bioforge.webp',
     status: 'Live'
   },
   {
@@ -96,16 +97,7 @@ export const creations = [
     description: 'Plateforme wellness complète : app mobile React Native + webapp. 15+ techniques guidées, coaching IA, intégration Garmin, gamification Paramis. Audio guidé ElevenLabs, bilingue, RGPD compliant.',
     tags: ['Wellness', 'React Native', 'AI', 'Garmin', 'Flask'],
     url: 'https://safe-flow.ai',
-    image: '/projects/safeflow.png',
-    status: 'Live'
-  },
-  {
-    id: 'hireflow',
-    name: 'HireFlow',
-    description: 'Plateforme de recherche d\'emploi augmentée par IA. Scraping 20+ sources, scoring CV-offre 0-100, lettres de motivation multi-ton, STAR stories, préparation entretiens. Suivi candidatures full-cycle.',
-    tags: ['HRTech', 'AI', 'Next.js', 'Prisma', 'Scraping'],
-    url: 'https://hireflow-beta.vercel.app',
-    image: '/projects/hireflow.png',
+    image: '/projects/safeflow.webp',
     status: 'Live'
   },
   {
@@ -113,17 +105,8 @@ export const creations = [
     name: 'E2V Outreach',
     description: 'CRM & plateforme d\'exécution commerciale. Pipeline/contacts, séquences email/call automatisées, sync HubSpot, dashboard KPIs temps réel. Monitoring agents IA avec file d\'approbation.',
     tags: ['SalesTech', 'CRM', 'HubSpot', 'Next.js', 'FastAPI'],
-    url: 'https://e2-v-outreach-kappa.vercel.app',
-    image: '/projects/e2v.png',
-    status: 'Live'
-  },
-  {
-    id: 'video-studio',
-    name: 'Video Studio',
-    description: 'Pipeline de production vidéo multilingue automatisée. Scripts IA, traduction avec glossaire, SSML, avatars HeyGen. Du brief au livrable final.',
-    tags: ['Video', 'AI', 'HeyGen', 'Next.js', 'FastAPI'],
-    url: 'https://video-studio-jade.vercel.app',
-    image: '/projects/video-studio.png',
+    url: 'https://e2v-outreach.vercel.app',
+    image: '/projects/e2v.webp',
     status: 'Live'
   },
   {
@@ -132,7 +115,7 @@ export const creations = [
     description: 'Plateforme de conformité REP pneumatique. Dashboards multi-parties prenantes, tracking volumes, détection anomalies, opérations terrain mobile-first, certificats 2 niveaux. Multi-pays.',
     tags: ['RegTech', 'Compliance', 'React', 'TypeScript', 'Multi-country'],
     url: 'https://tyre-epr.vercel.app',
-    image: '/projects/tyre-epr.png',
+    image: '/projects/tyre-epr.webp',
     status: 'Live'
   },
   {
@@ -141,7 +124,7 @@ export const creations = [
     description: 'Simulateur ROI recyclage mécanique. Modélisation coûts, économies, timeline ROI. Export Excel avec formules live pour validation CFO.',
     tags: ['Sales Enablement', 'ROI', 'Simulation', 'Excel Export'],
     url: 'https://mechanical-recycling-calculator.vercel.app',
-    image: '/projects/recycling-calculator.png',
+    image: '/projects/recycling-calculator.webp',
     status: 'Live'
   },
   {
@@ -150,7 +133,7 @@ export const creations = [
     description: 'Outil de cadrage projet interactif. Collecte structurée des besoins, qualification automatique, engagement prospect en phase de scoping.',
     tags: ['Sales Enablement', 'Next.js', 'Lead Qualification'],
     url: 'https://e2v-workshop-form.vercel.app',
-    image: '/projects/e2v-workshop-form.png',
+    image: '/projects/e2v-workshop-form.webp',
     status: 'Live'
   },
   {
@@ -158,8 +141,8 @@ export const creations = [
     name: 'E2V Design System',
     description: 'Bibliothèque de composants UI et design system pour l\'écosystème eco2Veritas. Prototypage rapide et guidelines de marque.',
     tags: ['UI/UX', 'Design System', 'Vite', 'Component Library'],
-    url: 'https://e2v-ui.vercel.app',
-    image: '/projects/e2v-ui.png',
+    url: 'https://tyre-mgmt.vercel.app',
+    image: '/projects/e2v-ui.webp',
     status: 'Live'
   },
   {
@@ -167,8 +150,8 @@ export const creations = [
     name: 'Saffron4Joy',
     description: 'Projet e-commerce pour l\'importation et distribution de safran premium d\'Iran. Branding complet, stratégie GTM et plateforme de vente.',
     tags: ['E-commerce', 'Import', 'Branding', 'GTM'],
-    url: 'https://saffron4joy.github.io/Website-S4J/',
-    image: '/projects/saffron4joy.png',
+    url: 'https://saffronforjoy.com',
+    image: '/projects/saffron4joy.webp',
     status: 'Live'
   }
 ]
@@ -180,7 +163,7 @@ export const blogPosts = [
     excerpt: 'Comment la blockchain révolutionne la traçabilité des médicaments et garantit la sécurité des patients.',
     date: '2024-01-15',
     category: 'Blockchain',
-    readTime: '5 min'
+    readTime: 5
   },
   {
     id: 2,
@@ -188,7 +171,7 @@ export const blogPosts = [
     excerpt: 'Retour d\'expérience sur le déploiement de solutions AI/AR dans les laboratoires pharmaceutiques.',
     date: '2024-01-10',
     category: 'AI/AR',
-    readTime: '7 min'
+    readTime: 7
   },
   {
     id: 3,
@@ -196,7 +179,7 @@ export const blogPosts = [
     excerpt: 'Comment structurer vos cycles de vente complexes avec la méthodologie MEDDICC.',
     date: '2024-01-05',
     category: 'Sales',
-    readTime: '6 min'
+    readTime: 6
   }
 ]
 
@@ -204,21 +187,21 @@ export const services = [
   {
     title: 'Enterprise Sales',
     description: 'Développement commercial grands comptes, méthodologies MEDDICC & SPIN, cycles de vente complexes.',
-    image: '/enterprise-sales.png'
+    image: '/enterprise-sales.webp'
   },
   {
     title: 'AI & SaaS Go-to-Market',
     description: 'Stratégie de lancement, expansion marché européen, channel & partner development.',
-    image: '/ai-saas-gtm.png'
+    image: '/ai-saas-gtm.webp'
   },
   {
     title: 'Life Sciences & Industrial',
     description: 'Expertise sectorielle pharma/biotech, environnements réglementés GxP, solutions industrielles.',
-    image: '/life-sciences.png'
+    image: '/life-sciences.webp'
   },
   {
     title: 'Team Building',
     description: 'Construction et scaling d\'équipes Sales, Project et R&D. Management cross-fonctionnel.',
-    image: '/team-building.png'
+    image: '/team-building.webp'
   }
 ]

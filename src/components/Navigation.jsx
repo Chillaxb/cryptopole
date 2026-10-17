@@ -13,7 +13,6 @@ export default function Navigation() {
   const links = [
     { path: '/', label: t.nav.home },
     { path: '/creations', label: t.nav.creations },
-    { path: '/blog', label: t.nav.blog },
     { path: '/about', label: t.nav.about },
   ]
 

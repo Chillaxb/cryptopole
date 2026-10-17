@@ -91,7 +91,7 @@ export default function Blog() {
                   <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium">
                     {post.category}
                   </span>
-                  <span className="text-slate-400 text-xs flex items-center gap-1">
+                  <span className="text-slate-500 text-xs flex items-center gap-1">
                     <Clock className="w-3 h-3" />
                     {post.readTime} {t.blog.readTime}
                   </span>
@@ -103,7 +103,7 @@ export default function Blog() {
                   {post.excerpt}
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-400">
+                  <span className="text-xs text-slate-500">
                     {formatDate(post.date)}
                   </span>
                   <button className="text-blue-600 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all">

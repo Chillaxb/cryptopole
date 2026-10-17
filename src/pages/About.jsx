@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap, Award, MapPin, Calendar, ArrowRight, Mail, Linkedin } from 'lucide-react'
+import { Briefcase, GraduationCap, Award, Trophy, MapPin, Calendar, ArrowRight, Mail, Linkedin } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 import { useTranslations } from '../data/translations'
 
@@ -8,16 +8,22 @@ export default function About() {
 
   const experience = language === 'fr' ? [
     {
+      role: 'Sales & Product Development Director',
+      company: 'eco2Veritas',
+      period: 'Nov 2025 – Présent',
+      description: "Direction des ventes enterprise, de la stratégie produit et de l'onboarding client pour une plateforme de conformité et de traçabilité dédiée à l'industrie du recyclage. Responsable de la roadmap de la plateforme."
+    },
+    {
       role: 'Independent Consultant – AI & Enterprise Software',
-      company: 'Spread AI / Eco2Veritas',
-      period: 'Juin 2024 – Présent',
-      description: "Strategic consulting pour entreprises européennes de logiciels IA sur l'expansion marché. Enterprise account development pour solutions logicielles industrielles en France."
+      company: 'Spread AI',
+      period: 'Juin 2024 – Nov 2025',
+      description: "Strategic consulting pour une entreprise européenne de logiciels IA : développement du marché français pour une solution Knowledge Graph dans l'automobile et la défense."
     },
     {
       role: 'Sales Director & General Manager France',
       company: 'ARXUM GmbH & ARXUM France SAS',
       period: 'Fév 2018 – Mai 2024 (6 ans)',
-      description: "Fondation et scaling de la filiale française de 0 à 25+ FTEs (Sales, Project, R&D). Croissance ARR de €0 à €100k via ventes directes et indirectes. Gestion du cycle de vente complet pour logiciels AI/AR en environnement Life Sciences réglementé."
+      description: "Fondation et scaling de la filiale française de 0 à 25+ FTEs (Sales, Project, R&D). Croissance ARR de €0 à €800k via ventes directes et indirectes. Gestion du cycle de vente complet pour logiciels AI/AR en environnement Life Sciences réglementé."
     },
     {
       role: 'Sales Executive – Cloud ERP Solutions',
@@ -27,16 +33,22 @@ export default function About() {
     }
   ] : [
     {
+      role: 'Sales & Product Development Director',
+      company: 'eco2Veritas',
+      period: 'Nov 2025 – Present',
+      description: 'Leading enterprise sales, product strategy and client onboarding for a compliance and traceability platform serving the recycling industry. Owner of the platform roadmap.'
+    },
+    {
       role: 'Independent Consultant – AI & Enterprise Software',
-      company: 'Spread AI / Eco2Veritas',
-      period: 'June 2024 – Present',
-      description: 'Strategic consulting for European AI software companies on market expansion. Enterprise account development for industrial software solutions in France.'
+      company: 'Spread AI',
+      period: 'June 2024 – Nov 2025',
+      description: 'Strategic consulting for a European AI software company: developing the French market for a Knowledge Graph solution in automotive and defense.'
     },
     {
       role: 'Sales Director & General Manager France',
       company: 'ARXUM GmbH & ARXUM France SAS',
       period: 'Feb 2018 – May 2024 (6 years)',
-      description: 'Founded and scaled French subsidiary from 0 to 25+ FTEs (Sales, Project, R&D). Grew ARR from €0 to €100k through direct and indirect sales. Full sales cycle management for AI/AR software in regulated Life Sciences environment.'
+      description: 'Founded and scaled French subsidiary from 0 to 25+ FTEs (Sales, Project, R&D). Grew ARR from €0 to €800k through direct and indirect sales. Full sales cycle management for AI/AR software in regulated Life Sciences environment.'
     },
     {
       role: 'Sales Executive – Cloud ERP Solutions',
@@ -92,7 +104,7 @@ export default function About() {
 
   const labels = language === 'fr' ? {
     available: 'Disponible',
-    keyAchievement: '🏆 Key Achievement: Construction de la filiale française from scratch jusqu\'à €100k ARR en 4 ans, collaboration avec 25+ FTEs (Sales, Project, R&D).',
+    keyAchievement: 'Key Achievement: Construction de la filiale française from scratch jusqu\'à €800k ARR, collaboration avec 25+ FTEs (Sales, Project, R&D).',
     experience: 'Expérience Professionnelle',
     education: 'Formation',
     skills: 'Compétences Clés',
@@ -103,7 +115,7 @@ export default function About() {
     description: 'Sales Director avec 9+ ans d\'expérience dans le scaling de solutions B2B SaaS et AI sur des marchés enterprise complexes. Track record prouvé dans la construction d\'équipes commerciales performantes, établissement de présence marché en Life Sciences, Industrial et Tech.'
   } : {
     available: 'Available',
-    keyAchievement: '🏆 Key Achievement: Built French subsidiary from scratch to €100k ARR in 4 years, collaborating with 25+ FTEs (Sales, Project, R&D).',
+    keyAchievement: 'Key Achievement: Built French subsidiary from scratch to €800k ARR, collaborating with 25+ FTEs (Sales, Project, R&D).',
     experience: 'Professional Experience',
     education: 'Education',
     skills: 'Key Skills',
@@ -130,14 +142,15 @@ export default function About() {
               {labels.description}
             </p>
             <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-6">
-              <p className="text-blue-800 font-medium">
+              <p className="flex items-start gap-3 text-blue-800 font-medium">
+                <Trophy className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                 {labels.keyAchievement}
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600">
               <span className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                Annecy / Paris, France
+                Annecy, France
               </span>
               <a href="mailto:axel_lr@pm.me" className="flex items-center gap-2 hover:text-blue-600 transition-colors">
                 <Mail className="w-4 h-4" />
@@ -153,9 +166,11 @@ export default function About() {
           <div className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden">
               <img
-                src="/founder-portrait.png"
+                src="/founder-portrait.webp"
                 alt="Axel Benoist"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl p-4">
@@ -185,7 +200,7 @@ export default function About() {
                     <h3 className="text-lg font-semibold text-slate-900">{exp.role}</h3>
                     <p className="text-blue-600 font-medium">{exp.company}</p>
                   </div>
-                  <span className="flex items-center gap-2 text-sm text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
+                  <span className="flex items-center gap-2 text-sm text-slate-600 bg-slate-100 px-3 py-1 rounded-full">
                     <Calendar className="w-4 h-4" />
                     {exp.period}
                   </span>
