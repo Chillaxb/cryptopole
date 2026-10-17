@@ -1,290 +1,183 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, ExternalLink, Calendar, Briefcase, Star, ChevronRight, Layers } from 'lucide-react'
+import HeroArt from '../components/HeroArt'
+import ExperienceDetails from '../components/ExperienceDetails'
 import Modal from '../components/Modal'
+import { ArrowRight, LoopIcon, PulseIcon, FactoryIcon, LinkedinIcon } from '../components/Icons'
 import { useLanguage } from '../context/LanguageContext'
-import { useTranslations } from '../data/translations'
+import { useTranslations, CONTACT_EMAIL, LINKEDIN_URL } from '../data/translations'
 
-const serviceImages = [
-  '/enterprise-sales.webp',
-  '/ai-saas-gtm.webp',
-  '/life-sciences.webp',
-  '/team-building.webp'
-]
-
-const clientLogos = [
-  '/logos/arxum.png',
-  '/logos/spread.png',
-  '/logos/e2v.png',
-  '/logos/exact.svg'
-]
+const domainIcons = {
+  circular: LoopIcon,
+  health: PulseIcon,
+  industry: FactoryIcon
+}
 
 export default function Landing() {
-  const [selectedClientIndex, setSelectedClientIndex] = useState(null)
+  const [selectedId, setSelectedId] = useState(null)
   const { language } = useLanguage()
   const t = useTranslations(language)
 
-  const selectedClient = selectedClientIndex !== null ? t.clients.items[selectedClientIndex] : null
+  const selected = t.experience.items.find((item) => item.id === selectedId)
 
   return (
-    <div className="pt-20 md:pt-16">
-      {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center relative overflow-hidden pt-8 md:pt-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50" />
-        <div className="absolute top-20 right-20 w-96 h-96 bg-blue-200 rounded-full blur-3xl opacity-30" />
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-200 rounded-full blur-3xl opacity-30" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6">
-              <img src="/logo-black.png" alt="" className="w-5 h-5" />
-              {t.hero.badge}
-            </div>
-
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6">
-              {t.hero.title}{' '}
-              <span className="gradient-text">{t.hero.titleHighlight}</span>
+    <div className="pt-16">
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-16 md:pt-20 md:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-7 flex flex-col gap-6">
+            <p className="eyebrow">{t.hero.eyebrow}</p>
+            <h1 className="font-display font-bold text-prusse text-[2.75rem] leading-[1.02] tracking-[-0.03em] sm:text-6xl lg:text-7xl">
+              {t.hero.titleA}{' '}
+              <em className="font-serif font-normal italic text-encre tracking-normal">{t.hero.titleB}</em>
             </h1>
-
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+            <p className="text-lg text-encre-soft max-w-xl leading-relaxed">
               {t.hero.description}
             </p>
-
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3">
               <a
-                href="mailto:axel_lr@pm.me"
-                className="gradient-bg text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity"
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="inline-flex items-center gap-2 bg-prusse text-papier px-6 py-3.5 rounded font-semibold hover:bg-prusse-deep transition-colors"
               >
                 {t.hero.cta}
                 <ArrowRight className="w-5 h-5" />
               </a>
               <Link
                 to="/creations"
-                className="bg-white text-slate-900 px-8 py-4 rounded-xl font-semibold border border-slate-200 hover:border-slate-300 transition-colors"
+                className="inline-flex items-center gap-2 border-[1.5px] border-prusse text-prusse px-6 py-3.5 rounded font-semibold hover:bg-prusse hover:text-papier transition-colors"
               >
                 {t.hero.ctaSecondary}
               </Link>
             </div>
-
-            <div className="flex flex-wrap items-center gap-6 mt-12 text-sm text-slate-600">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                {t.hero.stats.experience}
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                {t.hero.stats.arr}
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                {t.hero.stats.team}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              {t.services.title}
-            </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              {t.services.subtitle}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {t.services.items.map((service, index) => (
-              <div
-                key={index}
-                className="card-hover p-6 rounded-2xl bg-slate-50 border border-slate-100"
-              >
-                <div className="w-14 h-14 rounded-xl overflow-hidden mb-4 mx-auto">
-                  <img
-                    src={serviceImages[index]}
-                    alt={service.title}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                  />
+            <dl className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-6 mt-2 border-t border-ligne">
+              {t.hero.proofs.map((proof) => (
+                <div key={proof.label} className="flex flex-col gap-1">
+                  <dt className="font-mono text-xl text-prusse tabular-nums">{proof.value}</dt>
+                  <dd className="text-sm text-encre-soft">{proof.label}</dd>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 text-center">
-                  {service.title}
-                </h3>
-                <p className="text-slate-600 text-sm text-center">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Clients Section */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              {t.clients.title}
-            </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              {t.clients.subtitle}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {t.clients.items.map((client, index) => (
-              <button
-                key={index}
-                onClick={() => setSelectedClientIndex(index)}
-                className="card-hover bg-white p-6 rounded-2xl border border-slate-200 text-left group cursor-pointer"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-20 h-14 rounded-xl bg-white border border-slate-100 flex items-center justify-center p-2">
-                    <img src={clientLogos[index]} alt={client.name} className="w-full h-full object-contain" loading="lazy" decoding="async" />
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-blue-500 transition-colors" />
-                </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-1">
-                  {client.name}
-                </h3>
-                <p className="text-xs text-slate-500 mb-2">{client.period}</p>
-                <p className="text-slate-600 text-sm line-clamp-2">
-                  {client.description}
-                </p>
-                <div className="mt-3 flex flex-wrap gap-1">
-                  {client.sector.split(' • ').map((tag, i) => (
-                    <span key={i} className="text-xs px-2 py-0.5 bg-blue-50 text-blue-600 rounded-full">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Client Modal */}
-      <Modal isOpen={!!selectedClient} onClose={() => setSelectedClientIndex(null)}>
-        {selectedClient && (
-          <div className="p-8">
-            {/* Header */}
-            <div className="flex items-start gap-4 mb-6">
-              <div className="w-24 h-16 rounded-2xl bg-white border border-slate-200 flex items-center justify-center flex-shrink-0 p-3">
-                <img src={clientLogos[selectedClientIndex]} alt={selectedClient.name} className="w-full h-full object-contain" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold text-slate-900">{selectedClient.name}</h2>
-                <p className="text-blue-600 font-medium">{selectedClient.role}</p>
-                <div className="flex items-center gap-2 mt-1 text-sm text-slate-500">
-                  <Calendar className="w-4 h-4" />
-                  {selectedClient.period}
-                </div>
-              </div>
-            </div>
-
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 mb-6">
-              {selectedClient.sector.split(' • ').map((tag, i) => (
-                <span key={i} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                  {tag}
-                </span>
               ))}
-            </div>
-
-            {/* Context */}
-            <div className="mb-6">
-              <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-900 mb-2">
-                <Briefcase className="w-4 h-4 text-blue-600" />
-                {t.modal.context}
-              </h3>
-              <p className="text-slate-600">{selectedClient.details.context}</p>
-            </div>
-
-            {/* Highlights */}
-            <div className="mb-6">
-              <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-900 mb-3">
-                <Star className="w-4 h-4 text-blue-600" />
-                {t.modal.highlights}
-              </h3>
-              <ul className="space-y-2">
-                {selectedClient.details.highlights.map((highlight, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-600">
-                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    {highlight}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Impact */}
-            <div className="bg-slate-50 rounded-xl p-4 mb-6">
-              <h3 className="text-sm font-semibold text-slate-900 mb-2">{t.modal.impact}</h3>
-              <p className="text-slate-600 italic">"{selectedClient.details.impact}"</p>
-            </div>
-
-            {/* Skills */}
-            <div>
-              <h3 className="text-sm font-semibold text-slate-900 mb-3">{t.modal.skills}</h3>
-              <div className="flex flex-wrap gap-2">
-                {selectedClient.details.skills.map((skill, i) => (
-                  <span key={i} className="px-3 py-1 bg-slate-200 text-slate-700 rounded-full text-sm">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Stack & Tools */}
-            {selectedClient.details.stack && selectedClient.details.stack.length > 0 && (
-              <div className="mt-6">
-                <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-900 mb-3">
-                  <Layers className="w-4 h-4 text-blue-600" />
-                  {t.modal.stack}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {selectedClient.details.stack.map((tool, i) => (
-                    <span key={i} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
-                      {tool}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
+            </dl>
           </div>
-        )}
+          <div className="lg:col-span-5 max-w-sm mx-auto w-full lg:max-w-none">
+            <HeroArt roots={t.hero.roots} />
+          </div>
+        </div>
+      </section>
+
+      {/* Domains */}
+      <section className="bg-white border-y border-ligne">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="max-w-2xl flex flex-col gap-3 mb-12">
+            <p className="eyebrow">{t.domains.eyebrow}</p>
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-encre tracking-[-0.02em]">{t.domains.title}</h2>
+            <p className="text-lg text-encre-soft">{t.domains.subtitle}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ligne border border-ligne rounded-md overflow-hidden">
+            {t.domains.items.map((domain) => {
+              const DomainIcon = domainIcons[domain.id]
+              return (
+                <article key={domain.id} className="bg-papier p-7 flex flex-col gap-4">
+                  <DomainIcon className="w-9 h-9 text-prusse" />
+                  <h3 className="font-display font-semibold text-2xl text-encre">{domain.title}</h3>
+                  <p className="text-encre-soft leading-relaxed">{domain.text}</p>
+                  <div className="mt-auto pt-4 border-t border-ligne flex flex-col gap-2">
+                    <span className="eyebrow">{t.domains.proofLabel}</span>
+                    <p className="text-sm text-encre">{domain.proofs.join(' · ')}</p>
+                  </div>
+                </article>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities */}
+      <section>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="flex flex-col gap-3 mb-12">
+            <p className="eyebrow">{t.capabilities.eyebrow}</p>
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-encre tracking-[-0.02em]">{t.capabilities.title}</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 md:divide-x divide-ligne">
+            {t.capabilities.items.map((item, index) => (
+              <div key={item.title} className={`flex flex-col gap-3 ${index > 0 ? 'md:pl-8' : ''} ${index < 2 ? 'md:pr-8' : ''}`}>
+                <h3 className="font-display font-semibold text-xl text-prusse">{item.title}</h3>
+                <p className="text-encre-soft leading-relaxed">{item.text}</p>
+                <p className="font-mono text-sm text-mousse mt-1">{item.proof}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section className="bg-white border-y border-ligne">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+            <div className="flex flex-col gap-3">
+              <p className="eyebrow">{t.experience.eyebrow}</p>
+              <h2 className="font-display font-bold text-4xl md:text-5xl text-encre tracking-[-0.02em]">{t.experience.title}</h2>
+            </div>
+            <Link to="/about" className="inline-flex items-center gap-2 text-prusse font-semibold link-underline">
+              {t.experience.seeAll}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <ol className="border-t border-ligne">
+            {t.experience.items.map((item) => (
+              <li key={item.id} className="border-b border-ligne">
+                <button
+                  onClick={() => setSelectedId(item.id)}
+                  className="w-full text-left grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-6 py-6 group"
+                >
+                  <span className="md:col-span-2 font-mono text-sm text-encre-soft tabular-nums pt-1">{item.period}</span>
+                  <span className="md:col-span-3 flex flex-col">
+                    <span className="font-display font-semibold text-xl text-encre group-hover:text-prusse transition-colors">{item.name}</span>
+                    <span className="text-sm text-encre-soft">{item.role}</span>
+                  </span>
+                  <span className="md:col-span-6 text-encre-soft leading-relaxed">{item.summary}</span>
+                  <span className="md:col-span-1 flex md:justify-end items-start pt-1 text-prusse text-sm font-semibold">
+                    <span className="inline-flex items-center gap-1">
+                      <span className="md:sr-only">{t.experience.details}</span>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <Modal isOpen={!!selected} onClose={() => setSelectedId(null)} labelledBy="experience-title">
+        {selected && <ExperienceDetails item={selected} labels={t.modal} />}
       </Modal>
 
-      {/* CTA Section */}
-      <section className="py-24 gradient-bg relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtOS45NDEgMC0xOCA4LjA1OS0xOCAxOHM4LjA1OSAxOCAxOCAxOCAxOC04LjA1OSAxOC0xOC04LjA1OS0xOC0xOC0xOHptMCAzMmMtNy43MzIgMC0xNC02LjI2OC0xNC0xNHM2LjI2OC0xNCAxNC0xNCAxNCA2LjI2OCAxNCAxNC02LjI2OCAxNC0xNCAxNHoiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-50" />
-
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            {t.cta.title}
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            {t.cta.description}
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
+      {/* CTA */}
+      <section className="bg-prusse text-papier">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+          <div className="md:col-span-8 flex flex-col gap-4">
+            <h2 className="font-display font-bold text-4xl md:text-5xl tracking-[-0.02em]">{t.cta.title}</h2>
+            <p className="text-lg text-[#D8E0EA] max-w-xl">{t.cta.description}</p>
+          </div>
+          <div className="md:col-span-4 flex flex-col gap-3 md:items-end">
             <a
-              href="mailto:axel_lr@pm.me"
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold flex items-center gap-2 hover:bg-blue-50 transition-colors"
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="inline-flex items-center gap-2 bg-lichen text-encre px-6 py-3.5 rounded font-semibold hover:bg-papier transition-colors"
             >
               {t.cta.button}
               <ArrowRight className="w-5 h-5" />
             </a>
-            <Link
-              to="/about"
-              className="bg-transparent text-white px-8 py-4 rounded-xl font-semibold border-2 border-white/30 hover:bg-white/10 transition-colors flex items-center gap-2"
+            <p className="font-mono text-sm text-[#D8E0EA] select-all">{CONTACT_EMAIL}</p>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-papier link-underline"
             >
-              {t.cta.learnMore}
-              <ExternalLink className="w-5 h-5" />
-            </Link>
+              <LinkedinIcon className="w-4 h-4" />
+              LinkedIn
+            </a>
           </div>
         </div>
       </section>

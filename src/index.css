@@ -1,13 +1,21 @@
 @import "tailwindcss";
 
+/* Charte « Cyanotype » : bleu de Prusse, lichen, papier. */
 @theme {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --color-primary: #3b82f6;
-  --color-primary-dark: #2563eb;
-  --color-secondary: #8b5cf6;
-  --color-accent: #06b6d4;
-  --color-dark: #0f172a;
-  --color-gray: #64748b;
+  --font-sans: 'Instrument Sans', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+
+  --color-prusse: #1D3F7A;
+  --color-prusse-deep: #10264B;
+  --color-lichen: #B9C94C;
+  --color-papier: #F7F8F4;
+  --color-encre: #15202B;
+  --color-encre-soft: #44505A;
+  --color-mousse: #4F6020;
+  --color-brume: #DCE3E6;
+  --color-ligne: #D5DCDA;
 }
 
 html {
@@ -17,32 +25,50 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
-  background-color: #ffffff;
-  color: #0f172a;
+  background-color: var(--color-papier);
+  color: var(--color-encre);
+  -webkit-font-smoothing: antialiased;
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+h1, h2, h3 {
+  text-wrap: balance;
 }
 
-.gradient-bg {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+::selection {
+  background: var(--color-lichen);
+  color: var(--color-encre);
 }
 
-.glass {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+:focus-visible {
+  outline: 2px solid var(--color-prusse);
+  outline-offset: 3px;
 }
 
-.card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-mousse);
 }
 
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+.link-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--color-lichen);
+}
+
+.link-underline:hover {
+  text-decoration-color: currentColor;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

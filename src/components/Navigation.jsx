@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import Logo from './Logo'
+import { MenuIcon, CloseIcon } from './Icons'
 import { useLanguage } from '../context/LanguageContext'
-import { useTranslations } from '../data/translations'
+import { useTranslations, CONTACT_EMAIL } from '../data/translations'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,12 +19,24 @@ export default function Navigation() {
 
   const isActive = (path) => location.pathname === path
 
+  const languageToggle = (
+    <button
+      onClick={toggleLanguage}
+      aria-label={language === 'fr' ? 'Switch to English' : 'Passer en français'}
+      className="font-mono text-xs tracking-wider px-2.5 py-1.5 rounded border border-ligne hover:border-prusse transition-colors text-encre-soft"
+    >
+      <span className={language === 'fr' ? 'text-prusse font-medium' : ''}>FR</span>
+      <span className="mx-1 text-ligne">/</span>
+      <span className={language === 'en' ? 'text-prusse font-medium' : ''}>EN</span>
+    </button>
+  )
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center">
-            <img src="/logo-full.png" alt="Cryptopole" className="h-12" />
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-papier/90 backdrop-blur border-b border-ligne">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <Link to="/" aria-label="Cryptopole" onClick={() => setIsOpen(false)}>
+            <Logo />
           </Link>
 
           {/* Desktop Navigation */}
@@ -32,29 +45,20 @@ export default function Navigation() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors ${
+                aria-current={isActive(link.path) ? 'page' : undefined}
+                className={`text-[0.95rem] transition-colors ${
                   isActive(link.path)
-                    ? 'text-blue-600'
-                    : 'text-slate-600 hover:text-slate-900'
+                    ? 'text-prusse font-semibold'
+                    : 'text-encre-soft hover:text-prusse'
                 }`}
               >
                 {link.label}
               </Link>
             ))}
-
-            {/* Language Selector */}
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1 px-3 py-1.5 rounded-lg border border-slate-200 hover:border-slate-300 transition-colors text-sm font-medium text-slate-600 hover:text-slate-900"
-            >
-              <span className={language === 'fr' ? 'text-blue-600 font-semibold' : ''}>FR</span>
-              <span className="text-slate-300">|</span>
-              <span className={language === 'en' ? 'text-blue-600 font-semibold' : ''}>EN</span>
-            </button>
-
+            {languageToggle}
             <a
-              href="mailto:axel_lr@pm.me"
-              className="gradient-bg text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="bg-prusse text-papier px-4 py-2 rounded text-sm font-semibold hover:bg-prusse-deep transition-colors"
             >
               {t.nav.contact}
             </a>
@@ -62,49 +66,41 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-3">
-            {/* Mobile Language Selector */}
+            {languageToggle}
             <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1 px-2 py-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-600"
-            >
-              <span className={language === 'fr' ? 'text-blue-600 font-semibold' : ''}>FR</span>
-              <span className="text-slate-300">|</span>
-              <span className={language === 'en' ? 'text-blue-600 font-semibold' : ''}>EN</span>
-            </button>
-
-            <button
-              className="p-2"
               onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
+              aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+              aria-expanded={isOpen}
+              className="p-2 text-prusse"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <CloseIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-slate-200">
-            {links.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
-                className={`block py-2 text-sm font-medium ${
-                  isActive(link.path)
-                    ? 'text-blue-600'
-                    : 'text-slate-600'
-                }`}
+          <div className="md:hidden py-4 border-t border-ligne">
+            <div className="flex flex-col gap-1">
+              {links.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`py-2.5 font-display text-lg ${
+                    isActive(link.path) ? 'text-prusse font-semibold' : 'text-encre'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="mt-3 bg-prusse text-papier px-4 py-3 rounded text-center font-semibold"
               >
-                {link.label}
-              </Link>
-            ))}
-            <a
-              href="mailto:axel_lr@pm.me"
-              className="inline-block mt-4 gradient-bg text-white px-4 py-2 rounded-lg text-sm font-medium"
-            >
-              {t.nav.contact}
-            </a>
+                {t.nav.contact}
+              </a>
+            </div>
           </div>
         )}
       </div>

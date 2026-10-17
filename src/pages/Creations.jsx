@@ -1,6 +1,6 @@
-import { ExternalLink, Tag } from 'lucide-react'
+import { ArrowUpRight, ArrowRight } from '../components/Icons'
 import { useLanguage } from '../context/LanguageContext'
-import { useTranslations } from '../data/translations'
+import { useTranslations, CONTACT_EMAIL } from '../data/translations'
 
 const projectUrls = {
   'safe-flow': 'https://safe-flow.ai',
@@ -24,171 +24,85 @@ const projectImages = {
   'e2v-workshop-form': '/projects/e2v-workshop-form.webp'
 }
 
+const hostOf = (url) => new URL(url).hostname.replace(/^www\./, '')
+
 export default function Creations() {
   const { language } = useLanguage()
   const t = useTranslations(language)
 
-  const statusColors = {
-    'Live': 'bg-green-100 text-green-700',
-    'Production': 'bg-blue-100 text-blue-700',
-    'Development': 'bg-yellow-100 text-yellow-700',
-    'Consulting': 'bg-purple-100 text-purple-700',
-    'Project': 'bg-orange-100 text-orange-700'
-  }
-
-  const otherSkills = language === 'fr' ? [
-    {
-      title: 'Sales Automation',
-      description: 'CRM, séquences email, prospection automatisée et analytics commerciaux'
-    },
-    {
-      title: 'AI/AR Solutions',
-      description: 'Déploiement de solutions AI et réalité augmentée en environnement Life Sciences'
-    },
-    {
-      title: 'Go-to-Market',
-      description: 'Stratégie de lancement, expansion marché et channel development'
-    }
-  ] : [
-    {
-      title: 'Sales Automation',
-      description: 'CRM, email sequences, automated prospecting and sales analytics'
-    },
-    {
-      title: 'AI/AR Solutions',
-      description: 'Deployment of AI and augmented reality solutions in Life Sciences environments'
-    },
-    {
-      title: 'Go-to-Market',
-      description: 'Launch strategy, market expansion and channel development'
-    }
-  ]
-
-  const labels = language === 'fr' ? {
-    otherSkills: 'Autres compétences & outils',
-    projectCta: 'Vous avez un projet en tête ? Discutons-en !',
-    contactMe: 'Me contacter',
-    visit: 'Visiter'
-  } : {
-    otherSkills: 'Other skills & tools',
-    projectCta: 'Have a project in mind? Let\'s discuss!',
-    contactMe: 'Contact me',
-    visit: 'Visit'
-  }
-
   return (
-    <div className="pt-24 pb-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            {t.creations.title}
-          </h1>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            {t.creations.subtitle}
-          </p>
-        </div>
+    <div className="pt-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <header className="max-w-2xl flex flex-col gap-3 mb-14">
+          <p className="eyebrow">{t.creations.eyebrow}</p>
+          <h1 className="font-display font-bold text-5xl md:text-6xl text-prusse tracking-[-0.03em]">{t.creations.title}</h1>
+          <p className="text-lg text-encre-soft">{t.creations.subtitle}</p>
+        </header>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {t.creations.items.map((project) => (
-            <article
-              key={project.id}
-              className="card-hover bg-white rounded-3xl border border-slate-200 overflow-hidden"
-            >
-              {/* Project Image */}
-              {projectImages[project.id] ? (
-                <div className="h-52 bg-slate-900 overflow-hidden">
-                  <img
-                    src={projectImages[project.id]}
-                    alt={project.name}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                    onError={(e) => {
-                      e.target.style.display = 'none'
-                      e.target.parentElement.innerHTML = `<span class="text-4xl font-bold text-slate-300">${project.name}</span>`
-                    }}
-                  />
-                </div>
-              ) : (
-                <div className="h-52 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                  <span className="text-3xl font-bold text-white/30">
-                    {project.name}
-                  </span>
-                </div>
-              )}
-
-              <div className="p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-2xl font-bold text-slate-900">
-                    {project.name}
-                  </h2>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${statusColors[project.status] || 'bg-slate-100 text-slate-700'}`}>
-                    {project.status}
-                  </span>
-                </div>
-
-                <p className="text-slate-600 mb-6">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium flex items-center gap-1"
-                    >
-                      <Tag className="w-3 h-3" />
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {projectUrls[project.id] && (
-                  <a
-                    href={projectUrls[project.id]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="gradient-bg text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity"
-                  >
-                    {labels.visit}
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                )}
+        <div className="flex flex-col gap-16">
+          {t.creations.groups.map((group) => (
+            <section key={group.id} aria-labelledby={`group-${group.id}`} className="flex flex-col gap-6">
+              <div className="flex items-baseline justify-between gap-4 border-b border-ligne pb-3">
+                <h2 id={`group-${group.id}`} className="font-display font-semibold text-2xl text-encre">{group.title}</h2>
+                <span className="font-mono text-sm text-encre-soft tabular-nums">{String(group.items.length).padStart(2, '0')}</span>
               </div>
-            </article>
+              <div className={`grid grid-cols-1 gap-6 ${group.items.length >= 3 ? 'md:grid-cols-2 lg:grid-cols-3' : 'md:grid-cols-2'}`}>
+                {group.items.map((id) => {
+                  const project = t.creations.items[id]
+                  const url = projectUrls[id]
+                  const single = group.items.length === 1
+                  return (
+                    <article
+                      key={id}
+                      className={`bg-white border border-ligne rounded-md overflow-hidden flex flex-col ${single ? 'md:col-span-2 md:grid md:grid-cols-2' : ''}`}
+                    >
+                      <div className={`aspect-[16/9] bg-brume overflow-hidden border-ligne ${single ? 'border-b md:border-b-0 md:border-r md:aspect-auto md:h-full' : 'border-b'}`}>
+                        <img
+                          src={projectImages[id]}
+                          alt={project.name}
+                          className="w-full h-full object-cover object-top"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <div className="p-6 flex flex-col gap-4 flex-1">
+                        <div className="flex items-center justify-between gap-3">
+                          <h3 className="font-display font-semibold text-2xl text-encre">{project.name}</h3>
+                          <span className="inline-flex items-center gap-1.5 font-mono text-xs text-mousse">
+                            <span className="w-2 h-2 rounded-full bg-lichen" aria-hidden="true" />
+                            {t.creations.live}
+                          </span>
+                        </div>
+                        <p className="text-encre-soft leading-relaxed">{project.description}</p>
+                        <p className="font-mono text-xs text-encre-soft tracking-wide">{project.tags.join(' · ')}</p>
+                        {url && (
+                          <a
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-auto inline-flex items-center gap-2 self-start text-prusse font-semibold link-underline"
+                          >
+                            {t.creations.visit} {hostOf(url)}
+                            <ArrowUpRight className="w-4 h-4" />
+                          </a>
+                        )}
+                      </div>
+                    </article>
+                  )
+                })}
+              </div>
+            </section>
           ))}
         </div>
 
-        {/* Other Tools Section */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">
-            {labels.otherSkills}
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {otherSkills.map((skill, index) => (
-              <div key={index} className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-                <h3 className="font-semibold text-slate-900 mb-2">{skill.title}</h3>
-                <p className="text-sm text-slate-600">
-                  {skill.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-slate-600 mb-6">
-            {labels.projectCta}
-          </p>
+        <div className="mt-20 border-t border-ligne pt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <p className="font-display text-2xl text-encre">{t.cta.title}</p>
           <a
-            href="mailto:axel_lr@pm.me"
-            className="inline-flex gradient-bg text-white px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity"
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="inline-flex items-center gap-2 bg-prusse text-papier px-6 py-3.5 rounded font-semibold hover:bg-prusse-deep transition-colors self-start"
           >
-            {labels.contactMe}
+            {t.cta.button}
+            <ArrowRight className="w-5 h-5" />
           </a>
         </div>
       </div>

@@ -100,18 +100,18 @@ export default function Legal() {
   }
 
   return (
-    <div className="pt-24 pb-16">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+    <div className="pt-16">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <h1 className="font-display font-bold text-5xl text-prusse tracking-[-0.03em] mb-4">
           {content.title}
         </h1>
-        <p className="text-sm text-slate-600 mb-12">{content.updated}</p>
+        <p className="font-mono text-xs text-encre-soft mb-12">{content.updated}</p>
 
         <div className="space-y-10">
           {content.sections.map((section) => (
-            <section key={section.heading}>
-              <h2 className="text-xl font-semibold text-slate-900 mb-3">{section.heading}</h2>
-              <div className="space-y-2 text-slate-700 leading-relaxed">
+            <section key={section.heading} className="border-t border-ligne pt-6">
+              <h2 className="font-display font-semibold text-2xl text-encre mb-3">{section.heading}</h2>
+              <div className="space-y-2 text-encre-soft leading-relaxed">
                 {section.paragraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}

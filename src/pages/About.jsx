@@ -1,309 +1,159 @@
-import { Briefcase, GraduationCap, Award, Trophy, MapPin, Calendar, ArrowRight, Mail, Linkedin } from 'lucide-react'
+import { useState } from 'react'
+import ExperienceDetails from '../components/ExperienceDetails'
+import Modal from '../components/Modal'
+import { ArrowRight, MailIcon, MapPinIcon, LinkedinIcon } from '../components/Icons'
 import { useLanguage } from '../context/LanguageContext'
-import { useTranslations } from '../data/translations'
+import { useTranslations, CONTACT_EMAIL, LINKEDIN_URL } from '../data/translations'
 
 export default function About() {
+  const [selectedId, setSelectedId] = useState(null)
   const { language } = useLanguage()
   const t = useTranslations(language)
+  const a = t.about
 
-  const experience = language === 'fr' ? [
-    {
-      role: 'Sales & Product Development Director',
-      company: 'eco2Veritas',
-      period: 'Nov 2025 – Présent',
-      description: "Direction des ventes enterprise, de la stratégie produit et de l'onboarding client pour une plateforme de conformité et de traçabilité dédiée à l'industrie du recyclage. Responsable de la roadmap de la plateforme."
-    },
-    {
-      role: 'Independent Consultant – AI & Enterprise Software',
-      company: 'Spread AI',
-      period: 'Juin 2024 – Nov 2025',
-      description: "Strategic consulting pour une entreprise européenne de logiciels IA : développement du marché français pour une solution Knowledge Graph dans l'automobile et la défense."
-    },
-    {
-      role: 'Sales Director & General Manager France',
-      company: 'ARXUM GmbH & ARXUM France SAS',
-      period: 'Fév 2018 – Mai 2024 (6 ans)',
-      description: "Fondation et scaling de la filiale française jusqu'à une équipe de 6, au sein d'un groupe de 25+ personnes (Allemagne, France, Bulgarie). Croissance ARR de €0 à €800k via ventes directes et indirectes. Gestion du cycle de vente complet pour logiciels AI/AR en environnement Life Sciences réglementé."
-    },
-    {
-      role: 'Sales Executive – Cloud ERP Solutions',
-      company: 'Exact Software',
-      period: 'Août 2016 – Déc 2017 (1,5 an)',
-      description: 'Récompensé "Best Winter Sales Europe" – top performer en acquisition clients et revenus. Développement de nouveaux marchés pour solutions Cloud ERP, dépassement constant des quotas.'
-    }
-  ] : [
-    {
-      role: 'Sales & Product Development Director',
-      company: 'eco2Veritas',
-      period: 'Nov 2025 – Present',
-      description: 'Leading enterprise sales, product strategy and client onboarding for a compliance and traceability platform serving the recycling industry. Owner of the platform roadmap.'
-    },
-    {
-      role: 'Independent Consultant – AI & Enterprise Software',
-      company: 'Spread AI',
-      period: 'June 2024 – Nov 2025',
-      description: 'Strategic consulting for a European AI software company: developing the French market for a Knowledge Graph solution in automotive and defense.'
-    },
-    {
-      role: 'Sales Director & General Manager France',
-      company: 'ARXUM GmbH & ARXUM France SAS',
-      period: 'Feb 2018 – May 2024 (6 years)',
-      description: 'Founded and scaled the French subsidiary to a team of 6, within a 25+ person group (Germany, France, Bulgaria). Grew ARR from €0 to €800k through direct and indirect sales. Full sales cycle management for AI/AR software in regulated Life Sciences environment.'
-    },
-    {
-      role: 'Sales Executive – Cloud ERP Solutions',
-      company: 'Exact Software',
-      period: 'Aug 2016 – Dec 2017 (1.5 years)',
-      description: 'Awarded "Best Winter Sales Europe" – top performer in customer acquisition and revenue. Developed new markets for Cloud ERP solutions, consistently exceeding quotas.'
-    }
-  ]
-
-  const education = language === 'fr' ? [
-    {
-      degree: 'Executive Program – Energy and Sustainability',
-      school: 'École Polytechnique',
-      period: '2018 – 2019',
-      description: 'Thèse sur la technologie blockchain appliquée aux énergies renouvelables. Récompensé au hackathon United Nations Energy Program (UNEP).'
-    },
-    {
-      degree: 'MSc. Social Entrepreneurship & Alternative Business Models',
-      school: 'INSEEC Business School & Columbia College',
-      period: '2015 – 2016',
-      description: 'Double diplôme Paris & Chicago.'
-    }
-  ] : [
-    {
-      degree: 'Executive Program – Energy and Sustainability',
-      school: 'École Polytechnique',
-      period: '2018 – 2019',
-      description: 'Thesis on blockchain technology applied to renewable energy. Award winner at United Nations Energy Program (UNEP) hackathon.'
-    },
-    {
-      degree: 'MSc. Social Entrepreneurship & Alternative Business Models',
-      school: 'INSEEC Business School & Columbia College',
-      period: '2015 – 2016',
-      description: 'Dual degree Paris & Chicago.'
-    }
-  ]
-
-  const skills = language === 'fr' ? [
-    { category: 'Enterprise Sales', items: ['MEDDICC & SPIN Selling', 'Négociation complexe', 'Channel & Partner Dev', 'Cycles longs'] },
-    { category: 'AI & SaaS', items: ['Stratégie Go-to-Market', 'Expansion marché', 'Positionnement produit', 'Value Selling'] },
-    { category: 'Life Sciences', items: ['Pharma & Biotech', 'Environnements GxP', 'Conformité réglementaire', 'Opérations labo'] },
-    { category: 'Leadership', items: ['Team Building', 'Management transverse', 'Équipes multi-pays (DE, FR, BG)', 'P&L Ownership'] }
-  ] : [
-    { category: 'Enterprise Sales', items: ['MEDDICC & SPIN Selling', 'Complex Deal Negotiation', 'Channel & Partner Dev', 'Long Sales Cycles'] },
-    { category: 'AI & SaaS', items: ['Go-to-Market Strategy', 'Market Expansion', 'Product Positioning', 'Value Selling'] },
-    { category: 'Life Sciences', items: ['Pharma & Biotech', 'GxP Environments', 'Regulatory Compliance', 'Lab Operations'] },
-    { category: 'Leadership', items: ['Team Building', 'Cross-functional Mgmt', 'Cross-country teams (DE, FR, BG)', 'P&L Ownership'] }
-  ]
-
-  const interests = language === 'fr'
-    ? ['Triathlon', 'Boxe', 'Philosophie & Science', 'Piano']
-    : ['Triathlon', 'Boxing', 'Philosophy & Science', 'Piano']
-
-  const labels = language === 'fr' ? {
-    available: 'Disponible',
-    keyAchievement: 'Key Achievement: Construction de la filiale française from scratch jusqu\'à €800k ARR, avec une équipe de 6 en France au sein d\'un groupe de 25+ personnes sur 3 pays.',
-    experience: 'Expérience Professionnelle',
-    education: 'Formation',
-    skills: 'Compétences Clés',
-    interests: 'Centres d\'intérêt',
-    workTogether: 'Travaillons ensemble',
-    workDescription: 'Que vous cherchiez à développer votre marché français, structurer votre équipe commerciale ou lancer une solution AI/SaaS, discutons de votre projet.',
-    contactMe: 'Me contacter',
-    description: 'Sales Director avec 9+ ans d\'expérience dans le scaling de solutions B2B SaaS et AI sur des marchés enterprise complexes. Track record prouvé dans la construction d\'équipes commerciales performantes, établissement de présence marché en Life Sciences, Industrial et Tech.'
-  } : {
-    available: 'Available',
-    keyAchievement: 'Key Achievement: Built French subsidiary from scratch to €800k ARR, with a team of 6 in France within a 25+ person group across 3 countries.',
-    experience: 'Professional Experience',
-    education: 'Education',
-    skills: 'Key Skills',
-    interests: 'Interests',
-    workTogether: "Let's work together",
-    workDescription: 'Whether you want to develop your French market, structure your sales team, or launch an AI/SaaS solution, let\'s discuss your project.',
-    contactMe: 'Contact me',
-    description: 'Sales Director with 9+ years of experience scaling B2B SaaS and AI solutions in complex enterprise markets. Proven track record in building high-performing sales teams, establishing market presence in Life Sciences, Industrial and Tech.'
-  }
+  const selected = t.experience.items.find((item) => item.id === selectedId)
 
   return (
-    <div className="pt-24 pb-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">
-              Axel Benoist
-            </h1>
-            <p className="text-xl text-blue-600 font-medium mb-6">
-              Enterprise Sales Director | AI & SaaS
-            </p>
-            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              {labels.description}
-            </p>
-            <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-6">
-              <p className="flex items-start gap-3 text-blue-800 font-medium">
-                <Trophy className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                {labels.keyAchievement}
-              </p>
-            </div>
-            <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600">
-              <span className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                Annecy, France
-              </span>
-              <a href="mailto:axel_lr@pm.me" className="flex items-center gap-2 hover:text-blue-600 transition-colors">
-                <Mail className="w-4 h-4" />
-                axel_lr@pm.me
-              </a>
-              <a href="https://linkedin.com/in/axelbenoist" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-600 transition-colors">
-                <Linkedin className="w-4 h-4" />
-                LinkedIn
-              </a>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="aspect-square rounded-3xl overflow-hidden">
-              <img
-                src="/founder-portrait.webp"
-                alt="Axel Benoist"
-                className="w-full h-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl p-4">
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-slate-700">{labels.available}</span>
-              </div>
-            </div>
+    <div className="pt-16">
+      {/* Hero */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="lg:col-span-7 flex flex-col gap-5">
+          <p className="eyebrow">{a.eyebrow}</p>
+          <h1 className="font-display font-bold text-5xl md:text-6xl text-prusse tracking-[-0.03em]">Axel Benoist</h1>
+          <p className="text-xl text-encre font-semibold">{a.role}</p>
+          {a.bio.map((paragraph) => (
+            <p key={paragraph} className="text-lg text-encre-soft leading-relaxed max-w-2xl">{paragraph}</p>
+          ))}
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-encre-soft pt-2">
+            <span className="inline-flex items-center gap-2"><MapPinIcon className="w-4 h-4 text-prusse" />{a.location}</span>
+            <a href={`mailto:${CONTACT_EMAIL}`} className="inline-flex items-center gap-2 hover:text-prusse transition-colors">
+              <MailIcon className="w-4 h-4 text-prusse" />{CONTACT_EMAIL}
+            </a>
+            <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-prusse transition-colors">
+              <LinkedinIcon className="w-4 h-4 text-prusse" />LinkedIn
+            </a>
           </div>
         </div>
+        <div className="lg:col-span-5">
+          <figure className="relative max-w-sm mx-auto lg:max-w-none">
+            <img
+              src="/founder-portrait.webp"
+              alt="Axel Benoist"
+              className="w-full aspect-[4/5] object-cover rounded-md border border-ligne"
+            />
+            <figcaption className="absolute bottom-4 left-4 inline-flex items-center gap-2 bg-papier/95 rounded px-3 py-1.5 text-sm text-encre">
+              <span className="w-2 h-2 rounded-full bg-lichen" aria-hidden="true" />
+              {a.available}
+            </figcaption>
+          </figure>
+        </div>
+      </section>
 
-        {/* Experience */}
-        <section className="mb-20">
-          <div className="flex items-center gap-3 mb-8">
-            <Briefcase className="w-6 h-6 text-blue-600" />
-            <h2 className="text-2xl font-bold text-slate-900">{labels.experience}</h2>
-          </div>
+      {/* Facts */}
+      <section className="border-y border-ligne bg-white">
+        <dl className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4">
+          {a.facts.map((fact, index) => (
+            <div
+              key={fact.label}
+              className={`py-8 flex flex-col gap-1 ${index % 2 === 1 ? 'pl-6 border-l border-ligne' : ''} ${index >= 2 ? 'md:pl-6 md:border-l md:border-ligne border-t md:border-t-0 border-ligne' : ''}`}
+            >
+              <dt className="font-mono text-2xl text-prusse tabular-nums">{fact.value}</dt>
+              <dd className="text-sm text-encre-soft">{fact.label}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
 
-          <div className="space-y-6">
-            {experience.map((exp, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl border border-slate-200 p-6 card-hover"
-              >
-                <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-slate-900">{exp.role}</h3>
-                    <p className="text-blue-600 font-medium">{exp.company}</p>
-                  </div>
-                  <span className="flex items-center gap-2 text-sm text-slate-600 bg-slate-100 px-3 py-1 rounded-full">
-                    <Calendar className="w-4 h-4" />
-                    {exp.period}
-                  </span>
+      {/* Experience */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 className="font-display font-bold text-4xl text-encre tracking-[-0.02em] mb-10">{a.experienceTitle}</h2>
+        <ol className="border-t border-ligne">
+          {t.experience.items.map((item) => (
+            <li key={item.id} className="border-b border-ligne py-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
+              <div className="md:col-span-3 flex md:flex-col gap-4 md:gap-3 items-center md:items-start">
+                <div className="w-20 h-12 rounded border border-ligne bg-white flex items-center justify-center p-2 flex-shrink-0">
+                  <img src={item.logo} alt="" className="w-full h-full object-contain" loading="lazy" decoding="async" />
                 </div>
-                <p className="text-slate-600">{exp.description}</p>
+                <span className="font-mono text-sm text-encre-soft">{item.periodLong}</span>
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Education */}
-        <section className="mb-20">
-          <div className="flex items-center gap-3 mb-8">
-            <GraduationCap className="w-6 h-6 text-blue-600" />
-            <h2 className="text-2xl font-bold text-slate-900">{labels.education}</h2>
-          </div>
-
-          <div className="space-y-6">
-            {education.map((edu, index) => (
-              <div
-                key={index}
-                className="bg-slate-50 rounded-2xl border border-slate-100 p-6"
-              >
-                <div className="flex flex-wrap items-start justify-between gap-4 mb-2">
-                  <div>
-                    <h3 className="text-lg font-semibold text-slate-900">{edu.degree}</h3>
-                    <p className="text-blue-600 font-medium">{edu.school}</p>
-                  </div>
-                  <span className="text-sm text-slate-500">{edu.period}</span>
+              <div className="md:col-span-9 flex flex-col gap-3">
+                <div>
+                  <h3 className="font-display font-semibold text-2xl text-encre">{item.name}</h3>
+                  <p className="text-prusse font-semibold">{item.role}</p>
                 </div>
-                <p className="text-slate-600 text-sm">{edu.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Skills */}
-        <section className="mb-20">
-          <div className="flex items-center gap-3 mb-8">
-            <Award className="w-6 h-6 text-blue-600" />
-            <h2 className="text-2xl font-bold text-slate-900">{labels.skills}</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 border border-slate-200"
-              >
-                <h3 className="font-semibold text-slate-900 mb-4">{skill.category}</h3>
-                <ul className="space-y-2">
-                  {skill.items.map((item, i) => (
-                    <li key={i} className="text-sm text-slate-600 flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
-                      {item}
+                <ul className="flex flex-col gap-2">
+                  {item.details.highlights.map((highlight) => (
+                    <li key={highlight} className="flex items-start gap-3 text-encre-soft">
+                      <span className="mt-2 w-2 h-2 rounded-full bg-lichen flex-shrink-0" aria-hidden="true" />
+                      {highlight}
                     </li>
                   ))}
                 </ul>
+                <button
+                  onClick={() => setSelectedId(item.id)}
+                  className="self-start inline-flex items-center gap-2 text-prusse font-semibold link-underline mt-1"
+                >
+                  {t.experience.details}
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <Modal isOpen={!!selected} onClose={() => setSelectedId(null)} labelledBy="experience-title">
+        {selected && <ExperienceDetails item={selected} labels={t.modal} />}
+      </Modal>
+
+      {/* Education & skills */}
+      <section className="bg-white border-y border-ligne">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="flex flex-col gap-8">
+            <h2 className="font-display font-bold text-4xl text-encre tracking-[-0.02em]">{a.educationTitle}</h2>
+            {a.education.map((edu) => (
+              <div key={edu.degree} className="flex flex-col gap-1 border-t border-ligne pt-5">
+                <span className="font-mono text-sm text-encre-soft">{edu.period}</span>
+                <h3 className="font-display font-semibold text-xl text-encre">{edu.degree}</h3>
+                <p className="text-prusse font-medium">{edu.school}</p>
+                <p className="text-encre-soft">{edu.description}</p>
               </div>
             ))}
           </div>
-        </section>
-
-        {/* Interests */}
-        <section className="mb-20">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">{labels.interests}</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {interests.map((interest, index) => (
-              <span key={index} className="px-6 py-3 bg-slate-100 text-slate-700 rounded-full font-medium">
-                {interest}
-              </span>
-            ))}
+          <div className="flex flex-col gap-8">
+            <h2 className="font-display font-bold text-4xl text-encre tracking-[-0.02em]">{a.skillsTitle}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {a.skills.map((group) => (
+                <div key={group.category} className="flex flex-col gap-2 border-t border-ligne pt-5">
+                  <h3 className="eyebrow">{group.category}</h3>
+                  <ul className="flex flex-col gap-1 text-encre">
+                    {group.items.map((skill) => <li key={skill}>{skill}</li>)}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col gap-3 border-t border-ligne pt-5">
+              <h3 className="eyebrow">{a.interestsTitle}</h3>
+              <p className="text-encre">{a.interests.join(' · ')}</p>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA */}
-        <section className="gradient-bg rounded-3xl p-8 md:p-12 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            {labels.workTogether}
-          </h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-            {labels.workDescription}
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:axel_lr@pm.me"
-              className="inline-flex bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold items-center gap-2 hover:bg-blue-50 transition-colors"
-            >
-              {labels.contactMe}
-              <ArrowRight className="w-5 h-5" />
-            </a>
-            <a
-              href="https://linkedin.com/in/axelbenoist"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex bg-transparent text-white border-2 border-white/30 px-8 py-4 rounded-xl font-semibold items-center gap-2 hover:bg-white/10 transition-colors"
-            >
-              <Linkedin className="w-5 h-5" />
-              LinkedIn
-            </a>
-          </div>
-        </section>
-      </div>
+      {/* CTA */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+        <div className="flex flex-col gap-2">
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-prusse tracking-[-0.02em]">{t.cta.title}</h2>
+          <p className="text-encre-soft">{t.cta.description}</p>
+        </div>
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          className="inline-flex items-center gap-2 bg-prusse text-papier px-6 py-3.5 rounded font-semibold hover:bg-prusse-deep transition-colors self-start sm:self-auto"
+        >
+          {t.cta.button}
+          <ArrowRight className="w-5 h-5" />
+        </a>
+      </section>
     </div>
   )
 }

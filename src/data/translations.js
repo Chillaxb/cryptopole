@@ -1,223 +1,248 @@
+export const CONTACT_EMAIL = 'contact@cryptopole.fr'
+export const LINKEDIN_URL = 'https://linkedin.com/in/axelbenoist'
+
 export const translations = {
   fr: {
-    // Navigation
     nav: {
       home: 'Accueil',
-      creations: 'Mes Créations',
+      creations: 'Réalisations',
       blog: 'Blog',
-      about: 'À Propos',
+      about: 'Parcours',
       contact: 'Contact'
     },
 
-    // Hero Section
     hero: {
-      badge: 'Enterprise Sales & AI Consulting',
-      title: 'Accélérez votre',
-      titleHighlight: 'croissance B2B',
-      description: "Enterprise Sales Director avec 9+ ans d'expérience en B2B SaaS et solutions AI. Ex-GM France d'ARXUM, j'accompagne les entreprises tech dans leur expansion marché et la construction d'équipes commerciales performantes.",
-      cta: 'Discutons de votre projet',
-      ctaSecondary: 'Voir mes réalisations',
-      stats: {
-        experience: "9+ ans d'expérience",
-        arr: '€0 → €800k ARR',
-        team: 'Équipe de 6 en France'
-      }
+      eyebrow: 'Annecy · économie circulaire · santé · industrie',
+      titleA: 'La tech au service',
+      titleB: 'du vivant.',
+      description: "Je conçois, vends et déploie des produits numériques pour l'économie circulaire, l'industrie et la santé. Dix ans de terrain, du premier rendez-vous au déploiement chez le client.",
+      cta: 'Parlons de votre projet',
+      ctaSecondary: 'Voir les réalisations',
+      proofs: [
+        { value: '€0 → €800k', label: 'ARR, filiale France ARXUM' },
+        { value: '8', label: 'produits conçus et en ligne' },
+        { value: '10 ans', label: 'de ventes et de produit B2B' }
+      ],
+      roots: ['recyclage', 'santé', 'industrie']
     },
 
-    // Services Section
-    services: {
-      title: 'Expertise & Services',
-      subtitle: 'Accompagnement stratégique pour startups et scale-ups tech',
+    domains: {
+      eyebrow: "Où j'interviens",
+      title: 'Trois terrains',
+      subtitle: 'Des secteurs où la technologie se mesure en tonnes tracées, en santé gagnée, en risques évités.',
+      proofLabel: 'Preuves',
       items: [
         {
-          title: 'Enterprise Sales',
-          description: 'Développement commercial grands comptes, méthodologies MEDDICC & SPIN, cycles de vente complexes.'
+          id: 'circular',
+          title: 'Économie circulaire',
+          text: 'Tracer les déchets, prouver le recyclage, simplifier la conformité REP pour les recycleurs et les producteurs.',
+          proofs: ['eco2Veritas', 'Tyre EPR', 'Simulateur ROI recyclage']
         },
         {
-          title: 'AI & SaaS Go-to-Market',
-          description: 'Stratégie de lancement, expansion marché européen, channel & partner development.'
+          id: 'health',
+          title: 'Santé & performance',
+          text: "Rendre lisibles les signaux du corps : sommeil, VFC, charge d'entraînement, respiration.",
+          proofs: ['BioForge', 'SafeFlow']
         },
         {
-          title: 'Life Sciences & Industrial',
-          description: 'Expertise sectorielle pharma/biotech, environnements réglementés GxP, solutions industrielles.'
-        },
-        {
-          title: 'Team Building',
-          description: "Construction et scaling d'équipes Sales, Project et R&D. Management cross-fonctionnel."
+          id: 'industry',
+          title: 'Industrie & sciences de la vie',
+          text: 'Traçabilité et qualité en environnement réglementé : pharma, laboratoires, spatial, défense.',
+          proofs: ['ARXUM', 'Spread AI']
         }
       ]
     },
 
-    // Clients Section
-    clients: {
-      title: 'Expérience & Références',
-      subtitle: 'De la startup tech aux grands groupes industriels',
+    capabilities: {
+      eyebrow: "Ce que j'apporte",
+      title: 'Vendre, piloter, livrer',
       items: [
         {
-          name: 'ARXUM',
-          description: 'Sales Director & General Manager France - Industrial SaaS (AI, AR) for Life Sciences',
-          sector: 'Life Sciences • Blockchain',
-          period: '2018 - 2024',
-          role: 'Employé #1 → CEO France & Investisseur',
-          details: {
-            context: "Rejoint comme premier employé d'une startup blockchain allemande spécialisée dans la traçabilité industrielle pour les Life Sciences.",
-            highlights: [
-              'Évolution de Employé #1 à CEO France et Investisseur',
-              "Construction de la filiale française from scratch jusqu'à €800k ARR",
-              "Équipe de 6 en France, au sein d'un groupe de 25+ personnes (Allemagne, France, Bulgarie)",
-              'Participation à toutes les échelles : projets clients, développement commercial, évolution produit'
-            ],
-            impact: "Une aventure entrepreneuriale complète où j'ai pu toucher à tous les aspects d'une scale-up tech : de la première ligne de code déployée chez un client à la stratégie de croissance européenne.",
-            skills: ['Leadership', 'Entrepreneuriat', 'Sales B2B', 'Life Sciences', 'Blockchain'],
-            stack: ['Zoho CRM/ERP', 'Atlassian Jira', 'Atlassian Confluence']
-          }
+          title: "Vendre l'innovation aux grands comptes",
+          text: 'Cycles longs, achats exigeants, environnements réglementés. Ventes directes et partenaires.',
+          proof: '€0 → €800k ARR'
         },
         {
-          name: 'Spread AI',
-          description: "Strategic consulting pour l'expansion marché européen de solutions IA industrielles",
-          sector: 'Defense • Automotive • AI',
-          period: '2024 - 2025',
-          role: 'Consultant Strategic Sales',
-          details: {
-            context: "Ma 9ème année de collaboration avec des entreprises allemandes. Mission de développement du marché français pour une solution Knowledge Graph dans un contexte automobile européen particulièrement difficile.",
-            highlights: [
-              'Développement de relations stratégiques avec Renault et Stellantis (France & Italie)',
-              'Ouverture du secteur Défense : Ariane, Dassault, et autres acteurs majeurs',
-              'Application rigoureuse de la stratégie Spread sur le territoire français',
-              'Navigation dans un marché automobile en pleine restructuration'
-            ],
-            impact: "Une expérience riche en technique et en leçons dans un contexte de marché difficile. Là où les vrais sales font la différence : transformer les obstacles en opportunités.",
-            skills: ['Enterprise Sales', 'Automotive', 'Defense', 'Knowledge Graph', 'Resilience'],
-            stack: ['Salesforce', 'Sales Navigator', 'Lusha', 'SalesLoft', 'OpenAI']
-          }
+          title: 'Piloter le produit',
+          text: "Du besoin terrain à la roadmap, jusqu'à l'onboarding des premiers clients.",
+          proof: "Roadmap d'une plateforme de traçabilité"
         },
         {
+          title: 'Prototyper vite',
+          text: "D'une idée à un produit en ligne, testé avec de vrais utilisateurs, en quelques semaines.",
+          proof: '8 produits en ligne'
+        }
+      ]
+    },
+
+    experience: {
+      eyebrow: 'Parcours',
+      title: 'Dix ans entre terrain et produit',
+      details: 'Détails',
+      seeAll: 'Tout le parcours',
+      items: [
+        {
+          id: 'e2v',
           name: 'eco2Veritas',
-          description: "Plateforme de conformité et de traçabilité pour l'industrie du recyclage",
-          sector: 'Recyclage • Conformité • Traçabilité',
-          period: '2025 - Présent',
+          logo: '/logos/e2v.png',
           role: 'Sales & Product Development Director',
+          period: '2025 – auj.',
+          periodLong: 'Nov. 2025 – aujourd’hui',
+          summary: "Ventes enterprise, stratégie produit et onboarding client d'une plateforme de conformité et de traçabilité pour le recyclage. Je porte la roadmap de la plateforme.",
+          sector: ['Recyclage', 'Conformité', 'Traçabilité'],
           details: {
-            context: "Plateforme de conformité et de traçabilité pour l'industrie du recyclage. Je dirige les ventes enterprise, la stratégie produit et l'onboarding des clients, et je porte la roadmap de la plateforme.",
+            context: 'Plateforme de conformité et de traçabilité pour l’industrie du recyclage. Arrivé pour bâtir le moteur commercial, je porte aujourd’hui aussi la roadmap produit.',
             highlights: [
-              'Pilotage des ventes enterprise auprès des acteurs du recyclage',
-              'Définition de la stratégie produit et responsabilité de la roadmap plateforme',
-              'Onboarding des clients sur la plateforme',
-              "Création d'outils d'automatisation de prospection (E2V Outreach)"
+              'Pilotage des ventes enterprise auprès des acteurs du recyclage, au Royaume-Uni, en Europe et en Amérique latine',
+              "Déploiement chez un leader mondial de l'emballage, puis extension du contrat",
+              'Refonte de l’architecture produit et de la grille tarifaire',
+              'Création des outils de prospection (E2V Outreach)'
             ],
-            impact: "Contribution à la croissance d'une solution tech à impact environnemental positif.",
-            skills: ['Enterprise Sales', 'Product Strategy', 'Client Onboarding', 'Sales Automation', 'Cleantech'],
-            stack: ['HubSpot', 'Sales Navigator', 'Lusha', 'Anthropic', 'Microsoft 365']
+            impact: 'La conformité devient une source de valeur pour les recycleurs, et chaque tonne recyclée peut être prouvée.',
+            skills: ['Enterprise Sales', 'Stratégie produit', 'Onboarding client', 'Pricing', 'Économie circulaire'],
+            stack: ['HubSpot', 'Azure DevOps', 'Sales Navigator', 'Microsoft 365']
           }
         },
         {
-          name: 'Exact Software',
-          description: 'Sales Executive Cloud ERP - "Best Winter Sales Europe" Award',
-          sector: 'ERP/SaaS',
-          period: '2016 - 2017',
-          role: 'Sales Executive Cloud ERP',
+          id: 'spread',
+          name: 'Spread AI',
+          logo: '/logos/spread.png',
+          role: 'Consultant, développement du marché français',
+          period: '2024 – 2025',
+          periodLong: 'Juin 2024 – nov. 2025',
+          summary: "Ouverture du marché français pour une plateforme allemande de Knowledge Graph industriel, dans l'automobile et la défense.",
+          sector: ['Automobile', 'Défense', 'Industrie'],
           details: {
-            context: "Ma première expérience professionnelle au sein d'une entreprise internationale hollandaise, leader européen des solutions ERP pour PME.",
+            context: "Mission de développement du marché français pour une solution Knowledge Graph, dans un marché automobile européen en pleine restructuration.",
             highlights: [
-              'Meilleurs résultats de vente du pays',
-              'Récompensé "Best Winter Sales Europe" - top performer acquisition clients',
-              "Ouverture du marché ERP Cloud pour l'industrie française",
-              'Dépassement constant des quotas commerciaux'
+              'Relations stratégiques avec des constructeurs automobiles en France et en Italie',
+              'Ouverture de comptes dans la défense et le spatial',
+              'Plus de 80 rendez-vous qualifiés et deux négociations avec des constructeurs'
             ],
-            impact: "Une école de vente exceptionnelle où j'ai tout appris des fondamentaux du B2B SaaS. Les bases solides qui ont construit ma carrière.",
-            skills: ['SaaS Sales', 'ERP', 'New Business', 'Cloud Solutions', 'SMB/Mid-Market'],
-            stack: ['Exact Online', 'Globe CRM/ERP/WMS']
+            impact: 'Vendre une technologie exigeante dans un marché qui se contracte demande de la rigueur et de la patience.',
+            skills: ['Enterprise Sales', 'Automobile', 'Défense', 'Knowledge Graph'],
+            stack: ['Salesforce', 'Sales Navigator', 'SalesLoft']
+          }
+        },
+        {
+          id: 'arxum',
+          name: 'ARXUM',
+          logo: '/logos/arxum.png',
+          role: 'Sales Director & General Manager France',
+          period: '2018 – 2024',
+          periodLong: 'Fév. 2018 – mai 2024',
+          summary: 'Employé n°1, puis CEO France. Filiale française construite de zéro jusqu’à €800k d’ARR, comptes signés dont l’Agence spatiale européenne.',
+          sector: ['Sciences de la vie', 'Traçabilité', 'Industrie'],
+          details: {
+            context: "Premier employé d'une startup allemande de traçabilité industrielle pour les sciences de la vie.",
+            highlights: [
+              'Employé n°1, puis CEO France et investisseur',
+              "Filiale française construite de zéro jusqu'à €800k d'ARR, en ventes directes et indirectes",
+              "Équipe de 6 en France, au sein d'un groupe de 25+ personnes (Allemagne, France, Bulgarie)",
+              "Grands comptes signés, dont l'Agence spatiale européenne"
+            ],
+            impact: "Toutes les facettes d'une scale-up : du premier déploiement chez un client à la stratégie de croissance européenne.",
+            skills: ['Leadership', 'Création de filiale', 'Ventes B2B', 'Sciences de la vie', 'Blockchain'],
+            stack: ['Zoho CRM', 'Jira', 'Confluence']
+          }
+        },
+        {
+          id: 'exact',
+          name: 'Exact Software',
+          logo: '/logos/exact.svg',
+          role: 'Sales Executive, Cloud ERP',
+          period: '2016 – 2017',
+          periodLong: 'Août 2016 – déc. 2017',
+          summary: '« Best Winter Sales Europe ». Meilleurs résultats de vente du pays sur l’ERP cloud pour PME.',
+          sector: ['ERP', 'SaaS', 'PME'],
+          details: {
+            context: "Première expérience, chez un éditeur néerlandais leader de l'ERP pour PME en Europe.",
+            highlights: [
+              'Récompensé « Best Winter Sales Europe »',
+              'Meilleurs résultats de vente du pays',
+              "Ouverture du marché de l'ERP cloud auprès de l'industrie française"
+            ],
+            impact: 'Une école de vente exigeante, où j’ai appris les fondamentaux du SaaS B2B.',
+            skills: ['Vente SaaS', 'ERP', 'New business', 'PME'],
+            stack: ['Exact Online']
           }
         }
       ]
     },
 
-    // Modal
     modal: {
       context: 'Contexte',
       highlights: 'Points clés',
-      impact: 'Impact & Apprentissages',
-      skills: 'Compétences développées',
-      stack: 'Stack & Outils'
+      impact: "Ce que j'en retiens",
+      skills: 'Compétences',
+      stack: 'Outils'
     },
 
-    // CTA Section
     cta: {
-      title: 'Prêt à accélérer votre croissance ?',
-      description: "Que ce soit pour structurer votre équipe commerciale, développer le marché français ou lancer votre solution AI/SaaS, je suis là pour vous accompagner.",
-      button: 'Contactez-moi',
-      learnMore: 'En savoir plus'
+      title: 'Un projet qui sert le vivant ?',
+      description: 'Recyclage, santé, industrie : si votre produit doit prouver son impact, parlons-en.',
+      button: 'Écrire un message'
     },
 
-    // Creations Page
     creations: {
-      title: 'Mes Créations',
-      subtitle: 'Produits conçus, développés et déployés en production — du concept au go-to-market',
-      visitSite: 'Visiter le site',
-      items: [
-        {
-          id: 'bioforge',
+      eyebrow: 'Réalisations',
+      title: "Ce que j'ai construit",
+      subtitle: 'Huit produits conçus, développés et mis en ligne, du besoin terrain au premier utilisateur.',
+      visit: 'Visiter',
+      live: 'En ligne',
+      groups: [
+        { id: 'circular', title: 'Économie circulaire & conformité', items: ['tyre-epr', 'recycling-calculator', 'e2v-ui'] },
+        { id: 'health', title: 'Santé & performance', items: ['bioforge', 'safe-flow'] },
+        { id: 'sales', title: 'Outils commerciaux', items: ['e2v-outreach', 'e2v-workshop-form'] },
+        { id: 'commerce', title: 'Commerce', items: ['saffron4joy'] }
+      ],
+      items: {
+        bioforge: {
           name: 'BioForge',
-          description: "Plateforme santé & performance pour sportifs d'endurance. Cockpit quotidien (readiness Garmin ou WHOOP, charge d'entraînement), plans d'entraînement adaptatifs recalculés chaque jour selon le sommeil, la HRV et la fatigue, séances structurées envoyées sur montre Garmin. Briefs de course personnalisés (profil du parcours, allure par segment, plan nutrition). Health Hub croisant bilans sanguins, microbiome et entraînement. Coach conversationnel avec tout le contexte santé et forme, coaching ancré dans une science vérifiée.",
-          tags: ['HealthTech', 'Endurance', 'Wearables', 'Next.js', 'FastAPI', 'pgvector'],
-          status: 'Live'
+          description: "Le cockpit des sportifs d'endurance. Plans d'entraînement recalculés chaque jour selon le sommeil, la VFC et la fatigue, briefs de course sur mesure, analyses sanguines et microbiome croisées avec l'entraînement.",
+          tags: ['Santé', 'Endurance', 'Garmin · WHOOP']
         },
-        {
-          id: 'safe-flow',
-          name: 'Safe-flow.ai',
-          description: "Plateforme wellness complète : app mobile React Native (iOS/Android) + webapp + landing page. 15+ techniques guidées (respiration, méditation), coaching IA personnalisé, intégration Garmin (HRV, stress, sommeil), gamification \"Paramis\" avec badges et niveaux progressifs. Audio guidé ElevenLabs, bilingue FR/EN, RGPD compliant.",
-          tags: ['Wellness', 'React Native', 'AI', 'Garmin', 'Flask'],
-          status: 'Live'
+        'safe-flow': {
+          name: 'SafeFlow',
+          description: "Coach de respiration pour la performance. 12 programmes guidés, 129 jours d'audio, suivi de la VFC avec Garmin. App iOS, Android et web.",
+          tags: ['Respiration', 'VFC', 'Mobile']
         },
-        {
-          id: 'e2v-outreach',
+        'e2v-outreach': {
           name: 'E2V Outreach',
-          description: "CRM & plateforme d'exécution commerciale full-stack. Gestion pipeline/contacts, séquences email/call automatisées avec templates dynamiques, sync bidirectionnelle HubSpot, envoi SendGrid, dashboard KPIs temps réel. Monitoring d'agents IA de prospection avec feed live et file d'approbation.",
-          tags: ['SalesTech', 'CRM', 'HubSpot', 'Next.js', 'FastAPI'],
-          status: 'Live'
+          description: "CRM et plateforme d'exécution commerciale : pipeline, séquences e-mail et appels, synchronisation HubSpot, tableaux de bord en temps réel.",
+          tags: ['Ventes', 'CRM', 'HubSpot']
         },
-        {
-          id: 'tyre-epr',
-          name: 'Tyre EPR Platform',
-          description: "Plateforme de conformité REP (Responsabilité Élargie du Producteur) pour l'industrie du pneumatique. Dashboards multi-parties prenantes, suivi volumes injection/offset, détection d'anomalies mass balance, opérations terrain mobile-first avec mode offline, système de certificats 2 niveaux. Multi-pays (France ADEME, Mexique, EU).",
-          tags: ['RegTech', 'Compliance', 'React', 'TypeScript', 'Multi-country'],
-          status: 'Live'
+        'tyre-epr': {
+          name: 'Tyre EPR',
+          description: "Conformité REP pour la filière pneumatique : suivi des volumes, détection d'anomalies de bilan matière, opérations terrain hors ligne, certificats. France, Mexique, Europe.",
+          tags: ['Recyclage', 'REP', 'Multi-pays']
         },
-        {
-          id: 'recycling-calculator',
-          name: 'Recycling ROI Simulator',
-          description: "Simulateur interactif de ROI pour le recyclage mécanique. Modélisation des coûts incidents, temps d'audit, effectifs — calcul des économies, réduction charge de travail et timeline de retour sur investissement. Export Excel avec formules live pour validation CFO.",
-          tags: ['Sales Enablement', 'ROI', 'Simulation', 'Excel Export'],
-          status: 'Live'
+        'recycling-calculator': {
+          name: 'Simulateur ROI recyclage',
+          description: "Calcule le retour sur investissement de la digitalisation pour un recycleur : incidents, audits, effectifs. Export Excel avec formules, pour le directeur financier.",
+          tags: ['Recyclage', 'ROI', 'Excel']
         },
-        {
-          id: 'e2v-workshop-form',
-          name: 'E2V Project Scoping',
-          description: "Outil de cadrage projet interactif pour la phase de scoping commercial. Collecte structurée des besoins prospects, qualification automatique et maximisation de l'engagement en amont du cycle de vente.",
-          tags: ['Sales Enablement', 'Next.js', 'Lead Qualification'],
-          status: 'Live'
+        'e2v-workshop-form': {
+          name: 'Cadrage projet E2V',
+          description: "Questionnaire de cadrage pour l'avant-vente : besoins structurés, qualification automatique, prospect engagé dès le départ.",
+          tags: ['Avant-vente', 'Qualification']
         },
-        {
-          id: 'e2v-ui',
+        'e2v-ui': {
           name: 'E2V Design System',
-          description: "Bibliothèque de composants UI et design system pour l'écosystème eco2Veritas. Prototypage rapide d'interfaces, composants réutilisables et guidelines de marque.",
-          tags: ['UI/UX', 'Design System', 'Vite', 'Component Library'],
-          status: 'Live'
+          description: "Composants et prototypes d'interfaces pour l'écosystème eco2Veritas, dont la gestion des pneus usagés.",
+          tags: ['Design system', 'Interfaces']
         },
-        {
-          id: 'saffron4joy',
+        saffron4joy: {
           name: 'Saffron4Joy',
-          description: "Projet e-commerce pour l'importation et distribution de safran premium d'Iran. Branding complet, stratégie go-to-market et plateforme de vente en ligne.",
-          tags: ['E-commerce', 'Import', 'Branding', 'GTM'],
-          status: 'Live'
+          description: "Import et distribution de safran premium d'Iran : marque, stratégie de lancement et boutique en ligne.",
+          tags: ['E-commerce', 'Marque']
         }
-      ]
+      }
     },
 
-    // Blog Page
     blog: {
-      title: 'Blog & Insights',
-      subtitle: 'Réflexions sur les ventes enterprise, la tech et le business development',
+      title: 'Notes',
+      subtitle: 'Réflexions sur les ventes enterprise, la tech et le développement commercial',
       readMore: 'Lire la suite',
       readTime: 'min de lecture',
       comingSoon: 'Article complet à venir...',
@@ -225,7 +250,7 @@ export const translations = {
         {
           id: 1,
           title: "L'avenir de la Blockchain dans l'industrie pharmaceutique",
-          excerpt: 'Comment la blockchain révolutionne la traçabilité des médicaments et garantit la sécurité des patients.',
+          excerpt: 'Comment la blockchain améliore la traçabilité des médicaments et la sécurité des patients.',
           date: '2024-01-15',
           category: 'Blockchain',
           readTime: 5
@@ -233,14 +258,14 @@ export const translations = {
         {
           id: 2,
           title: 'IA et AR en environnement réglementé Life Sciences',
-          excerpt: "Retour d'expérience sur le déploiement de solutions AI/AR dans les laboratoires pharmaceutiques.",
+          excerpt: "Retour d'expérience sur le déploiement de solutions IA et AR dans les laboratoires pharmaceutiques.",
           date: '2024-01-10',
           category: 'AI/AR',
           readTime: 7
         },
         {
           id: 3,
-          title: 'MEDDICC : La méthode qui transforme les ventes enterprise',
+          title: 'MEDDICC : la méthode qui structure les ventes enterprise',
           excerpt: 'Comment structurer vos cycles de vente complexes avec la méthodologie MEDDICC.',
           date: '2024-01-05',
           category: 'Sales',
@@ -249,289 +274,298 @@ export const translations = {
       ]
     },
 
-    // About Page
     about: {
-      title: 'À Propos',
-      role: 'Enterprise Sales Director | AI & SaaS',
-      intro: "Passionné par l'intersection entre technologie et business development, j'accompagne les entreprises tech dans leur croissance depuis plus de 9 ans.",
-      experience: {
-        title: 'Parcours',
-        description: "De ma première expérience chez Exact Software où j'ai été récompensé \"Best Winter Sales Europe\", jusqu'à mon rôle de CEO France chez ARXUM, j'ai développé une expertise unique dans la vente de solutions technologiques complexes."
-      },
-      expertise: {
-        title: 'Expertise',
-        items: [
-          {
-            title: 'Enterprise Sales',
-            description: 'Méthodologies MEDDICC, SPIN Selling. Cycles de vente complexes B2B.'
-          },
-          {
-            title: 'Go-to-Market',
-            description: 'Lancement et expansion de solutions SaaS/AI sur le marché européen.'
-          },
-          {
-            title: 'Life Sciences',
-            description: 'Environnements réglementés GxP, pharma, biotech.'
-          },
-          {
-            title: 'Leadership',
-            description: "Construction et management d'équipes Sales, Project, R&D."
-          }
-        ]
-      },
-      values: {
-        title: 'Valeurs',
-        items: [
-          {
-            title: 'Excellence',
-            description: "La recherche constante de l'excellence dans chaque interaction client."
-          },
-          {
-            title: 'Innovation',
-            description: 'Toujours à la pointe des nouvelles technologies et méthodologies.'
-          },
-          {
-            title: 'Authenticité',
-            description: 'Des relations basées sur la confiance et la transparence.'
-          }
-        ]
-      },
-      cta: {
-        title: 'Travaillons ensemble',
-        description: "Vous avez un projet de développement commercial ou de lancement produit ? Discutons de comment je peux vous accompagner.",
-        button: 'Me contacter'
-      }
+      eyebrow: 'Parcours',
+      role: 'Sales & Product Development Director',
+      bio: [
+        "Je dirige les ventes, la stratégie produit et l'onboarding client chez eco2Veritas, une plateforme de conformité et de traçabilité pour le recyclage. Arrivé en 2025 pour bâtir le moteur commercial, je porte aujourd'hui la roadmap de la plateforme.",
+        "Avant cela, chez ARXUM, j'ai construit la filiale française de zéro jusqu'à €800k d'ARR et signé des grands comptes, dont l'Agence spatiale européenne. En parallèle, je conçois mes propres produits avec A-X Software."
+      ],
+      location: 'Annecy, France',
+      available: 'Disponible pour échanger',
+      facts: [
+        { value: '€0 → €800k', label: 'ARR, filiale France' },
+        { value: 'ESA', label: 'parmi les comptes signés' },
+        { value: 'n°1 → CEO', label: 'chez ARXUM' },
+        { value: 'X-HEC', label: 'Energy & Sustainability' }
+      ],
+      experienceTitle: 'Expérience',
+      educationTitle: 'Formation',
+      education: [
+        {
+          degree: 'Executive Program, Energy & Sustainability',
+          school: 'X-HEC (École polytechnique × HEC Paris)',
+          period: '2018 – 2019',
+          description: "Thèse sur la blockchain appliquée aux énergies renouvelables. Primé lors d'un hackathon de l'UNEP."
+        },
+        {
+          degree: 'MSc Social Entrepreneurship & Alternative Business Models',
+          school: 'INSEEC Business School & Columbia College Chicago',
+          period: '2015 – 2016',
+          description: 'Double diplôme Paris et Chicago.'
+        }
+      ],
+      skillsTitle: 'Compétences',
+      skills: [
+        { category: 'Ventes enterprise', items: ['MEDDICC & SPIN', 'Négociation complexe', 'Partenaires & channel', 'Cycles longs'] },
+        { category: 'Produit', items: ['Roadmap', 'Onboarding client', 'Prototypage rapide', 'Pricing'] },
+        { category: 'Impact & réglementation', items: ['REP / EPR', 'Traçabilité', 'Environnements GxP', 'Économie circulaire'] },
+        { category: 'Leadership', items: ['Création de filiale', 'Équipes multi-pays (DE, FR, BG)', 'Management transverse', 'P&L'] }
+      ],
+      interestsTitle: "Centres d'intérêt",
+      interests: ['Triathlon', 'Boxe', 'Philosophie & sciences', 'Piano']
     },
 
-    // Footer
     footer: {
+      tagline: 'La tech au service du vivant.',
       description: "Je conçois, vends et déploie des produits numériques pour l'économie circulaire, l'industrie et la santé. Basé à Annecy.",
       navigation: 'Navigation',
       contact: 'Contact',
       rights: 'Tous droits réservés.',
-      legal: 'Mentions légales',
-      privacy: 'Confidentialité'
+      legal: 'Mentions légales'
     }
   },
 
   en: {
-    // Navigation
     nav: {
       home: 'Home',
-      creations: 'My Projects',
+      creations: 'Work',
       blog: 'Blog',
-      about: 'About',
+      about: 'Background',
       contact: 'Contact'
     },
 
-    // Hero Section
     hero: {
-      badge: 'Enterprise Sales & AI Consulting',
-      title: 'Accelerate your',
-      titleHighlight: 'B2B growth',
-      description: "Enterprise Sales Director with 9+ years of experience in B2B SaaS and AI solutions. Former GM France at ARXUM, I help tech companies with market expansion and building high-performing sales teams.",
-      cta: "Let's discuss your project",
-      ctaSecondary: 'View my work',
-      stats: {
-        experience: '9+ years experience',
-        arr: '€0 → €800k ARR',
-        team: 'Team of 6 in France'
+      eyebrow: 'Annecy · circular economy · health · industry',
+      titleA: 'Technology in service of',
+      titleB: 'the living world.',
+      description: 'I design, sell and deploy digital products for the circular economy, industry and health. Ten years in the field, from the first meeting to the customer rollout.',
+      cta: "Let's talk about your project",
+      ctaSecondary: 'See the work',
+      proofs: [
+        { value: '€0 → €800k', label: 'ARR, ARXUM France' },
+        { value: '8', label: 'products built and live' },
+        { value: '10 years', label: 'of B2B sales and product' }
+      ],
+      roots: ['recycling', 'health', 'industry']
+    },
+
+    domains: {
+      eyebrow: 'Where I work',
+      title: 'Three fields',
+      subtitle: 'Sectors where technology is measured in traced tonnes, better health and avoided risks.',
+      proofLabel: 'Proof',
+      items: [
+        {
+          id: 'circular',
+          title: 'Circular economy',
+          text: 'Tracing waste, proving recycling and simplifying extended producer responsibility for recyclers and producers.',
+          proofs: ['eco2Veritas', 'Tyre EPR', 'Recycling ROI simulator']
+        },
+        {
+          id: 'health',
+          title: 'Health & performance',
+          text: 'Making body signals readable: sleep, HRV, training load, breathing.',
+          proofs: ['BioForge', 'SafeFlow']
+        },
+        {
+          id: 'industry',
+          title: 'Industry & life sciences',
+          text: 'Traceability and quality in regulated environments: pharma, labs, space, defense.',
+          proofs: ['ARXUM', 'Spread AI']
+        }
+      ]
+    },
+
+    capabilities: {
+      eyebrow: 'What I bring',
+      title: 'Sell, steer, ship',
+      items: [
+        {
+          title: 'Selling innovation to large accounts',
+          text: 'Long cycles, demanding procurement, regulated environments. Direct sales and partners.',
+          proof: '€0 → €800k ARR'
+        },
+        {
+          title: 'Steering the product',
+          text: 'From field needs to the roadmap, through to onboarding the first customers.',
+          proof: 'Roadmap of a traceability platform'
+        },
+        {
+          title: 'Prototyping fast',
+          text: 'From an idea to a live product, tested with real users, in a few weeks.',
+          proof: '8 live products'
+        }
+      ]
+    },
+
+    experience: {
+      eyebrow: 'Background',
+      title: 'Ten years between field and product',
+      details: 'Details',
+      seeAll: 'Full background',
+      items: [
+        {
+          id: 'e2v',
+          name: 'eco2Veritas',
+          logo: '/logos/e2v.png',
+          role: 'Sales & Product Development Director',
+          period: '2025 – now',
+          periodLong: 'Nov 2025 – present',
+          summary: 'Enterprise sales, product strategy and client onboarding for a compliance and traceability platform serving the recycling industry. I own the platform roadmap.',
+          sector: ['Recycling', 'Compliance', 'Traceability'],
+          details: {
+            context: 'Compliance and traceability platform for the recycling industry. I joined to build the commercial engine and now also own the product roadmap.',
+            highlights: [
+              'Leading enterprise sales with recycling players across the UK, Europe and Latin America',
+              'Delivered a deployment for a global packaging leader, then its expansion',
+              'Rebuilt the product and pricing architecture',
+              'Built the prospecting tools (E2V Outreach)'
+            ],
+            impact: 'Compliance becomes a source of value for recyclers, and every recycled tonne can be proven.',
+            skills: ['Enterprise Sales', 'Product Strategy', 'Client Onboarding', 'Pricing', 'Circular Economy'],
+            stack: ['HubSpot', 'Azure DevOps', 'Sales Navigator', 'Microsoft 365']
+          }
+        },
+        {
+          id: 'spread',
+          name: 'Spread AI',
+          logo: '/logos/spread.png',
+          role: 'Consultant, French market development',
+          period: '2024 – 2025',
+          periodLong: 'Jun 2024 – Nov 2025',
+          summary: 'Opened the French market for a German industrial Knowledge Graph platform, in automotive and defense.',
+          sector: ['Automotive', 'Defense', 'Industry'],
+          details: {
+            context: 'Developing the French market for a Knowledge Graph solution, while the European automotive market was restructuring.',
+            highlights: [
+              'Strategic relationships with carmakers in France and Italy',
+              'Opened accounts in defense and space',
+              'More than 80 qualified meetings and two negotiations with carmakers'
+            ],
+            impact: 'Selling demanding technology in a shrinking market takes rigor and patience.',
+            skills: ['Enterprise Sales', 'Automotive', 'Defense', 'Knowledge Graph'],
+            stack: ['Salesforce', 'Sales Navigator', 'SalesLoft']
+          }
+        },
+        {
+          id: 'arxum',
+          name: 'ARXUM',
+          logo: '/logos/arxum.png',
+          role: 'Sales Director & General Manager France',
+          period: '2018 – 2024',
+          periodLong: 'Feb 2018 – May 2024',
+          summary: 'Employee #1, then CEO France. Built the French subsidiary from scratch to €800k ARR and signed accounts including the European Space Agency.',
+          sector: ['Life Sciences', 'Traceability', 'Industry'],
+          details: {
+            context: 'First employee of a German industrial traceability startup serving life sciences.',
+            highlights: [
+              'Employee #1, then CEO France and investor',
+              'Built the French subsidiary from scratch to €800k ARR, through direct and indirect sales',
+              'Team of 6 in France, within a 25+ person group (Germany, France, Bulgaria)',
+              'Signed large accounts, including the European Space Agency'
+            ],
+            impact: 'Every side of a scale-up: from the first customer deployment to the European growth strategy.',
+            skills: ['Leadership', 'Subsidiary Launch', 'B2B Sales', 'Life Sciences', 'Blockchain'],
+            stack: ['Zoho CRM', 'Jira', 'Confluence']
+          }
+        },
+        {
+          id: 'exact',
+          name: 'Exact Software',
+          logo: '/logos/exact.svg',
+          role: 'Sales Executive, Cloud ERP',
+          period: '2016 – 2017',
+          periodLong: 'Aug 2016 – Dec 2017',
+          summary: '"Best Winter Sales Europe". Top sales results in the country for cloud ERP for SMEs.',
+          sector: ['ERP', 'SaaS', 'SMB'],
+          details: {
+            context: 'First role, at a Dutch software company leading the European ERP market for SMEs.',
+            highlights: [
+              'Awarded "Best Winter Sales Europe"',
+              'Top sales results in the country',
+              'Opened the cloud ERP market with French industry'
+            ],
+            impact: 'A demanding sales school where I learned the fundamentals of B2B SaaS.',
+            skills: ['SaaS Sales', 'ERP', 'New Business', 'SMB'],
+            stack: ['Exact Online']
+          }
+        }
+      ]
+    },
+
+    modal: {
+      context: 'Context',
+      highlights: 'Highlights',
+      impact: 'What I took from it',
+      skills: 'Skills',
+      stack: 'Tools'
+    },
+
+    cta: {
+      title: 'A project that serves the living world?',
+      description: 'Recycling, health, industry: if your product has to prove its impact, let’s talk.',
+      button: 'Send a message'
+    },
+
+    creations: {
+      eyebrow: 'Work',
+      title: 'What I have built',
+      subtitle: 'Eight products designed, built and shipped, from field needs to the first user.',
+      visit: 'Visit',
+      live: 'Live',
+      groups: [
+        { id: 'circular', title: 'Circular economy & compliance', items: ['tyre-epr', 'recycling-calculator', 'e2v-ui'] },
+        { id: 'health', title: 'Health & performance', items: ['bioforge', 'safe-flow'] },
+        { id: 'sales', title: 'Sales tools', items: ['e2v-outreach', 'e2v-workshop-form'] },
+        { id: 'commerce', title: 'Commerce', items: ['saffron4joy'] }
+      ],
+      items: {
+        bioforge: {
+          name: 'BioForge',
+          description: 'The cockpit for endurance athletes. Training plans redesigned every day from sleep, HRV and fatigue, tailored race briefs, blood and microbiome analysis cross-checked with training.',
+          tags: ['Health', 'Endurance', 'Garmin · WHOOP']
+        },
+        'safe-flow': {
+          name: 'SafeFlow',
+          description: 'Breathing coach for performance. 12 guided programs, 129 days of audio, HRV tracking with Garmin. iOS, Android and web app.',
+          tags: ['Breathing', 'HRV', 'Mobile']
+        },
+        'e2v-outreach': {
+          name: 'E2V Outreach',
+          description: 'CRM and sales execution platform: pipeline, email and call sequences, HubSpot sync, real-time dashboards.',
+          tags: ['Sales', 'CRM', 'HubSpot']
+        },
+        'tyre-epr': {
+          name: 'Tyre EPR',
+          description: 'Extended producer responsibility for the tyre industry: volume tracking, mass balance anomaly detection, offline field operations, certificates. France, Mexico, Europe.',
+          tags: ['Recycling', 'EPR', 'Multi-country']
+        },
+        'recycling-calculator': {
+          name: 'Recycling ROI simulator',
+          description: 'Calculates the return on digitalisation for a recycler: incidents, audits, headcount. Excel export with live formulas, for the CFO.',
+          tags: ['Recycling', 'ROI', 'Excel']
+        },
+        'e2v-workshop-form': {
+          name: 'E2V project scoping',
+          description: 'Scoping questionnaire for pre-sales: structured needs, automatic qualification, an engaged prospect from day one.',
+          tags: ['Pre-sales', 'Qualification']
+        },
+        'e2v-ui': {
+          name: 'E2V Design System',
+          description: 'Components and interface prototypes for the eco2Veritas ecosystem, including end-of-life tyre management.',
+          tags: ['Design system', 'Interfaces']
+        },
+        saffron4joy: {
+          name: 'Saffron4Joy',
+          description: 'Import and distribution of premium Iranian saffron: brand, launch strategy and online store.',
+          tags: ['E-commerce', 'Brand']
+        }
       }
     },
 
-    // Services Section
-    services: {
-      title: 'Expertise & Services',
-      subtitle: 'Strategic support for tech startups and scale-ups',
-      items: [
-        {
-          title: 'Enterprise Sales',
-          description: 'Key account development, MEDDICC & SPIN methodologies, complex sales cycles.'
-        },
-        {
-          title: 'AI & SaaS Go-to-Market',
-          description: 'Launch strategy, European market expansion, channel & partner development.'
-        },
-        {
-          title: 'Life Sciences & Industrial',
-          description: 'Pharma/biotech sector expertise, GxP regulated environments, industrial solutions.'
-        },
-        {
-          title: 'Team Building',
-          description: 'Building and scaling Sales, Project and R&D teams. Cross-functional management.'
-        }
-      ]
-    },
-
-    // Clients Section
-    clients: {
-      title: 'Experience & References',
-      subtitle: 'From tech startups to large industrial groups',
-      items: [
-        {
-          name: 'ARXUM',
-          description: 'Sales Director & General Manager France - Industrial SaaS (AI, AR) for Life Sciences',
-          sector: 'Life Sciences • Blockchain',
-          period: '2018 - 2024',
-          role: 'Employee #1 → CEO France & Investor',
-          details: {
-            context: 'Joined as the first employee of a German blockchain startup specialized in industrial traceability for Life Sciences.',
-            highlights: [
-              'Evolution from Employee #1 to CEO France and Investor',
-              'Built the French subsidiary from scratch to €800k ARR',
-              'Team of 6 in France, within a 25+ person group (Germany, France, Bulgaria)',
-              'Involvement at all levels: client projects, business development, product evolution'
-            ],
-            impact: "A complete entrepreneurial adventure where I touched every aspect of a tech scale-up: from the first line of code deployed at a client to the European growth strategy.",
-            skills: ['Leadership', 'Entrepreneurship', 'B2B Sales', 'Life Sciences', 'Blockchain'],
-            stack: ['Zoho CRM/ERP', 'Atlassian Jira', 'Atlassian Confluence']
-          }
-        },
-        {
-          name: 'Spread AI',
-          description: 'Strategic consulting for European market expansion of industrial AI solutions',
-          sector: 'Defense • Automotive • AI',
-          period: '2024 - 2025',
-          role: 'Strategic Sales Consultant',
-          details: {
-            context: 'My 9th year of collaboration with German companies. Mission to develop the French market for a Knowledge Graph solution in a particularly challenging European automotive context.',
-            highlights: [
-              'Developed strategic relationships with Renault and Stellantis (France & Italy)',
-              'Opened the Defense sector: Ariane, Dassault, and other major players',
-              'Rigorous application of Spread strategy in French territory',
-              'Navigating an automotive market in full restructuring'
-            ],
-            impact: 'A rich experience in technique and lessons in a difficult market context. Where real sales professionals make the difference: turning obstacles into opportunities.',
-            skills: ['Enterprise Sales', 'Automotive', 'Defense', 'Knowledge Graph', 'Resilience'],
-            stack: ['Salesforce', 'Sales Navigator', 'Lusha', 'SalesLoft', 'OpenAI']
-          }
-        },
-        {
-          name: 'eco2Veritas',
-          description: 'Compliance and traceability platform for the recycling industry',
-          sector: 'Recycling • Compliance • Traceability',
-          period: '2025 - Present',
-          role: 'Sales & Product Development Director',
-          details: {
-            context: 'Compliance and traceability platform for the recycling industry. I lead enterprise sales, product strategy and client onboarding, and own the platform roadmap.',
-            highlights: [
-              'Leading enterprise sales with recycling industry players',
-              'Defining product strategy and owning the platform roadmap',
-              'Onboarding clients onto the platform',
-              'Creation of prospecting automation tools (E2V Outreach)'
-            ],
-            impact: 'Contributing to the growth of a tech solution with positive environmental impact.',
-            skills: ['Enterprise Sales', 'Product Strategy', 'Client Onboarding', 'Sales Automation', 'Cleantech'],
-            stack: ['HubSpot', 'Sales Navigator', 'Lusha', 'Anthropic', 'Microsoft 365']
-          }
-        },
-        {
-          name: 'Exact Software',
-          description: 'Sales Executive Cloud ERP - "Best Winter Sales Europe" Award',
-          sector: 'ERP/SaaS',
-          period: '2016 - 2017',
-          role: 'Sales Executive Cloud ERP',
-          details: {
-            context: 'My first professional experience within a Dutch international company, European leader in ERP solutions for SMEs.',
-            highlights: [
-              'Best sales results in the country',
-              'Awarded "Best Winter Sales Europe" - top performer client acquisition',
-              'Opening the Cloud ERP market for French industry',
-              'Consistently exceeding sales quotas'
-            ],
-            impact: 'An exceptional sales school where I learned all the fundamentals of B2B SaaS. The solid foundations that built my career.',
-            skills: ['SaaS Sales', 'ERP', 'New Business', 'Cloud Solutions', 'SMB/Mid-Market'],
-            stack: ['Exact Online', 'Globe CRM/ERP/WMS']
-          }
-        }
-      ]
-    },
-
-    // Modal
-    modal: {
-      context: 'Context',
-      highlights: 'Key Points',
-      impact: 'Impact & Learnings',
-      skills: 'Skills Developed',
-      stack: 'Stack & Tools'
-    },
-
-    // CTA Section
-    cta: {
-      title: 'Ready to accelerate your growth?',
-      description: "Whether it's structuring your sales team, developing the French market, or launching your AI/SaaS solution, I'm here to support you.",
-      button: 'Contact me',
-      learnMore: 'Learn more'
-    },
-
-    // Creations Page
-    creations: {
-      title: 'My Projects',
-      subtitle: 'Products designed, built and deployed to production — from concept to go-to-market',
-      visitSite: 'Visit site',
-      items: [
-        {
-          id: 'bioforge',
-          name: 'BioForge',
-          description: 'Health & performance platform for endurance athletes. Daily cockpit (readiness from Garmin or WHOOP, training load), adaptive training plans redesigned every day from sleep, HRV and fatigue, structured workouts pushed to Garmin watches. Personalized race briefs (course profile, segment pacing, nutrition plan). Health Hub cross-analyzing blood tests, microbiome and training. Conversational coach with full health and fitness context, coaching grounded in verified science.',
-          tags: ['HealthTech', 'Endurance', 'Wearables', 'Next.js', 'FastAPI', 'pgvector'],
-          status: 'Live'
-        },
-        {
-          id: 'safe-flow',
-          name: 'Safe-flow.ai',
-          description: 'Full-stack wellness platform: React Native mobile app (iOS/Android) + webapp + landing page. 15+ guided techniques (breathwork, meditation), personalized AI coaching, Garmin integration (HRV, stress, sleep), "Paramis" gamification with badges and progressive levels. ElevenLabs guided audio, bilingual FR/EN, GDPR compliant.',
-          tags: ['Wellness', 'React Native', 'AI', 'Garmin', 'Flask'],
-          status: 'Live'
-        },
-        {
-          id: 'e2v-outreach',
-          name: 'E2V Outreach',
-          description: 'Full-stack CRM & sales execution platform. Pipeline/contact management, automated email/call sequences with dynamic templates, bidirectional HubSpot sync, SendGrid delivery, real-time KPI dashboard. AI prospecting agent monitoring with live feed and approval queue.',
-          tags: ['SalesTech', 'CRM', 'HubSpot', 'Next.js', 'FastAPI'],
-          status: 'Live'
-        },
-        {
-          id: 'tyre-epr',
-          name: 'Tyre EPR Platform',
-          description: 'EPR (Extended Producer Responsibility) compliance platform for the tyre industry. Multi-stakeholder dashboards, injection/offset volume tracking, mass balance anomaly detection, mobile-first field operations with offline mode, 2-tier certificate system. Multi-country support (France ADEME, Mexico, EU).',
-          tags: ['RegTech', 'Compliance', 'React', 'TypeScript', 'Multi-country'],
-          status: 'Live'
-        },
-        {
-          id: 'recycling-calculator',
-          name: 'Recycling ROI Simulator',
-          description: 'Interactive ROI simulator for mechanical recycling. Models incident costs, audit time, staffing — calculates savings, workload reduction and payback timeline. Excel export with live formulas for CFO validation.',
-          tags: ['Sales Enablement', 'ROI', 'Simulation', 'Excel Export'],
-          status: 'Live'
-        },
-        {
-          id: 'e2v-workshop-form',
-          name: 'E2V Project Scoping',
-          description: 'Interactive project scoping tool for the commercial qualification phase. Structured requirements gathering, automated qualification and prospect engagement maximization upstream of the sales cycle.',
-          tags: ['Sales Enablement', 'Next.js', 'Lead Qualification'],
-          status: 'Live'
-        },
-        {
-          id: 'e2v-ui',
-          name: 'E2V Design System',
-          description: 'UI component library and design system for the eco2Veritas ecosystem. Rapid interface prototyping, reusable components and brand guidelines.',
-          tags: ['UI/UX', 'Design System', 'Vite', 'Component Library'],
-          status: 'Live'
-        },
-        {
-          id: 'saffron4joy',
-          name: 'Saffron4Joy',
-          description: 'E-commerce project for importing and distributing premium saffron from Iran. Full branding, go-to-market strategy and online sales platform.',
-          tags: ['E-commerce', 'Import', 'Branding', 'GTM'],
-          status: 'Live'
-        }
-      ]
-    },
-
-    // Blog Page
     blog: {
-      title: 'Blog & Insights',
+      title: 'Notes',
       subtitle: 'Thoughts on enterprise sales, tech and business development',
       readMore: 'Read more',
       readTime: 'min read',
@@ -539,8 +573,8 @@ export const translations = {
       posts: [
         {
           id: 1,
-          title: 'The Future of Blockchain in Pharmaceutical Industry',
-          excerpt: 'How blockchain is revolutionizing drug traceability and ensuring patient safety.',
+          title: 'The Future of Blockchain in the Pharmaceutical Industry',
+          excerpt: 'How blockchain improves drug traceability and patient safety.',
           date: '2024-01-15',
           category: 'Blockchain',
           readTime: 5
@@ -548,15 +582,15 @@ export const translations = {
         {
           id: 2,
           title: 'AI and AR in Regulated Life Sciences Environments',
-          excerpt: 'Lessons learned from deploying AI/AR solutions in pharmaceutical laboratories.',
+          excerpt: 'Lessons from deploying AI and AR solutions in pharmaceutical laboratories.',
           date: '2024-01-10',
           category: 'AI/AR',
           readTime: 7
         },
         {
           id: 3,
-          title: 'MEDDICC: The Method That Transforms Enterprise Sales',
-          excerpt: 'How to structure your complex sales cycles with the MEDDICC methodology.',
+          title: 'MEDDICC: the method that structures enterprise sales',
+          excerpt: 'How to structure complex sales cycles with the MEDDICC methodology.',
           date: '2024-01-05',
           category: 'Sales',
           readTime: 6
@@ -564,68 +598,55 @@ export const translations = {
       ]
     },
 
-    // About Page
     about: {
-      title: 'About',
-      role: 'Enterprise Sales Director | AI & SaaS',
-      intro: "Passionate about the intersection of technology and business development, I've been helping tech companies grow for over 9 years.",
-      experience: {
-        title: 'Background',
-        description: 'From my first experience at Exact Software where I was awarded "Best Winter Sales Europe", to my role as CEO France at ARXUM, I\'ve developed unique expertise in selling complex technology solutions.'
-      },
-      expertise: {
-        title: 'Expertise',
-        items: [
-          {
-            title: 'Enterprise Sales',
-            description: 'MEDDICC, SPIN Selling methodologies. Complex B2B sales cycles.'
-          },
-          {
-            title: 'Go-to-Market',
-            description: 'Launch and expansion of SaaS/AI solutions in the European market.'
-          },
-          {
-            title: 'Life Sciences',
-            description: 'GxP regulated environments, pharma, biotech.'
-          },
-          {
-            title: 'Leadership',
-            description: 'Building and managing Sales, Project, R&D teams.'
-          }
-        ]
-      },
-      values: {
-        title: 'Values',
-        items: [
-          {
-            title: 'Excellence',
-            description: 'The constant pursuit of excellence in every client interaction.'
-          },
-          {
-            title: 'Innovation',
-            description: 'Always at the forefront of new technologies and methodologies.'
-          },
-          {
-            title: 'Authenticity',
-            description: 'Relationships built on trust and transparency.'
-          }
-        ]
-      },
-      cta: {
-        title: "Let's work together",
-        description: 'Have a business development or product launch project? Let\'s discuss how I can help you.',
-        button: 'Contact me'
-      }
+      eyebrow: 'Background',
+      role: 'Sales & Product Development Director',
+      bio: [
+        'I lead sales, product strategy and client onboarding at eco2Veritas, a compliance and traceability platform for the recycling industry. I joined in 2025 to build the commercial engine and now own the platform roadmap.',
+        'Before that, at ARXUM, I built the French subsidiary from scratch to €800k ARR and signed large accounts, including the European Space Agency. Alongside, I build my own products with A-X Software.'
+      ],
+      location: 'Annecy, France',
+      available: 'Open to conversations',
+      facts: [
+        { value: '€0 → €800k', label: 'ARR, French subsidiary' },
+        { value: 'ESA', label: 'among signed accounts' },
+        { value: '#1 → CEO', label: 'at ARXUM' },
+        { value: 'X-HEC', label: 'Energy & Sustainability' }
+      ],
+      experienceTitle: 'Experience',
+      educationTitle: 'Education',
+      education: [
+        {
+          degree: 'Executive Program, Energy & Sustainability',
+          school: 'X-HEC (École polytechnique × HEC Paris)',
+          period: '2018 – 2019',
+          description: 'Thesis on blockchain applied to renewable energy. Award winner at a UNEP hackathon.'
+        },
+        {
+          degree: 'MSc Social Entrepreneurship & Alternative Business Models',
+          school: 'INSEEC Business School & Columbia College Chicago',
+          period: '2015 – 2016',
+          description: 'Dual degree, Paris and Chicago.'
+        }
+      ],
+      skillsTitle: 'Skills',
+      skills: [
+        { category: 'Enterprise sales', items: ['MEDDICC & SPIN', 'Complex negotiation', 'Partners & channel', 'Long cycles'] },
+        { category: 'Product', items: ['Roadmap', 'Client onboarding', 'Rapid prototyping', 'Pricing'] },
+        { category: 'Impact & regulation', items: ['EPR', 'Traceability', 'GxP environments', 'Circular economy'] },
+        { category: 'Leadership', items: ['Subsidiary launch', 'Cross-country teams (DE, FR, BG)', 'Cross-functional management', 'P&L'] }
+      ],
+      interestsTitle: 'Interests',
+      interests: ['Triathlon', 'Boxing', 'Philosophy & science', 'Piano']
     },
 
-    // Footer
     footer: {
+      tagline: 'Technology in service of the living world.',
       description: 'I design, sell and deploy digital products for the circular economy, industry and health. Based in Annecy, France.',
       navigation: 'Navigation',
       contact: 'Contact',
       rights: 'All rights reserved.',
-      legal: 'Legal Notice',
-      privacy: 'Privacy'
+      legal: 'Legal notice'
     }
   }
 }

@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
-import { Linkedin, Github, Mail } from 'lucide-react'
+import Logo from './Logo'
+import { LinkedinIcon, GithubIcon, MailIcon } from './Icons'
 import { useLanguage } from '../context/LanguageContext'
-import { useTranslations } from '../data/translations'
+import { useTranslations, CONTACT_EMAIL, LINKEDIN_URL } from '../data/translations'
 
 export default function Footer() {
   const { language } = useLanguage()
@@ -14,26 +15,21 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="col-span-1 md:col-span-2">
-            <div className="mb-4">
-              <img src="/logo-full.png" alt="Cryptopole" className="h-10 brightness-0 invert" />
-            </div>
-            <p className="text-slate-400 text-sm max-w-md">
-              {t.footer.description}
-            </p>
+    <footer className="bg-prusse-deep text-papier">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div className="md:col-span-2 flex flex-col gap-4">
+            <Logo tone="papier" />
+            <p className="font-serif italic text-2xl text-papier">{t.footer.tagline}</p>
+            <p className="text-[#C9D3E0] text-sm max-w-md leading-relaxed">{t.footer.description}</p>
           </div>
 
-          {/* Links */}
           <div>
-            <h3 className="font-semibold mb-4">{t.footer.navigation}</h3>
-            <ul className="space-y-2 text-sm text-slate-400">
+            <h3 className="eyebrow !text-lichen mb-4">{t.footer.navigation}</h3>
+            <ul className="space-y-2 text-sm">
               {navLinks.map((link) => (
                 <li key={link.path}>
-                  <Link to={link.path} className="hover:text-white transition-colors">
+                  <Link to={link.path} className="text-[#C9D3E0] hover:text-papier transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -41,25 +37,24 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-4">{t.footer.contact}</h3>
-            <ul className="space-y-2 text-sm text-slate-400">
+            <h3 className="eyebrow !text-lichen mb-4">{t.footer.contact}</h3>
+            <ul className="space-y-2 text-sm">
               <li>
-                <a href="mailto:axel_lr@pm.me" className="hover:text-white transition-colors flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
-                  axel_lr@pm.me
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-[#C9D3E0] hover:text-papier transition-colors inline-flex items-center gap-2">
+                  <MailIcon className="w-4 h-4" />
+                  {CONTACT_EMAIL}
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/axelbenoist" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
-                  <Linkedin className="w-4 h-4" />
+                <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-[#C9D3E0] hover:text-papier transition-colors inline-flex items-center gap-2">
+                  <LinkedinIcon className="w-4 h-4" />
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="https://github.com/Chillaxb" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
-                  <Github className="w-4 h-4" />
+                <a href="https://github.com/Chillaxb" target="_blank" rel="noopener noreferrer" className="text-[#C9D3E0] hover:text-papier transition-colors inline-flex items-center gap-2">
+                  <GithubIcon className="w-4 h-4" />
                   GitHub
                 </a>
               </li>
@@ -67,11 +62,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-8 pt-8 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6">
-          <p className="text-sm text-slate-400">
-            © {new Date().getFullYear()} A-X Software · Cryptopole. {t.footer.rights}
-          </p>
-          <Link to="/mentions-legales" className="text-sm text-slate-400 hover:text-white transition-colors">
+        <div className="border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-sm text-[#AFBCCD]">
+          <p>© {new Date().getFullYear()} A-X Software · Cryptopole. {t.footer.rights}</p>
+          <Link to="/mentions-legales" className="hover:text-papier transition-colors">
             {t.footer.legal}
           </Link>
         </div>
