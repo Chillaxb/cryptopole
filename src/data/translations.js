@@ -20,7 +20,7 @@ export const translations = {
       stats: {
         experience: "9+ ans d'expérience",
         arr: '€0 → €800k ARR',
-        team: '25+ FTEs en équipe'
+        team: 'Équipe de 6 en France'
       }
     },
 
@@ -64,7 +64,7 @@ export const translations = {
             highlights: [
               'Évolution de Employé #1 à CEO France et Investisseur',
               "Construction de la filiale française from scratch jusqu'à €800k ARR",
-              'Collaboration avec 25+ FTEs (Sales, Project, R&D)',
+              "Équipe de 6 en France, au sein d'un groupe de 25+ personnes (Allemagne, France, Bulgarie)",
               'Participation à toutes les échelles : projets clients, développement commercial, évolution produit'
             ],
             impact: "Une aventure entrepreneuriale complète où j'ai pu toucher à tous les aspects d'une scale-up tech : de la première ligne de code déployée chez un client à la stratégie de croissance européenne.",
@@ -305,7 +305,7 @@ export const translations = {
 
     // Footer
     footer: {
-      description: "Consultant freelance spécialisé en Intelligence Artificielle, Blockchain et Technologies XR. Solutions innovantes pour l'industrie pharmaceutique, biotech et spatiale.",
+      description: "Je conçois, vends et déploie des produits numériques pour l'économie circulaire, l'industrie et la santé. Basé à Annecy.",
       navigation: 'Navigation',
       contact: 'Contact',
       rights: 'Tous droits réservés.',
@@ -335,7 +335,7 @@ export const translations = {
       stats: {
         experience: '9+ years experience',
         arr: '€0 → €800k ARR',
-        team: '25+ FTEs managed'
+        team: 'Team of 6 in France'
       }
     },
 
@@ -379,7 +379,7 @@ export const translations = {
             highlights: [
               'Evolution from Employee #1 to CEO France and Investor',
               'Built the French subsidiary from scratch to €800k ARR',
-              'Collaboration with 25+ FTEs (Sales, Project, R&D)',
+              'Team of 6 in France, within a 25+ person group (Germany, France, Bulgaria)',
               'Involvement at all levels: client projects, business development, product evolution'
             ],
             impact: "A complete entrepreneurial adventure where I touched every aspect of a tech scale-up: from the first line of code deployed at a client to the European growth strategy.",
@@ -620,7 +620,7 @@ export const translations = {
 
     // Footer
     footer: {
-      description: 'Freelance consultant specialized in Artificial Intelligence, Blockchain and XR Technologies. Innovative solutions for pharmaceutical, biotech and space industries.',
+      description: 'I design, sell and deploy digital products for the circular economy, industry and health. Based in Annecy, France.',
       navigation: 'Navigation',
       contact: 'Contact',
       rights: 'All rights reserved.',

@@ -11,7 +11,7 @@ export const clients = [
       highlights: [
         'Évolution de Employé #1 à CEO France et Investisseur',
         'Construction de la filiale française from scratch jusqu\'à €800k ARR',
-        'Collaboration avec 25+ FTEs (Sales, Project, R&D)',
+        "Équipe de 6 en France, au sein d'un groupe de 25+ personnes (Allemagne, France, Bulgarie)",
         'Participation à toutes les échelles : projets clients, développement commercial, évolution produit'
       ],
       impact: 'Une aventure entrepreneuriale complète où j\'ai pu toucher à tous les aspects d\'une scale-up tech : de la première ligne de code déployée chez un client à la stratégie de croissance européenne.',

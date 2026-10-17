@@ -23,7 +23,7 @@ export default function About() {
       role: 'Sales Director & General Manager France',
       company: 'ARXUM GmbH & ARXUM France SAS',
       period: 'Fév 2018 – Mai 2024 (6 ans)',
-      description: "Fondation et scaling de la filiale française de 0 à 25+ FTEs (Sales, Project, R&D). Croissance ARR de €0 à €800k via ventes directes et indirectes. Gestion du cycle de vente complet pour logiciels AI/AR en environnement Life Sciences réglementé."
+      description: "Fondation et scaling de la filiale française jusqu'à une équipe de 6, au sein d'un groupe de 25+ personnes (Allemagne, France, Bulgarie). Croissance ARR de €0 à €800k via ventes directes et indirectes. Gestion du cycle de vente complet pour logiciels AI/AR en environnement Life Sciences réglementé."
     },
     {
       role: 'Sales Executive – Cloud ERP Solutions',
@@ -48,7 +48,7 @@ export default function About() {
       role: 'Sales Director & General Manager France',
       company: 'ARXUM GmbH & ARXUM France SAS',
       period: 'Feb 2018 – May 2024 (6 years)',
-      description: 'Founded and scaled French subsidiary from 0 to 25+ FTEs (Sales, Project, R&D). Grew ARR from €0 to €800k through direct and indirect sales. Full sales cycle management for AI/AR software in regulated Life Sciences environment.'
+      description: 'Founded and scaled the French subsidiary to a team of 6, within a 25+ person group (Germany, France, Bulgaria). Grew ARR from €0 to €800k through direct and indirect sales. Full sales cycle management for AI/AR software in regulated Life Sciences environment.'
     },
     {
       role: 'Sales Executive – Cloud ERP Solutions',
@@ -90,12 +90,12 @@ export default function About() {
     { category: 'Enterprise Sales', items: ['MEDDICC & SPIN Selling', 'Négociation complexe', 'Channel & Partner Dev', 'Cycles longs'] },
     { category: 'AI & SaaS', items: ['Stratégie Go-to-Market', 'Expansion marché', 'Positionnement produit', 'Value Selling'] },
     { category: 'Life Sciences', items: ['Pharma & Biotech', 'Environnements GxP', 'Conformité réglementaire', 'Opérations labo'] },
-    { category: 'Leadership', items: ['Team Building', 'Management transverse', 'Collaboration 25+ FTEs', 'P&L Ownership'] }
+    { category: 'Leadership', items: ['Team Building', 'Management transverse', 'Équipes multi-pays (DE, FR, BG)', 'P&L Ownership'] }
   ] : [
     { category: 'Enterprise Sales', items: ['MEDDICC & SPIN Selling', 'Complex Deal Negotiation', 'Channel & Partner Dev', 'Long Sales Cycles'] },
     { category: 'AI & SaaS', items: ['Go-to-Market Strategy', 'Market Expansion', 'Product Positioning', 'Value Selling'] },
     { category: 'Life Sciences', items: ['Pharma & Biotech', 'GxP Environments', 'Regulatory Compliance', 'Lab Operations'] },
-    { category: 'Leadership', items: ['Team Building', 'Cross-functional Mgmt', 'Collaboration 25+ FTEs', 'P&L Ownership'] }
+    { category: 'Leadership', items: ['Team Building', 'Cross-functional Mgmt', 'Cross-country teams (DE, FR, BG)', 'P&L Ownership'] }
   ]
 
   const interests = language === 'fr'
@@ -104,7 +104,7 @@ export default function About() {
 
   const labels = language === 'fr' ? {
     available: 'Disponible',
-    keyAchievement: 'Key Achievement: Construction de la filiale française from scratch jusqu\'à €800k ARR, collaboration avec 25+ FTEs (Sales, Project, R&D).',
+    keyAchievement: 'Key Achievement: Construction de la filiale française from scratch jusqu\'à €800k ARR, avec une équipe de 6 en France au sein d\'un groupe de 25+ personnes sur 3 pays.',
     experience: 'Expérience Professionnelle',
     education: 'Formation',
     skills: 'Compétences Clés',
@@ -115,7 +115,7 @@ export default function About() {
     description: 'Sales Director avec 9+ ans d\'expérience dans le scaling de solutions B2B SaaS et AI sur des marchés enterprise complexes. Track record prouvé dans la construction d\'équipes commerciales performantes, établissement de présence marché en Life Sciences, Industrial et Tech.'
   } : {
     available: 'Available',
-    keyAchievement: 'Key Achievement: Built French subsidiary from scratch to €800k ARR, collaborating with 25+ FTEs (Sales, Project, R&D).',
+    keyAchievement: 'Key Achievement: Built French subsidiary from scratch to €800k ARR, with a team of 6 in France within a 25+ person group across 3 countries.',
     experience: 'Professional Experience',
     education: 'Education',
     skills: 'Key Skills',

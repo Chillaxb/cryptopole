@@ -67,10 +67,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-8 pt-8 flex justify-center items-center">
+        <div className="border-t border-slate-800 mt-8 pt-8 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6">
           <p className="text-sm text-slate-400">
-            © {new Date().getFullYear()} Cryptopole. {t.footer.rights}
+            © {new Date().getFullYear()} A-X Software · Cryptopole. {t.footer.rights}
           </p>
+          <Link to="/mentions-legales" className="text-sm text-slate-400 hover:text-white transition-colors">
+            {t.footer.legal}
+          </Link>
         </div>
       </div>
     </footer>
