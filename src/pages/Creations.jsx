@@ -40,15 +40,16 @@ export default function Creations() {
         </header>
 
         <div className="flex flex-col gap-16">
-          {t.creations.groups.map((group) => (
+          {t.creations.groups.map((group, groupIndex) => (
             <section key={group.id} aria-labelledby={`group-${group.id}`} className="flex flex-col gap-6">
               <div className="flex items-baseline justify-between gap-4 border-b border-ligne pb-3">
                 <h2 id={`group-${group.id}`} className="font-display font-semibold text-2xl text-encre">{group.title}</h2>
                 <span className="font-mono text-sm text-encre-soft tabular-nums">{String(group.items.length).padStart(2, '0')}</span>
               </div>
               <div className={`grid grid-cols-1 gap-6 ${group.items.length >= 3 ? 'md:grid-cols-2 lg:grid-cols-3' : 'md:grid-cols-2'}`}>
-                {group.items.map((id) => {
+                {group.items.map((id, itemIndex) => {
                   const project = t.creations.items[id]
+                  const aboveFold = groupIndex === 0 && itemIndex === 0
                   const url = projectUrls[id]
                   const single = group.items.length === 1
                   return (
@@ -61,7 +62,8 @@ export default function Creations() {
                           src={projectImages[id]}
                           alt={project.name}
                           className="w-full h-full object-cover object-top"
-                          loading="lazy"
+                          loading={aboveFold ? 'eager' : 'lazy'}
+                          fetchPriority={aboveFold ? 'high' : 'auto'}
                           decoding="async"
                         />
                       </div>
