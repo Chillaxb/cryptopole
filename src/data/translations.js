@@ -19,7 +19,7 @@ export const translations = {
       cta: 'Parlons de votre projet',
       ctaSecondary: 'Voir les réalisations',
       proofs: [
-        { value: '€0 → €800k', label: 'ARR, filiale France ARXUM' },
+        { value: '€0 → €800k', label: 'ARR en 2 ans, ARXUM France' },
         { value: '8', label: 'produits conçus et en ligne' },
         { value: '10 ans', label: 'de ventes et de produit B2B' }
       ],
@@ -88,18 +88,19 @@ export const translations = {
           role: 'Sales & Product Development Director',
           period: '2025 – auj.',
           periodLong: 'Nov. 2025 – aujourd’hui',
-          summary: "Ventes enterprise, stratégie produit et onboarding client d'une plateforme de conformité et de traçabilité pour le recyclage. Je porte la roadmap de la plateforme.",
+          summary: "Développement produit d'une plateforme qui automatise les preuves du recyclage et du contenu recyclé : roadmap, architecture, déploiements. Je pilote aussi les ventes enterprise.",
           sector: ['Recyclage', 'Conformité', 'Traçabilité'],
           details: {
-            context: 'Plateforme de conformité et de traçabilité pour l’industrie du recyclage. Arrivé pour bâtir le moteur commercial, je porte aujourd’hui aussi la roadmap produit.',
+            context: "Entreprise britannique qui automatise les preuves derrière le recyclage et les allégations de contenu recyclé. Arrivé pour bâtir le moteur commercial, je porte aujourd'hui la roadmap produit.",
             highlights: [
-              'Pilotage des ventes enterprise auprès des acteurs du recyclage, au Royaume-Uni, en Europe et en Amérique latine',
-              "Déploiement chez un leader mondial de l'emballage, puis extension du contrat",
-              'Refonte de l’architecture produit et de la grille tarifaire',
+              'Roadmap de la plateforme : la réalité des sites, la réglementation et les attentes des auditeurs traduites en un logiciel qui capte la preuve une fois et la convertit en certificats vérifiés',
+              "Refonte de l'architecture produit, des modules et de la grille tarifaire",
+              "Déploiement multi-sites chez un leader mondial de l'emballage, puis extension du contrat",
+              "Recycleurs, producteurs d'emballages et éco-organismes au Royaume-Uni, en Europe et en Amérique latine",
               'Création des outils de prospection (E2V Outreach)'
             ],
             impact: 'La conformité devient une source de valeur pour les recycleurs, et chaque tonne recyclée peut être prouvée.',
-            skills: ['Enterprise Sales', 'Stratégie produit', 'Onboarding client', 'Pricing', 'Économie circulaire'],
+            skills: ['Stratégie produit', 'Roadmap', 'Enterprise Sales', 'Pricing', 'Économie circulaire'],
             stack: ['HubSpot', 'Azure DevOps', 'Sales Navigator', 'Microsoft 365']
           }
         },
@@ -131,13 +132,13 @@ export const translations = {
           role: 'Sales Director & General Manager France',
           period: '2018 – 2024',
           periodLong: 'Fév. 2018 – mai 2024',
-          summary: 'Employé n°1, puis CEO France. Filiale française construite de zéro jusqu’à €800k d’ARR, comptes signés dont l’Agence spatiale européenne.',
+          summary: "Employé n°1, puis CEO France. Filiale française passée de €0 à €800k d'ARR en deux ans, comptes signés dont l'Agence spatiale européenne.",
           sector: ['Sciences de la vie', 'Traçabilité', 'Industrie'],
           details: {
             context: "Premier employé d'une startup allemande de traçabilité industrielle pour les sciences de la vie.",
             highlights: [
               'Employé n°1, puis CEO France et investisseur',
-              "Filiale française construite de zéro jusqu'à €800k d'ARR, en ventes directes et indirectes",
+              "Filiale française passée de €0 à €800k d'ARR en deux ans, en ventes directes et indirectes",
               "Équipe de 6 en France, au sein d'un groupe de 25+ personnes (Allemagne, France, Bulgarie)",
               "Grands comptes signés, dont l'Agence spatiale européenne"
             ],
@@ -296,15 +297,16 @@ export const translations = {
       eyebrow: 'Parcours',
       role: 'Sales & Product Development Director',
       bio: [
-        "Je dirige les ventes, la stratégie produit et l'onboarding client chez eco2Veritas, une plateforme de conformité et de traçabilité pour le recyclage. Arrivé en 2025 pour bâtir le moteur commercial, je porte aujourd'hui la roadmap de la plateforme.",
-        "Avant cela, chez ARXUM, j'ai construit la filiale française de zéro jusqu'à €800k d'ARR et signé des grands comptes, dont l'Agence spatiale européenne. En parallèle, je conçois mes propres produits avec A-X Software."
+        "Je dirige le développement produit d'eco2Veritas, une entreprise britannique qui automatise les preuves derrière le recyclage et les allégations de contenu recyclé. Je porte la roadmap de la plateforme : je traduis la réalité des sites de recyclage, les exigences réglementaires et les attentes des auditeurs en un logiciel qui capte la preuve une seule fois et la convertit en certificats vérifiés.",
+        "J'ai refondu l'architecture du produit et de ses modules, livré un déploiement multi-sites chez un grand compte puis son extension, et je travaille avec des recycleurs, des producteurs d'emballages et des éco-organismes au Royaume-Uni, en Europe et en Amérique latine.",
+        "Avant cela, CEO d'ARXUM France, j'ai fait passer la filiale de €0 à €800k d'ARR en deux ans, avec des comptes comme l'Agence spatiale européenne. En parallèle, je conçois mes propres produits avec A-X Software."
       ],
       location: 'Annecy, France',
       available: 'Disponible pour échanger',
       facts: [
-        { value: '€0 → €800k', label: 'ARR, filiale France' },
+        { value: '3 régions', label: 'Royaume-Uni, Europe, Amérique latine' },
+        { value: '€0 → €800k', label: 'ARR en 2 ans, ARXUM France' },
         { value: 'ESA', label: 'parmi les comptes signés' },
-        { value: 'n°1 → CEO', label: 'chez ARXUM' },
         { value: 'X-HEC', label: 'Energy & Sustainability' }
       ],
       experienceTitle: 'Expérience',
@@ -361,7 +363,7 @@ export const translations = {
       cta: "Let's talk about your project",
       ctaSecondary: 'See the work',
       proofs: [
-        { value: '€0 → €800k', label: 'ARR, ARXUM France' },
+        { value: '€0 → €800k', label: 'ARR in 2 years, ARXUM France' },
         { value: '8', label: 'products built and live' },
         { value: '10 years', label: 'of B2B sales and product' }
       ],
@@ -430,18 +432,19 @@ export const translations = {
           role: 'Sales & Product Development Director',
           period: '2025 – now',
           periodLong: 'Nov 2025 – present',
-          summary: 'Enterprise sales, product strategy and client onboarding for a compliance and traceability platform serving the recycling industry. I own the platform roadmap.',
+          summary: 'Product development for a platform that automates the evidence behind recycling and recycled content: roadmap, architecture, deployments. I also lead enterprise sales.',
           sector: ['Recycling', 'Compliance', 'Traceability'],
           details: {
-            context: 'Compliance and traceability platform for the recycling industry. I joined to build the commercial engine and now also own the product roadmap.',
+            context: 'UK-based company that automates the evidence behind recycling and recycled-content claims. I joined to build the commercial engine and now own the product roadmap.',
             highlights: [
-              'Leading enterprise sales with recycling players across the UK, Europe and Latin America',
-              'Delivered a deployment for a global packaging leader, then its expansion',
-              'Rebuilt the product and pricing architecture',
+              'Platform roadmap: site realities, regulation and auditor expectations turned into software that captures evidence once and converts it into verified certificates',
+              'Rebuilt the product, module and pricing architecture',
+              'Delivered a multi-site deployment for a global packaging leader, then its expansion',
+              'Recyclers, packaging producers and compliance schemes across the UK, Europe and Latin America',
               'Built the prospecting tools (E2V Outreach)'
             ],
             impact: 'Compliance becomes a source of value for recyclers, and every recycled tonne can be proven.',
-            skills: ['Enterprise Sales', 'Product Strategy', 'Client Onboarding', 'Pricing', 'Circular Economy'],
+            skills: ['Product Strategy', 'Roadmap', 'Enterprise Sales', 'Pricing', 'Circular Economy'],
             stack: ['HubSpot', 'Azure DevOps', 'Sales Navigator', 'Microsoft 365']
           }
         },
@@ -473,13 +476,13 @@ export const translations = {
           role: 'Sales Director & General Manager France',
           period: '2018 – 2024',
           periodLong: 'Feb 2018 – May 2024',
-          summary: 'Employee #1, then CEO France. Built the French subsidiary from scratch to €800k ARR and signed accounts including the European Space Agency.',
+          summary: 'Employee #1, then CEO France. Scaled the French subsidiary from €0 to €800k ARR in two years and signed accounts including the European Space Agency.',
           sector: ['Life Sciences', 'Traceability', 'Industry'],
           details: {
             context: 'First employee of a German industrial traceability startup serving life sciences.',
             highlights: [
               'Employee #1, then CEO France and investor',
-              'Built the French subsidiary from scratch to €800k ARR, through direct and indirect sales',
+              'Scaled the French subsidiary from €0 to €800k ARR in two years, through direct and indirect sales',
               'Team of 6 in France, within a 25+ person group (Germany, France, Bulgaria)',
               'Signed large accounts, including the European Space Agency'
             ],
@@ -638,15 +641,16 @@ export const translations = {
       eyebrow: 'Background',
       role: 'Sales & Product Development Director',
       bio: [
-        'I lead sales, product strategy and client onboarding at eco2Veritas, a compliance and traceability platform for the recycling industry. I joined in 2025 to build the commercial engine and now own the platform roadmap.',
-        'Before that, at ARXUM, I built the French subsidiary from scratch to €800k ARR and signed large accounts, including the European Space Agency. Alongside, I build my own products with A-X Software.'
+        'I lead product development at eco2Veritas, a UK-based company that automates the evidence behind recycling and recycled-content claims. I own the platform roadmap and turn the realities of recycling sites, regulatory requirements and auditor expectations into software that captures evidence once and converts it into verified certificates.',
+        'I rebuilt the product and module architecture, delivered a multi-site enterprise deployment and its expansion, and work with recyclers, packaging producers and compliance schemes across the UK, Europe and Latin America.',
+        'Previously CEO of ARXUM France, I scaled the subsidiary from €0 to €800k ARR in two years, with accounts such as the European Space Agency. Alongside, I build my own products with A-X Software.'
       ],
       location: 'Annecy, France',
       available: 'Open to conversations',
       facts: [
-        { value: '€0 → €800k', label: 'ARR, French subsidiary' },
+        { value: '3 regions', label: 'UK, Europe, Latin America' },
+        { value: '€0 → €800k', label: 'ARR in 2 years, ARXUM France' },
         { value: 'ESA', label: 'among signed accounts' },
-        { value: '#1 → CEO', label: 'at ARXUM' },
         { value: 'X-HEC', label: 'Energy & Sustainability' }
       ],
       experienceTitle: 'Experience',
