@@ -194,9 +194,9 @@ export const translations = {
       onRequest: 'Démo sur demande',
       status: { live: 'En ligne', beta: 'Bêta ouverte', demo: 'Démo', private: 'Accès restreint' },
       groups: [
+        { id: 'health', title: 'Santé & performance', intro: "Rendre accessible à tous un suivi jusqu'ici réservé aux sportifs encadrés.", items: ['bioforge', 'safe-flow'] },
         { id: 'circular', title: 'Économie circulaire : piloter la conformité', intro: 'La conformité coûte. Mesurée et prouvée, elle devient un argument commercial.', items: ['e2v-ui', 'tyre-epr'] },
         { id: 'sales', title: 'Vente B2B : du premier contact au contrat', intro: 'Raccourcir un cycle de vente industriel : chiffrer la valeur, cadrer vite, suivre chaque contact.', items: ['recycling-calculator', 'e2v-workshop-form', 'e2v-outreach'] },
-        { id: 'health', title: 'Santé & performance', intro: "Rendre accessible à tous un suivi jusqu'ici réservé aux sportifs encadrés.", items: ['bioforge', 'safe-flow'] },
         { id: 'commerce', title: 'Marque & e-commerce', intro: 'Lancer une marque de bout en bout, du produit à la boutique.', items: ['saffron4joy'] }
       ],
       items: {
@@ -538,9 +538,9 @@ export const translations = {
       onRequest: 'Demo on request',
       status: { live: 'Live', beta: 'Open beta', demo: 'Demo', private: 'Restricted access' },
       groups: [
+        { id: 'health', title: 'Health & performance', intro: 'Making the kind of guidance only coached athletes had available to everyone.', items: ['bioforge', 'safe-flow'] },
         { id: 'circular', title: 'Circular economy: running compliance', intro: 'Compliance costs money. Measured and proven, it becomes a sales argument.', items: ['e2v-ui', 'tyre-epr'] },
         { id: 'sales', title: 'B2B sales: from first contact to contract', intro: 'Shortening an industrial sales cycle: put a number on the value, scope fast, follow every contact.', items: ['recycling-calculator', 'e2v-workshop-form', 'e2v-outreach'] },
-        { id: 'health', title: 'Health & performance', intro: 'Making the kind of guidance only coached athletes had available to everyone.', items: ['bioforge', 'safe-flow'] },
         { id: 'commerce', title: 'Brand & e-commerce', intro: 'Launching a brand end to end, from product to store.', items: ['saffron4joy'] }
       ],
       items: {
