@@ -35,16 +35,12 @@ export default function About() {
           </div>
         </div>
         <div className="lg:col-span-5">
-          <figure className="relative max-w-sm mx-auto lg:max-w-none">
+          <figure className="max-w-sm mx-auto lg:max-w-none">
             <img
               src="/founder-portrait.webp"
               alt="Axel Benoist"
               className="w-full aspect-[4/5] object-cover rounded-md border border-ligne"
             />
-            <figcaption className="absolute bottom-4 left-4 inline-flex items-center gap-2 bg-papier/95 rounded px-3 py-1.5 text-sm text-encre">
-              <span className="w-2 h-2 rounded-full bg-lichen" aria-hidden="true" />
-              {a.available}
-            </figcaption>
           </figure>
         </div>
       </section>

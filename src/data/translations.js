@@ -16,7 +16,7 @@ export const translations = {
       titleA: 'La tech au service',
       titleB: 'du vivant.',
       description: "Je conçois, vends et déploie des produits numériques pour l'économie circulaire, l'industrie et la santé. Dix ans de terrain, du premier rendez-vous au déploiement chez le client.",
-      cta: 'Parlons de votre projet',
+      cta: 'Me contacter',
       ctaSecondary: 'Voir les réalisations',
       proofs: [
         { value: '€0 → €800k', label: 'ARR en 2 ans, ARXUM France' },
@@ -180,8 +180,8 @@ export const translations = {
     },
 
     cta: {
-      title: 'Un projet qui sert le vivant ?',
-      description: 'Recyclage, santé, industrie : si votre produit doit prouver son impact, parlons-en.',
+      title: "Une question, un retour d'expérience ?",
+      description: 'Recyclage, santé, industrie : le plus simple reste un e-mail.',
       button: 'Écrire un message'
     },
 
@@ -302,7 +302,6 @@ export const translations = {
         "Avant cela, CEO d'ARXUM France, j'ai fait passer la filiale de €0 à €800k d'ARR en deux ans, avec des comptes comme l'Agence spatiale européenne. En parallèle, je conçois mes propres produits avec A-X Software."
       ],
       location: 'Annecy, France',
-      available: 'Disponible pour échanger',
       facts: [
         { value: '3 régions', label: 'Royaume-Uni, Europe, Amérique latine' },
         { value: '€0 → €800k', label: 'ARR en 2 ans, ARXUM France' },
@@ -360,7 +359,7 @@ export const translations = {
       titleA: 'Technology in service of',
       titleB: 'the living world.',
       description: 'I design, sell and deploy digital products for the circular economy, industry and health. Ten years in the field, from the first meeting to the customer rollout.',
-      cta: "Let's talk about your project",
+      cta: 'Get in touch',
       ctaSecondary: 'See the work',
       proofs: [
         { value: '€0 → €800k', label: 'ARR in 2 years, ARXUM France' },
@@ -524,8 +523,8 @@ export const translations = {
     },
 
     cta: {
-      title: 'A project that serves the living world?',
-      description: 'Recycling, health, industry: if your product has to prove its impact, let’s talk.',
+      title: 'A question, an experience to share?',
+      description: 'Recycling, health, industry: email is the simplest way to reach me.',
       button: 'Send a message'
     },
 
@@ -646,7 +645,6 @@ export const translations = {
         'Previously CEO of ARXUM France, I scaled the subsidiary from €0 to €800k ARR in two years, with accounts such as the European Space Agency. Alongside, I build my own products with A-X Software.'
       ],
       location: 'Annecy, France',
-      available: 'Open to conversations',
       facts: [
         { value: '3 regions', label: 'UK, Europe, Latin America' },
         { value: '€0 → €800k', label: 'ARR in 2 years, ARXUM France' },
