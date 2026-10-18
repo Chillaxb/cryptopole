@@ -12,7 +12,7 @@ export const translations = {
     },
 
     hero: {
-      eyebrow: 'Annecy · économie circulaire · santé · industrie',
+      eyebrow: 'Annecy · santé · économie circulaire · industrie',
       titleA: 'La tech au service',
       titleB: 'du vivant.',
       description: "Je conçois, vends et déploie des produits numériques pour l'économie circulaire, l'industrie et la santé. Dix ans de terrain, du premier rendez-vous au déploiement chez le client.",
@@ -29,20 +29,20 @@ export const translations = {
     domains: {
       eyebrow: "Où j'interviens",
       title: 'Trois terrains',
-      subtitle: 'Des secteurs où la technologie se mesure en tonnes tracées, en santé gagnée, en risques évités.',
+      subtitle: 'Des secteurs où la technologie se mesure en santé gagnée, en tonnes tracées, en risques évités.',
       proofLabel: 'Preuves',
       items: [
-        {
-          id: 'circular',
-          title: 'Économie circulaire',
-          text: 'Tracer les déchets, prouver le recyclage, simplifier la conformité REP pour les recycleurs et les producteurs.',
-          proofs: ['eco2Veritas', 'Tyre EPR', 'Simulateur ROI recyclage']
-        },
         {
           id: 'health',
           title: 'Santé & performance',
           text: "Rendre lisibles les signaux du corps : sommeil, VFC, charge d'entraînement, respiration.",
           proofs: ['BioForge', 'SafeFlow']
+        },
+        {
+          id: 'circular',
+          title: 'Économie circulaire',
+          text: 'Tracer les déchets, prouver le recyclage, simplifier la conformité REP pour les recycleurs et les producteurs.',
+          proofs: ['eco2Veritas', 'Plateforme de conformité pneus', 'Simulateur de gains recyclage']
         },
         {
           id: 'industry',
@@ -356,7 +356,7 @@ export const translations = {
     },
 
     hero: {
-      eyebrow: 'Annecy · circular economy · health · industry',
+      eyebrow: 'Annecy · health · circular economy · industry',
       titleA: 'Technology in service of',
       titleB: 'the living world.',
       description: 'I design, sell and deploy digital products for the circular economy, industry and health. Ten years in the field, from the first meeting to the customer rollout.',
@@ -373,20 +373,20 @@ export const translations = {
     domains: {
       eyebrow: 'Where I work',
       title: 'Three fields',
-      subtitle: 'Sectors where technology is measured in traced tonnes, better health and avoided risks.',
+      subtitle: 'Sectors where technology is measured in better health, traced tonnes and avoided risks.',
       proofLabel: 'Proof',
       items: [
-        {
-          id: 'circular',
-          title: 'Circular economy',
-          text: 'Tracing waste, proving recycling and simplifying extended producer responsibility for recyclers and producers.',
-          proofs: ['eco2Veritas', 'Tyre EPR', 'Recycling ROI simulator']
-        },
         {
           id: 'health',
           title: 'Health & performance',
           text: 'Making body signals readable: sleep, HRV, training load, breathing.',
           proofs: ['BioForge', 'SafeFlow']
+        },
+        {
+          id: 'circular',
+          title: 'Circular economy',
+          text: 'Tracing waste, proving recycling and simplifying extended producer responsibility for recyclers and producers.',
+          proofs: ['eco2Veritas', 'Tyre compliance platform', 'Recycling savings simulator']
         },
         {
           id: 'industry',
