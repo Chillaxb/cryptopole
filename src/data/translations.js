@@ -187,55 +187,73 @@ export const translations = {
     creations: {
       eyebrow: 'Réalisations',
       title: "Ce que j'ai construit",
-      subtitle: 'Huit produits conçus, développés et mis en ligne, du besoin terrain au premier utilisateur.',
+      subtitle: "Huit produits, chacun né d'un problème business : ce qu'il résout, pour qui, et ce que ça change.",
       visit: 'Visiter',
-      live: 'En ligne',
+      seeDemo: 'Ouvrir la démo',
+      onRequest: 'Démo sur demande',
+      status: { live: 'En ligne', beta: 'Bêta ouverte', demo: 'Démo', private: 'Accès restreint' },
       groups: [
-        { id: 'circular', title: 'Économie circulaire & conformité', items: ['tyre-epr', 'recycling-calculator', 'e2v-ui'] },
-        { id: 'health', title: 'Santé & performance', items: ['bioforge', 'safe-flow'] },
-        { id: 'sales', title: 'Outils commerciaux', items: ['e2v-outreach', 'e2v-workshop-form'] },
-        { id: 'commerce', title: 'Commerce', items: ['saffron4joy'] }
+        { id: 'circular', title: 'Économie circulaire : piloter la conformité', intro: 'La conformité coûte. Mesurée et prouvée, elle devient un argument commercial.', items: ['e2v-ui', 'tyre-epr'] },
+        { id: 'sales', title: 'Vente B2B : du premier contact au contrat', intro: 'Raccourcir un cycle de vente industriel : chiffrer la valeur, cadrer vite, suivre chaque contact.', items: ['recycling-calculator', 'e2v-workshop-form', 'e2v-outreach'] },
+        { id: 'health', title: 'Santé & performance', intro: "Rendre accessible à tous un suivi jusqu'ici réservé aux sportifs encadrés.", items: ['bioforge', 'safe-flow'] },
+        { id: 'commerce', title: 'Marque & e-commerce', intro: 'Lancer une marque de bout en bout, du produit à la boutique.', items: ['saffron4joy'] }
       ],
       items: {
-        bioforge: {
-          name: 'BioForge',
-          description: "Le cockpit des sportifs d'endurance. Plans d'entraînement recalculés chaque jour selon le sommeil, la VFC et la fatigue, briefs de course sur mesure, analyses sanguines et microbiome croisées avec l'entraînement.",
-          tags: ['Santé', 'Endurance', 'Garmin · WHOOP']
+        'e2v-ui': {
+          name: 'Plateforme de conformité pneus',
+          status: 'demo',
+          pitch: "Chaque fabricant voit en temps réel s'il est en règle.",
+          description: "Pour une filière de responsabilité élargie du producteur : volumes mis sur le marché face aux tonnes réellement recyclées et certifiées, écarts détectés avant l'audit, pénalités évitées. Quatre vues : opérateur terrain, éco-organisme, marque, auditeur.",
+          tags: ['Conformité', 'Bilan matière', 'Certificats']
         },
-        'safe-flow': {
-          name: 'SafeFlow',
-          description: "Coach de respiration pour la performance. 12 programmes guidés, 129 jours d'audio, suivi de la VFC avec Garmin. App iOS, Android et web.",
-          tags: ['Respiration', 'VFC', 'Mobile']
+        'tyre-epr': {
+          name: 'Modèle économique filière pneus',
+          status: 'demo',
+          pitch: "Montrer à chaque maillon ce qu'il gagne, avant de lancer la filière.",
+          description: "Simulateur du marché mexicain des pneus usagés (550 000 t par an) sur cinq ans : de l'éco-contribution payée par les fabricants aux revenus des garages, collecteurs, transporteurs et cimenteries. Une base chiffrée commune pour négocier avec chaque acteur.",
+          tags: ['Mexique', 'Plan à 5 ans', 'Chaîne de valeur']
+        },
+        'recycling-calculator': {
+          name: 'Simulateur de gains recyclage',
+          status: 'demo',
+          pitch: 'Transformer une démo produit en business case chiffré.',
+          description: "Pour un recycleur : le coût de ses contrôles manuels (réception, déclarations, bilan matière, certification) face au processus automatisé. Heures libérées, incidents évités, gains annuels, puis trois rapports prêts pour le directeur financier et la direction.",
+          tags: ['Avant-vente', 'Retour sur investissement', 'Rapports']
+        },
+        'e2v-workshop-form': {
+          name: 'Questionnaire de cadrage client',
+          status: 'private',
+          pitch: "L'atelier commence avec les réponses déjà sur la table.",
+          description: "Envoyé au prospect avant l'atelier de cadrage, avec un accès propre à chaque client : réception des matières, déclarations, bilan matière, certificats, systèmes en place. Le temps d'atelier sert à décider, plus à collecter.",
+          tags: ['Avant-vente', 'Cadrage', 'Accès par client']
         },
         'e2v-outreach': {
           name: 'E2V Outreach',
-          description: "CRM et plateforme d'exécution commerciale : pipeline, séquences e-mail et appels, synchronisation HubSpot, tableaux de bord en temps réel.",
-          tags: ['Ventes', 'CRM', 'HubSpot']
+          status: 'private',
+          pitch: "Toute la prospection d'eco2Veritas dans un seul outil.",
+          description: "Pipeline, séquences e-mail, LinkedIn et appels, actions du jour pour chaque commercial, analyse des appels et synchronisation avec HubSpot. Chacun sait qui contacter aujourd'hui, la direction suit le pipeline en direct.",
+          tags: ['CRM', 'Prospection', 'HubSpot']
         },
-        'tyre-epr': {
-          name: 'Tyre EPR',
-          description: "Conformité REP pour la filière pneumatique : suivi des volumes, détection d'anomalies de bilan matière, opérations terrain hors ligne, certificats. France, Mexique, Europe.",
-          tags: ['Recyclage', 'REP', 'Multi-pays']
+        bioforge: {
+          name: 'BioForge',
+          status: 'beta',
+          pitch: "Le suivi d'un coach privé, au prix d'une appli.",
+          description: "Les plans figés ignorent la vraie vie : nuit courte, fatigue, réunion qui déborde. BioForge recalcule le programme chaque jour à partir du sommeil, de la variabilité cardiaque et de la charge réelle, envoie les séances sur la montre et prépare un brief pour chaque course. Gratuit pendant la bêta, puis 9 € par mois, là où un coach en coûte 150.",
+          tags: ['Endurance', 'Garmin · WHOOP · Apple Santé', 'iOS']
         },
-        'recycling-calculator': {
-          name: 'Simulateur ROI recyclage',
-          description: "Calcule le retour sur investissement de la digitalisation pour un recycleur : incidents, audits, effectifs. Export Excel avec formules, pour le directeur financier.",
-          tags: ['Recyclage', 'ROI', 'Excel']
-        },
-        'e2v-workshop-form': {
-          name: 'Cadrage projet E2V',
-          description: "Questionnaire de cadrage pour l'avant-vente : besoins structurés, qualification automatique, prospect engagé dès le départ.",
-          tags: ['Avant-vente', 'Qualification']
-        },
-        'e2v-ui': {
-          name: 'E2V Design System',
-          description: "Composants et prototypes d'interfaces pour l'écosystème eco2Veritas, dont la gestion des pneus usagés.",
-          tags: ['Design system', 'Interfaces']
+        'safe-flow': {
+          name: 'SafeFlow',
+          status: 'live',
+          pitch: 'La respiration, entraînée et mesurée comme un sport.',
+          description: "Les apps de respiration perdent leurs utilisateurs : on ne sait pas comment faire, on n'arrive pas à s'y tenir. SafeFlow guide chaque souffle au son et à l'image, cale la routine sur l'agenda et prouve les progrès par la variabilité cardiaque, mesurée avec Garmin.",
+          tags: ['12 programmes · 129 jours', 'Freemium', 'iOS · web']
         },
         saffron4joy: {
           name: 'Saffron4Joy',
-          description: "Import et distribution de safran premium d'Iran : marque, stratégie de lancement et boutique en ligne.",
-          tags: ['E-commerce', 'Marque']
+          status: 'live',
+          pitch: 'Une marque premium lancée de zéro.',
+          description: "Import et distribution de safran iranien : positionnement, identité, boutique en ligne bilingue et une acquisition portée par les contenus (recettes, bienfaits, blog).",
+          tags: ['E-commerce', 'Marque', 'Contenus']
         }
       }
     },
@@ -511,55 +529,73 @@ export const translations = {
     creations: {
       eyebrow: 'Work',
       title: 'What I have built',
-      subtitle: 'Eight products designed, built and shipped, from field needs to the first user.',
+      subtitle: 'Eight products, each born from a business problem: what it solves, for whom, and what it changes.',
       visit: 'Visit',
-      live: 'Live',
+      seeDemo: 'Open the demo',
+      onRequest: 'Demo on request',
+      status: { live: 'Live', beta: 'Open beta', demo: 'Demo', private: 'Restricted access' },
       groups: [
-        { id: 'circular', title: 'Circular economy & compliance', items: ['tyre-epr', 'recycling-calculator', 'e2v-ui'] },
-        { id: 'health', title: 'Health & performance', items: ['bioforge', 'safe-flow'] },
-        { id: 'sales', title: 'Sales tools', items: ['e2v-outreach', 'e2v-workshop-form'] },
-        { id: 'commerce', title: 'Commerce', items: ['saffron4joy'] }
+        { id: 'circular', title: 'Circular economy: running compliance', intro: 'Compliance costs money. Measured and proven, it becomes a sales argument.', items: ['e2v-ui', 'tyre-epr'] },
+        { id: 'sales', title: 'B2B sales: from first contact to contract', intro: 'Shortening an industrial sales cycle: put a number on the value, scope fast, follow every contact.', items: ['recycling-calculator', 'e2v-workshop-form', 'e2v-outreach'] },
+        { id: 'health', title: 'Health & performance', intro: 'Making the kind of guidance only coached athletes had available to everyone.', items: ['bioforge', 'safe-flow'] },
+        { id: 'commerce', title: 'Brand & e-commerce', intro: 'Launching a brand end to end, from product to store.', items: ['saffron4joy'] }
       ],
       items: {
-        bioforge: {
-          name: 'BioForge',
-          description: 'The cockpit for endurance athletes. Training plans redesigned every day from sleep, HRV and fatigue, tailored race briefs, blood and microbiome analysis cross-checked with training.',
-          tags: ['Health', 'Endurance', 'Garmin · WHOOP']
+        'e2v-ui': {
+          name: 'Tyre compliance platform',
+          status: 'demo',
+          pitch: 'Every manufacturer sees in real time whether it is compliant.',
+          description: 'For an extended producer responsibility scheme: tonnes placed on the market against tonnes actually recycled and certified, gaps caught before the audit, penalties avoided. Four views: field operator, producer organisation, brand, auditor.',
+          tags: ['Compliance', 'Mass balance', 'Certificates']
         },
-        'safe-flow': {
-          name: 'SafeFlow',
-          description: 'Breathing coach for performance. 12 guided programs, 129 days of audio, HRV tracking with Garmin. iOS, Android and web app.',
-          tags: ['Breathing', 'HRV', 'Mobile']
+        'tyre-epr': {
+          name: 'Tyre value chain model',
+          status: 'demo',
+          pitch: 'Showing every link what it earns, before the scheme launches.',
+          description: 'Simulator of the Mexican end-of-life tyre market (550,000 t a year) over five years: from the eco-fee paid by manufacturers to the revenue of garages, collectors, hauliers and cement kilns. One shared set of numbers to negotiate with every player.',
+          tags: ['Mexico', '5-year plan', 'Value chain']
+        },
+        'recycling-calculator': {
+          name: 'Recycling savings simulator',
+          status: 'demo',
+          pitch: 'Turning a product demo into a costed business case.',
+          description: 'For a recycler: the cost of its manual checks (intake, reporting, mass balance, certification) against the automated process. Hours freed, incidents avoided, annual savings, then three reports ready for the CFO and the board.',
+          tags: ['Pre-sales', 'Return on investment', 'Reports']
+        },
+        'e2v-workshop-form': {
+          name: 'Client scoping questionnaire',
+          status: 'private',
+          pitch: 'The workshop starts with the answers already on the table.',
+          description: 'Sent to the prospect before the scoping workshop, with access unique to each client: material intake, reporting, mass balance, certificates, current systems. Workshop time goes to decisions, not data collection.',
+          tags: ['Pre-sales', 'Scoping', 'Per-client access']
         },
         'e2v-outreach': {
           name: 'E2V Outreach',
-          description: 'CRM and sales execution platform: pipeline, email and call sequences, HubSpot sync, real-time dashboards.',
-          tags: ['Sales', 'CRM', 'HubSpot']
+          status: 'private',
+          pitch: "All of eco2Veritas' prospecting in one tool.",
+          description: 'Pipeline, email, LinkedIn and call sequences, daily actions for each rep, call analysis and HubSpot sync. Everyone knows who to contact today, leadership follows the pipeline live.',
+          tags: ['CRM', 'Prospecting', 'HubSpot']
         },
-        'tyre-epr': {
-          name: 'Tyre EPR',
-          description: 'Extended producer responsibility for the tyre industry: volume tracking, mass balance anomaly detection, offline field operations, certificates. France, Mexico, Europe.',
-          tags: ['Recycling', 'EPR', 'Multi-country']
+        bioforge: {
+          name: 'BioForge',
+          status: 'beta',
+          pitch: 'The follow-up of a private coach, for the price of an app.',
+          description: 'Fixed plans ignore real life: a short night, fatigue, a meeting that runs over. BioForge redesigns the programme every day from sleep, heart rate variability and actual load, sends sessions to the watch and prepares a brief for every race. Free during the beta, then €9 a month, where a coach costs €150.',
+          tags: ['Endurance', 'Garmin · WHOOP · Apple Health', 'iOS']
         },
-        'recycling-calculator': {
-          name: 'Recycling ROI simulator',
-          description: 'Calculates the return on digitalisation for a recycler: incidents, audits, headcount. Excel export with live formulas, for the CFO.',
-          tags: ['Recycling', 'ROI', 'Excel']
-        },
-        'e2v-workshop-form': {
-          name: 'E2V project scoping',
-          description: 'Scoping questionnaire for pre-sales: structured needs, automatic qualification, an engaged prospect from day one.',
-          tags: ['Pre-sales', 'Qualification']
-        },
-        'e2v-ui': {
-          name: 'E2V Design System',
-          description: 'Components and interface prototypes for the eco2Veritas ecosystem, including end-of-life tyre management.',
-          tags: ['Design system', 'Interfaces']
+        'safe-flow': {
+          name: 'SafeFlow',
+          status: 'live',
+          pitch: 'Breathing, trained and measured like a sport.',
+          description: 'Breathing apps lose their users: people do not know how to do it and cannot keep it up. SafeFlow guides every breath with sound and visuals, fits the routine into the calendar and proves progress through heart rate variability, measured with Garmin.',
+          tags: ['12 programmes · 129 days', 'Freemium', 'iOS · web']
         },
         saffron4joy: {
           name: 'Saffron4Joy',
-          description: 'Import and distribution of premium Iranian saffron: brand, launch strategy and online store.',
-          tags: ['E-commerce', 'Brand']
+          status: 'live',
+          pitch: 'A premium brand launched from scratch.',
+          description: 'Import and distribution of Iranian saffron: positioning, identity, a bilingual online store and content-led acquisition (recipes, benefits, blog).',
+          tags: ['E-commerce', 'Brand', 'Content']
         }
       }
     },

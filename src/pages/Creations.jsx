@@ -2,15 +2,21 @@ import { ArrowUpRight, ArrowRight } from '../components/Icons'
 import { useLanguage } from '../context/LanguageContext'
 import { useTranslations, CONTACT_EMAIL } from '../data/translations'
 
+// Restricted tools (login or per-client access code) get no public link
 const projectUrls = {
   'safe-flow': 'https://safe-flow.ai',
-  'e2v-outreach': 'https://e2v-outreach.vercel.app',
   'saffron4joy': 'https://saffronforjoy.com',
   'bioforge': 'https://bioforge.science',
-  'e2v-workshop-form': 'https://e2v-workshop-form.vercel.app',
   'tyre-epr': 'https://tyre-epr.vercel.app',
   'e2v-ui': 'https://tyre-mgmt.vercel.app',
   'recycling-calculator': 'https://mechanical-recycling-calculator.vercel.app'
+}
+
+const statusDot = {
+  live: 'bg-lichen',
+  beta: 'bg-lichen',
+  demo: 'bg-prusse/50',
+  private: 'border border-encre-soft'
 }
 
 const projectImages = {
@@ -42,9 +48,12 @@ export default function Creations() {
         <div className="flex flex-col gap-16">
           {t.creations.groups.map((group, groupIndex) => (
             <section key={group.id} aria-labelledby={`group-${group.id}`} className="flex flex-col gap-6">
-              <div className="flex items-baseline justify-between gap-4 border-b border-ligne pb-3">
-                <h2 id={`group-${group.id}`} className="font-display font-semibold text-2xl text-encre">{group.title}</h2>
-                <span className="font-mono text-sm text-encre-soft tabular-nums">{String(group.items.length).padStart(2, '0')}</span>
+              <div className="flex flex-col gap-2 border-b border-ligne pb-4">
+                <div className="flex items-baseline justify-between gap-4">
+                  <h2 id={`group-${group.id}`} className="font-display font-semibold text-2xl text-encre">{group.title}</h2>
+                  <span className="font-mono text-sm text-encre-soft tabular-nums">{String(group.items.length).padStart(2, '0')}</span>
+                </div>
+                <p className="text-encre-soft max-w-2xl">{group.intro}</p>
               </div>
               <div className={`grid grid-cols-1 gap-6 ${group.items.length >= 3 ? 'md:grid-cols-2 lg:grid-cols-3' : 'md:grid-cols-2'}`}>
                 {group.items.map((id, itemIndex) => {
@@ -68,24 +77,33 @@ export default function Creations() {
                         />
                       </div>
                       <div className="p-6 flex flex-col gap-4 flex-1">
-                        <div className="flex items-center justify-between gap-3">
-                          <h3 className="font-display font-semibold text-2xl text-encre">{project.name}</h3>
-                          <span className="inline-flex items-center gap-1.5 font-mono text-xs text-mousse">
-                            <span className="w-2 h-2 rounded-full bg-lichen" aria-hidden="true" />
-                            {t.creations.live}
+                        <div className="flex flex-col gap-1.5">
+                          <span className={`inline-flex items-center gap-1.5 font-mono text-xs ${project.status === 'private' || project.status === 'demo' ? 'text-encre-soft' : 'text-mousse'}`}>
+                            <span className={`w-2 h-2 rounded-full ${statusDot[project.status]}`} aria-hidden="true" />
+                            {t.creations.status[project.status]}
                           </span>
+                          <h3 className="font-display font-semibold text-2xl text-encre">{project.name}</h3>
                         </div>
+                        <p className="font-display font-semibold text-lg text-prusse leading-snug">{project.pitch}</p>
                         <p className="text-encre-soft leading-relaxed">{project.description}</p>
                         <p className="font-mono text-xs text-encre-soft tracking-wide">{project.tags.join(' · ')}</p>
-                        {url && (
+                        {url ? (
                           <a
                             href={url}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-auto inline-flex items-center gap-2 self-start text-prusse font-semibold link-underline"
                           >
-                            {t.creations.visit} {hostOf(url)}
+                            {project.status === 'demo' ? t.creations.seeDemo : `${t.creations.visit} ${hostOf(url)}`}
                             <ArrowUpRight className="w-4 h-4" />
+                          </a>
+                        ) : (
+                          <a
+                            href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`${t.creations.onRequest} : ${project.name}`)}`}
+                            className="mt-auto inline-flex items-center gap-2 self-start text-prusse font-semibold link-underline"
+                          >
+                            {t.creations.onRequest}
+                            <ArrowRight className="w-4 h-4" />
                           </a>
                         )}
                       </div>
